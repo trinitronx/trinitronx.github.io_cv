@@ -20,11 +20,14 @@ Any change you want to make to your CV from then on would have to be done on the
 
 ### II. Build it locally and print a PDF
 
-1. To [install jekyll](https://jekyllrb.com/docs/installation/), run `gem install bundler jekyll` from the command line.
-3. [Clone](https://help.github.com/en/articles/cloning-a-repository) your fork of markdown-cv to your local machine.
-3. Type `jekyll serve` to render your CV at http://localhost:4000.
+1. [Clone](https://help.github.com/en/articles/cloning-a-repository) your fork
+   of markdown-cv to your local machine.
+2. To [install jekyll](https://jekyllrb.com/docs/installation/), and
+   dependencies, run `bundle install` from the command line.
+3. Type `bundle exec jekyll serve` to render your CV at http://localhost:4000.
 4. You can edit the `index.md` file and see the changes live in your browser.
-5. To print a PDF, press <kbd>⌘</kbd> + <kbd>p</kbd>. Print and web CSS media queries should take care of the styling.
+5. To print a PDF, press <kbd>⌘</kbd> + <kbd>p</kbd>. Print and web CSS media
+   queries should take care of the styling.
 
 ## Styling
 
