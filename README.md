@@ -1,6 +1,13 @@
+<!-- markdownlint-configure-file
+{
+  "MD003": { "style": "atx" },
+  "MD033": false
+}
+-->
 # markdown-cv
 
-A curriculum vitae maintained in plain text and rendered to HTML and PDF using CSS.
+A curriculum vitae maintained in plain text and rendered to HTML and PDF using
+CSS.
 
 Inspired by & based on [markdown-cv](http://elipapa.github.io/markdown-cv).
 
@@ -8,15 +15,18 @@ Inspired by & based on [markdown-cv](http://elipapa.github.io/markdown-cv).
 
 ## Distribution
 
-To transform the plain text Markdown CV into a beautiful and shareable HTML page, there are two options:
+To transform the plain text Markdown CV into a beautiful and shareable HTML
+page, there are two options:
 
 ### I. Use Github Pages to publish it online
 
-1. Delete the existing `gh-pages` branch from your fork. It will only contain this webpage.
+1. Delete the existing `gh-pages` branch from your fork. It will only contain
+   this webpage.
 2. Create a new branch called `gh-pages`.
 3. Head to *yourusername*.github.io/markdown-cv to see your CV live.
 
-Any change you want to make to your CV from then on would have to be done on the `gh-pages` branch and will be immediately rendered by Github Pages.
+Any change you want to make to your CV from then on would have to be done on the
+`gh-pages` branch and will be immediately rendered by Github Pages.
 
 ### II. Build it locally and print a PDF
 
@@ -24,7 +34,7 @@ Any change you want to make to your CV from then on would have to be done on the
    of markdown-cv to your local machine.
 2. To [install jekyll](https://jekyllrb.com/docs/installation/), and
    dependencies, run `bundle install` from the command line.
-3. Type `bundle exec jekyll serve` to render your CV at http://localhost:4000.
+3. Type `bundle exec jekyll serve` to render your CV at <http://localhost:4000>.
 4. You can edit the `index.md` file and see the changes live in your browser.
 5. To print a PDF, press <kbd>⌘</kbd> + <kbd>p</kbd>. Print and web CSS media
    queries should take care of the styling.
@@ -38,10 +48,11 @@ template](https://github.com/kjhealy/kjh-vita).
 2. `davewhipp` is a tweaked version of `kjhealy`, with bigger fonts and dates
   right aligned.
 
-To change the default style, simply change the variable in the
-`_config.yml` file.
+To change the default style, simply change the variable in the `_config.yml`
+file.
 
-Any other styling is possible. More CSS style contributions and forks are welcome!
+Any other styling is possible. More CSS style contributions and forks are
+welcome!
 
 ### Authors
 
