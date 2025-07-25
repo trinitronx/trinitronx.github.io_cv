@@ -9,3 +9,7 @@ style: davewhipp
 exclude: ["README.md", "LICENSE"]
 sass:
   style: compressed
+kramdown:
+  input: GFM
+  parse_block_html: true
+  parse_span_html: true
