@@ -2,13 +2,6 @@
 layout: test
 title: "James Cuzella's CV"
 ---
-<!-- markdownlint-configure-file
-{
-  "frontMatter": "/((^---\s*$[\s\S]+?^---\s*)/m",
-  "MD003": { "style": "setext" },
-  "":
-}
--->
 <!-- markdownlint-disable-file MD024 MD025 -->
 # James Cuzella
 
