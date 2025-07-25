@@ -5,9 +5,13 @@ title: "James Cuzella's CV"
 <!-- markdownlint-disable-file MD024 MD025 -->
 # James Cuzella
 
+<div id="webaddress">
+
 |             |                                    |                           |
 |:-----------:|:----------------------------------:|:-------------------------:|
 | @trinitronx | [linkedin.com/in/james-cuzella][1] | [trinitronx.github.io][2] |
+
+</div>
 
 ## DEVOPS ENGINEER | SITE RELIABILITY ENGINEER | CLOUD ENGINEER
 
