@@ -5,7 +5,7 @@ description: markdown-cv is a simple template to list all your accomplishments i
 
 # Build settings
 markdown: kramdown
-style: davewhipp
+style: jamescuzella
 exclude: ["README.md", "LICENSE"]
 sass:
   style: compressed
