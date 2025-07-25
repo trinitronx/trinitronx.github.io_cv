@@ -30,7 +30,8 @@ Standing on the shoulders of giants
 
 ### Specialized in
 
-Laws of motion, gravitation, minting coins, disliking [Robert Hooke](http://en.wikipedia.org/wiki/Robert_Hooke)
+Laws of motion, gravitation, minting coins, disliking [Robert
+Hooke](http://en.wikipedia.org/wiki/Robert_Hooke)
 
 ### Research interests
 
@@ -60,7 +61,8 @@ Associate, *French Academy of Science*, Paris, France
 
 ## Publications
 
-<!-- A list is also available [online](http://scholar.google.co.uk/citations?user=LTOTl0YAAAAJ) -->
+<!-- A list is also available
+[online](http://scholar.google.co.uk/citations?user=LTOTl0YAAAAJ) -->
 
 ### Journals
 
@@ -74,8 +76,9 @@ etc. etc. etc.
 
 ### Patents
 
-`2012`
-Infinitesimal calculus for solutions to physics problems, [SMBC](http://www.techdirt.com/articles/20121011/09312820678/if-patents-had-been-around-time-newton.shtml) patent 001
+`2012` Infinitesimal calculus for solutions to physics problems,
+[SMBC](http://www.techdirt.com/articles/20121011/09312820678/if-patents-had-been-around-time-newton.shtml)
+patent 001
 
 ## Occupation
 
