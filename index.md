@@ -2,19 +2,6 @@
 layout: cv
 title: Isaac Newtons's CV
 ---
-<!-- markdownlint-configure-file
-{
-  "frontMatter": "/((^---\s*$[\s\S]+?^---\s*)/m",
-  "hr-style": {
-    "style": "---"
-  },
-  "no-trailing-spaces": false,
-  "heading-style": { "style": "setext" },
-  "no-inline-html": false,
-  "single-title": false
-}
--->
-<!-- markdownlint-disable-file MD025 MD033 -->
 # Isaac Newton
 
 Physicist, Mathematician, Cambridge professor.
