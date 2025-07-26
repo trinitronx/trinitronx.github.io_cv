@@ -13,6 +13,10 @@ title: "James Cuzella's CV"
 
 </div>
 
+---
+
+<div id="skills">
+
 ## DEVOPS ENGINEER | SITE RELIABILITY ENGINEER | CLOUD ENGINEER
 
 A talented, dynamic DevOps Engineer with strong expertise in building cloud infrastructure from the ground up, as well as maintaining
@@ -32,6 +36,10 @@ Deployment | Amazon Web Services | Cloud infrastructure | Terraform | Ansible | 
 | Operating Systems:     | Windows 9x, 2000, XP, Vista, 7/8.1/10/11, Linux Distributions including Arch, Manjaro, Gentoo, Ubuntu, Debian, CentOS, RedHat, CoreOS, Alpine, Yocto, MacOS 10.x-15.x, FreeBSD, OpenWRT |
 | Programming Languages: | Ruby; Python; Bash/Shell Scripting; Rust; Go; Java; C/C++; VHDL; Perl; Tcl; Motorola HCS12 Assembly, PHP, SQL, CSS, JavaScript, HTML, TypeScript |
 | Computer Applications: | Terraform, Chef, Ansible, Jenkins, Docker, Kubernetes, ElasticSearch, Logstash, Kibana, Kafka, CloudFlare, OpenSSL, SSH, FTP, SVN, GIT, Sublime Text, VSCode, Eclipse/Tasktop, Dreamweaver, Photoshop, Illustrator, LAMP Stack, Apache Tomcat, Ruby on Rails, Python+mod WSGI, Memcached, APC, Varnish, Many Open Source Web Apps, MS Office, OpenOffice, Xilinx ISE, MathCAD, Matlab, Quartus, OrCAD/PSpice, LabView, SolidWorks |
+
+</div>
+
+<div id="experience">
 
 ## PROFESSIONAL EXPERIENCE
 
@@ -178,6 +186,8 @@ Developed and programmed a concept inventory website designed to assess student 
 - Copied test questions from word documents into a custom XML document type definition format
 - Designed application that generated tests for different subjects using XML files and database information
 - Developed user login and administrative interfaces, focusing on web security and ease of use by class instructors
+
+</div>
 
 ## EDUCATION
 
