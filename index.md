@@ -45,7 +45,7 @@ Deployment \| Amazon Web Services \| Cloud infrastructure \| Terraform \| Ansibl
 
 ### Echo 360 | Remote, US (CO/VA/OH/TX)
 
-12/2020 – Present
+`12/2020 – Present`
 
 #### Senior Site Reliability Engineer
 
@@ -61,7 +61,7 @@ configuration management & deployment to AWS using Terraform, Kubernetes, and Ar
 
 ### Proofpoint | Broomfield, CO
 
-08/2016 – 10/2020
+`08/2016 – 10/2020`
 
 #### DevOps Engineer
 
@@ -85,7 +85,7 @@ Deployment (CI/CD)
 
 ### Return Path | Broomfield, CO
 
-07/2014 – 08/2016
+`07/2014 – 08/2016`
 
 #### DevOps Engineer
 
@@ -100,7 +100,7 @@ validation and deployment playbooks using Ansible and Python.
 
 ### Tango Group / Gloo | Boulder, CO
 
-03/2013 – 06/2014
+`03/2013 – 06/2014`
 
 #### DevOps Engineer
 
@@ -113,7 +113,7 @@ Integration Testing Frameworks. Cloud Architecture Design and Planning for Scala
 
 ### Standing Cloud | Boulder, CO
 
-01/2011 – 03/2013
+`01/2011 – 03/2013`
 
 #### Jr. Linux Systems Administrator
 
@@ -127,7 +127,7 @@ the Cloud.
 
 ### SEAKR Engineering | Centennial, CO
 
-05/2010 – 09/2010
+`05/2010 – 09/2010`
 
 #### Infrastructure & Automation Design Engineer
 
@@ -141,7 +141,7 @@ Created a corporate wiki intranet site to facilitate collaboration amongst engin
 
 ### Echostar | Englewood, CO
 
-05/2009 – 08/2009
+`05/2009 – 08/2009`
 
 #### Web Programming Intern
 
@@ -151,7 +151,7 @@ Developed intranet site module to support submittal, generation, and approval fl
 
 ### Colorado School of Mines | Golden, CO
 
-01/2009 – 05/2009
+`01/2009 – 05/2009`
 
 #### Web Programmer
 
@@ -163,7 +163,7 @@ Fixed bugs for “InkSurvey” (tablet PC collaborative classroom web software).
 
 ### Xilinx | Longmont, CO
 
-05/2008 – 09/2008
+`05/2008 – 09/2008`
 
 #### ChipScope Intern
 
@@ -177,7 +177,7 @@ Worked on an agile development team on an innovative project to be submitted for
 
 ### Colorado School of Mines | Golden, CO
 
-05/2007 – 09/2007
+`05/2007 – 09/2007`
 
 #### Web Programmer
 
