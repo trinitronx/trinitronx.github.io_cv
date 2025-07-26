@@ -1,5 +1,5 @@
 ---
-layout: test
+layout: cv
 title: "James Cuzella's CV"
 ---
 <!-- markdownlint-disable-file MD024 MD025 -->
