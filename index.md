@@ -3,6 +3,7 @@ layout: cv
 title: "James Cuzella's CV"
 ---
 <!-- markdownlint-disable-file MD024 MD025 -->
+<div id="header">
 # James Cuzella
 
 <div id="webaddress">
@@ -14,6 +15,8 @@ title: "James Cuzella's CV"
 </div>
 
 ---
+
+</div>
 
 <div id="skills">
 
@@ -189,6 +192,8 @@ Developed and programmed a concept inventory website designed to assess student 
 
 </div>
 
+<div id="education">
+
 ## EDUCATION
 
 Colorado School of Mines | **B.S. Engineering** - Electrical Specialty
@@ -196,10 +201,18 @@ Area of Special Interest in Computer Science, Dean’s List – GPA: 3.2
 
 Colorado School of Mines Linux User Group | BlueKey Honor Society Member | CSM Broadcasting Club
 
+</div>
+
+<div id="certifications">
+
 ## CERTIFICATIONS & AWARDS
 
 - Dante Certification Level 1, 2, & 3 – Audinate 2021-Present
 - Technical Contribution Award – Proofpoint 2017 Cloud Migration
+
+</div>
+
+<div id="academic-projects">
 
 ## KEY ACADEMIC PROJECTS
 
@@ -207,6 +220,10 @@ Colorado School of Mines Linux User Group | BlueKey Honor Society Member | CSM B
 - Worked with fellow students on Agile team to complete a C++ program used to dynamically create photomosaic images
   from JPEG files
 - Programmed and designed a dynamic website template using PHP, MySQL, CSS, JavaScript, and HTML for Engineering Club
+
+</div>
+
+<div id="open-source">
 
 ## OPEN SOURCE CONTRIBUTIONS
 
@@ -316,6 +333,8 @@ Colorado School of Mines Linux User Group | BlueKey Honor Society Member | CSM B
   - [cookstyle: Pass-through exit status (Fixes #15)][oss.17.1]
 
 [... Plus too many to list][5]
+
+</div>
 
 [1]: https://linkedin.com/in/james-cuzella
 [2]: https://trinitronx.github.io
