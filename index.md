@@ -70,15 +70,23 @@ configuration management & deployment to AWS using Terraform, Kubernetes, and Ar
 
 Handle Email Fraud Defense product and team. Support engineering team to deploy software and provision infrastructure in
 Amazon Web Services (AWS). Migrated entire product from ReturnPath’s data center to AWS Virtual Private Cloud (VPC) to support
-product acquisition. Build Amazon VPCs for Development, Staging, and Production Environments. Provisioned Kubernetes Clusters
-via kops + Amazon EC2. Deploy, maintain, and scale Graphite and Grafana stack for system metrics and monitoring. Create
+product acquisition. Build Amazon VPCs for Development, Staging, and Production Environments with focus on AWS VPC Security. Locked down Security Groups while integrating with new company's networks, and Transit VPCs. Provisioned Kubernetes Clusters
+via kops + Amazon EC2. Deploy, maintain, and scale Diamond, Graphite / Carbon, and Grafana stack for system metrics and monitoring. Create
 monitoring dashboards for critical systems and developed custom metrics. Secure cluster using HashiCorp Vault Secrets provisioning
 with integration into Kubernetes ServiceAccounts, Role-Based Access Control (RBAC), & Amazon IAM integration.
 
+- Setup Kubernetes cluster monitoring & centralized logging
+  - Monitoring with Prometheus & Grafana
+  - Centralized logging with ELK stack (ElasticSearch, Logstash, Kibana)
+  - Migrated legacy systems into Docker containers, and from DataDog to Prometheus + Grafana
 - Maintained Postfix MTA server tier for product data ingestion
-- Deployed and maintained DNS Caching servers to optimize for millions of local lookups
+  - Email MX server tier handled throughput of millions of messages per day
+  - Configured systems to use SELinux, migrated from CentOS 6 to 7, and then RHEL 8
+- Deployed and maintained DNS Caching servers (`unbound`) to optimize for millions of local lookups
 - Implemented and provisioned Infrastructure as Code (IaC) with HashiCorp Terraform
 - Sustained legacy Ansible playbooks IaC repository for product’s data pipeline infrastructure components
+  - Maintained & scaled legacy Diamond, Graphite / Carbon monitoring stack
+  - Optimized Graphite stack for high level of disk I/O using LVM & EBS NVMe volumes
 - Built Docker containers for deployment into Kubernetes Clusters and/or Dedicated EC2 CoreOS instances
 - Setup declarative Jenkins pipelines including DevSecOps SAST / SCA tools for Continuous Integration testing & Continuous
 Deployment (CI/CD)
@@ -98,6 +106,11 @@ validation and deployment playbooks using Ansible and Python.
 - Maintained Infrastructure as Code Repositories with Core Operations team
 - Provisioned Virtual Machines on-prem (VMWare vSphere) and in the Cloud (AWS) for Infrastructure Deployment
 - Worked with Core Operations Team to maintain and administer shared VPS Infrastructure & hardware in the datacenter
+- Built & scaled CoreOS Docker clusters
+- Migrated CoreOS systems to Kubernetes clusters
+- Upgraded MapR clusters
+- Datacenter hardware maintenance
+- Built & scaled Diamond, Graphite / Carbon, Nagios & PagerDuty monitoring and alerting stack
 
 ---
 
@@ -107,7 +120,7 @@ validation and deployment playbooks using Ansible and Python.
 
 #### DevOps Engineer
 
-Administered and maintained 38+ server cloud-based infrastructure for PaaS backend. Developed Chef cookbooks in Ruby including Unit and
+Administered and maintained 38+ server cloud-based infrastructure for PaaS Ruby on Rails / JRuby backend. Developed Chef cookbooks in Ruby including Unit and
 Integration Testing Frameworks. Cloud Architecture Design and Planning for Scalable, Multi-Region, Fault-Tolerant Services.
 
 - Worked to develop shared goals and understanding about technical & infrastructure design requirements
@@ -123,7 +136,13 @@ Integration Testing Frameworks. Cloud Architecture Design and Planning for Scala
 Collaborated on agile team to develop automated web application install and server configuration scripts for deployment on virtual machines in
 the Cloud.
 
-- Developed and maintained over 107 web app install & configuration management scripts written in Bash
+- Developed and maintained over 107 web app, and language stack install & configuration management scripts written in Bash for Cloud deployment
+  - Deployed to over 15 top cloud providers (AWS, RackSpace, OpSource, Linode, etc...)
+  - Management & Administration of Linux Cloud servers
+  - Application deployment automation and rapid development
+  - Agile software development
+  - Providing Direct Customer Support to Cloud Application Users
+  - Development of Cucumber / Watir / Selenium Acceptance Tests in Ruby
 - Helped troubleshoot and fix issues for customers
 
 ---
@@ -173,8 +192,9 @@ Fixed bugs for “InkSurvey” (tablet PC collaborative classroom web software).
 Worked on an agile development team on an innovative project to be submitted for patent, involving test case automation on computing clusters for live FPGA regression testing.
 
 - Created and updated documentation on existing computing cluster tools
-- Daemonized networkable JTAG server software using the GNU ‘expect’ tool
+- Daemonized networkable JTAG server software using the GNU `expect` tool
 - Created Tcl JTAG scanner for board enumeration
+- Programmed in Perl and Tcl, wrote documentation, filed bug reports, and attended development team meetings, along with other duties
 
 ---
 
