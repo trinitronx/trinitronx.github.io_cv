@@ -255,7 +255,7 @@ a:hover {
 	#webaddress {
 		margin-top: 1rem;
 		text-align: center;
-		color: #16a085;
+		/* color: #16a085; /* contrast-ratio (black): 6.4:1, (white): 3.28:1 */
 		font-family: Monaco,Menlo,monospace,sans-serif;
 	}
 	
@@ -602,3 +602,104 @@ strong {
 @media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation:landscape) {
   /* iPad landscape layout
 } */
+
+
+@media screen and (prefers-contrast: more),
+       screen and (prefers-contrast: more) and (forced-colors: active) {
+	/* The foreground:background contrast-ratio should be >= 7:1 */
+	/* References:
+	*    - https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/25672185a29b8fdefab70996242ad03d6c5f4ef0/Accessibility/PrefersContrast/explainer.md
+	*    - https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/25672185a29b8fdefab70996242ad03d6c5f4ef0/Accessibility/HighContrast/explainer.md
+	*    - https://www.w3.org/WAI/GL/wiki/Contrast_ratio
+	*    - https://webaim.org/resources/contrastchecker/
+	*/
+	@media (forced-colors: none) and (prefers-color-scheme: dark),
+	       (-ms-high-contrast: active) and (prefers-color-scheme: dark),
+		   (-ms-high-contrast: white-on-black) {
+		html {
+			color: #ffffff; /* contrast-ratio: 17.59:1 */
+			background-color: #141a1b;
+		}
+		code {
+			color: #ddd; /* contrast-ratio: 12.95:1 */
+		}
+		#header {
+			#webaddress {
+				color: #32c3a6; /* contrast-ratio: 7.95:1 */
+			}
+		}
+	}
+	@media (forced-colors: none) and (prefers-color-scheme: light),
+	       (-ms-high-contrast: active) and (prefers-color-scheme: light),
+		   (-ms-high-contrast: black-on-white) {
+		html {
+			color: #141a1b; /* contrast ratio: 17.59:1 */
+			background-color: #fff;
+		}
+		code {
+			color: #222; /* contrast ratio: 15.9:1 */
+		}
+		#header {
+			#webaddress {
+				/* color: #0c6453; contrast ratio: 7.08:1 */
+				color: #0b5b4d; /* contrast ration: 8.02:1 */
+			}
+		}
+	}
+}
+
+@media screen and (prefers-contrast: less),
+       screen and (prefers-contrast: less) and (forced-colors: active) {
+	/* TODO: Add styles for less contrast mode */
+	/* @media (prefers-color-scheme: dark) {} */
+	@media (prefers-color-scheme: light) {
+		code {
+			color: #AAA;
+		}
+	}
+}
+
+@media screen and (prefers-contrast: no-preference) and (forced-colors: none) {
+	@media (prefers-color-scheme: dark) {
+		html {
+			color: #d6d6d6; /* contrast-ratio: 9.92:1 */
+			background-color: #282a2b;
+		}
+		code {
+			color: #918f8e; /* contrast-ratio: 4.47:1 */
+		}
+		#header {
+			#webaddress {
+				color: #2eb398; /* contrast-ratio: 5.5:1 */
+			}
+			#webaddress td {
+				border-left-color: #d6d6d6; /* contrast-ratio: 9.92:1 */
+			}
+		}
+	}
+	@media (prefers-color-scheme: light) {
+		code {
+			color: #777;
+		}
+		#skills {
+			h2 {
+				color: #445b1f;
+			}
+		}
+		#header {
+			#webaddress {
+				color: #09765e;
+			}
+		}
+	}
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	* {
+		/* Very short durations means JavaScript that relies on events still works */
+		animation-duration: 0.001ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.001ms !important;
+	}
+}
+
