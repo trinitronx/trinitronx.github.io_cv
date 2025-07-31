@@ -19,8 +19,8 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
 	font: inherit;
+	font-size: 1rem; /* default element font size = base */
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -29,7 +29,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1rem;
 }
 ol, ul {
 	list-style: none;
@@ -67,10 +67,15 @@ body {
 	/* --align-guide-main-width: calc(100vw - 2 * var(--align-guide-width)); */
 
 	/* font: normal normal 400; */
-	font: normal normal 400 16px sans-serif;
-	font-size: 100%;
+	/* font: normal normal 400 16px sans-serif; */
+	font-style: normal;
+	font-variant-caps: normal;
+	font-weight: 400;
+
+	font-family: sans-serif;
+
 	line-height: var(--line-height);
-	/*also written as...  font: normal normal 400 100%/1.5rem;*/
+	/*also written as...  font: normal normal 400 100%/1rem;*/
 	font-family: Avenir,Verdana,sans-serif;
 	margin-top: var(--page-margin-top);
 	margin-left: var(--page-margin-left);
@@ -86,8 +91,8 @@ p {
 }
 
 code {
-	font: normal normal;
-	font-size: 90%;
+	/* font: normal normal 400 16px monospace; */
+	/* font-size: 90%; */
 	/*line-height: 1rem;*/
 	font-family: Monaco,Menlo,monospace,sans-serif;
 	color: #aaa;
