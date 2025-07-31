@@ -68,12 +68,18 @@ configuration management & deployment to AWS using Terraform, Kubernetes, and Ar
 
 #### DevOps Engineer
 
-Handle Email Fraud Defense product and team. Support engineering team to deploy software and provision infrastructure in
-Amazon Web Services (AWS). Migrated entire product from ReturnPath’s data center to AWS Virtual Private Cloud (VPC) to support
-product acquisition. Build Amazon VPCs for Development, Staging, and Production Environments with focus on AWS VPC Security. Locked down Security Groups while integrating with new company's networks, and Transit VPCs. Provisioned Kubernetes Clusters
-via kops + Amazon EC2. Deploy, maintain, and scale Diamond, Graphite / Carbon, and Grafana stack for system metrics and monitoring. Create
-monitoring dashboards for critical systems and developed custom metrics. Secure cluster using HashiCorp Vault Secrets provisioning
-with integration into Kubernetes ServiceAccounts, Role-Based Access Control (RBAC), & Amazon IAM integration.
+Handle Email Fraud Defense product and team. Support engineering team to deploy
+software and provision infrastructure in Amazon Web Services (AWS). Migrated
+entire product from ReturnPath’s data center to AWS Virtual Private Cloud (VPC)
+to support product acquisition. Build Amazon VPCs for Development, Staging, and
+Production Environments with focus on AWS VPC Security. Locked down Security
+Groups while integrating with the new company's networks, and Transit VPCs.
+Provisioned Kubernetes Clusters via kops + Amazon EC2. Deploy, maintain, and
+scale Diamond, Graphite / Carbon, and Grafana stack for system metrics and
+monitoring. Create monitoring dashboards for critical systems and developed
+custom metrics. Secure cluster using HashiCorp Vault Secrets provisioning with
+integration into Kubernetes ServiceAccounts, Role-Based Access Control (RBAC), &
+Amazon IAM integration.
 
 - Setup Kubernetes cluster monitoring & centralized logging
   - Monitoring with Prometheus & Grafana
