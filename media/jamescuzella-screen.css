@@ -279,6 +279,8 @@ a:hover {
 		padding-left: 1rem;
 		padding-right: 1rem;
 		border-left: 0.0625rem solid black;
+		text-wrap: balance;
+		font-weight: 800;
 	}
 	
 	#webaddress table tr td:first-child,
