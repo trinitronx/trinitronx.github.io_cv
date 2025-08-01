@@ -531,6 +531,36 @@ strong {
 			width: unset;
 		}
 	}
+	/* Override Flexbox layout for table fit on small screen */
+	#header {
+		& #webaddress td {
+			padding-left: 1rem;
+			padding-right: 1rem;
+			/* border-left: 0.0625rem solid black; */
+			border-left: none;
+			border-right: none;
+			padding-top: 0.5rem;
+			padding-bottom: 0.5rem;
+			border-bottom: 0.0625rem solid black;
+			text-wrap: balance;
+			display: flex;
+			/* justify-content: space-between; */
+			justify-content: center;
+			align-items: center;
+			flex-flow: row wrap;
+		}
+
+		& #webaddress table tr td:first-child,
+		& #webaddress table tr th:first-child {
+			border-top: none;
+		}
+
+		& #webaddress table tr td:last-child,
+		& #webaddress table tr th:last-child {
+			border-top: none;
+			border-bottom: none;
+		}
+	}
  }
 
 /* tablet portrait */
