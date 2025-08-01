@@ -476,7 +476,7 @@ strong {
 		background-color: blue;
 		--line-height: 0.75rem;
 		--table-bottom-margin: 0.75rem;
-		--page-margin-top: 0.5rem;
+		--page-margin-top: 1.5rem;
 		--page-margin-left: 0;
 		--page-margin-right: 0;
 		--align-guide-width: 5vw;
@@ -519,7 +519,7 @@ strong {
 		background-color: pink;
 		--line-height: 1rem;
 		--table-bottom-margin: 0.75rem;
-		--page-margin-top: 0.5rem;
+		--page-margin-top: 1.5rem;
 		--page-margin-left: 1rem;
 		--page-margin-right: 1rem;
 		--align-guide-width: 5vw;
@@ -571,10 +571,10 @@ strong {
 		background-color: unset;
 		--line-height: 1.5rem;
 		--table-bottom-margin: 1rem;
-		--page-margin-top: 0.5rem;
+		--page-margin-top: 1.9rem;
 		--page-margin-left: 0.2rem;
-		--page-margin-right: 0.2rem;
-		--align-guide-width: 5vw;
+		--page-margin-right: 0rem; /* use max device width */
+		--align-guide-width: 1.5vw;
 	}
 	#experience {
 		&> h3 + p code {
@@ -597,10 +597,10 @@ strong {
 		background-color: rgb(255, 184, 60);
 		--line-height: 1.5rem;
 		--table-bottom-margin: 1rem;
-		--page-margin-top: 0.5rem;
+		--page-margin-top: 1.5rem;
 		--page-margin-left: 1.5rem;
-		--page-margin-right: 1.5rem;
-		--align-guide-width: 5vw;
+		--page-margin-right: 0rem; /* use max device width */
+		--align-guide-width: 1vw;
 	}
 	#experience {
 		&> h3 + p code {
@@ -616,7 +616,7 @@ strong {
 		background-color: moccasin;
 		--line-height: 1.5rem;
 		--table-bottom-margin: 1rem;
-		--page-margin-top: 0.5rem;
+		--page-margin-top: 2rem;
 		--page-margin-left: 2rem;
 		--page-margin-right: 2rem;
 		--align-guide-width: 25vw;
