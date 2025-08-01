@@ -515,7 +515,7 @@ strong {
 	}
 }
 
-@media only screen and (max-width: 599px) {
+@media only screen and (min-width: 376px) and (max-width: 599px) {
 	/* mobile browsers < 600px; (iPhone) */
 	body {
 		background-color: pink;
