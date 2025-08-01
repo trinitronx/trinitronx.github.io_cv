@@ -112,7 +112,8 @@ ul {
 	/* left: 25%; */
 	/* width: 75%; */
 	margin-bottom: 1.5rem;
-	margin-top: -0.5rem;
+	/* margin-top: -0.5rem; */
+	margin-top: 0.5rem;
 }
 
 /*uncomment to get dashes in the list*/
@@ -457,7 +458,7 @@ strong {
 		min-width: max-content;
 	}
 
-	& > p, ol, ul, li {
+	& > p, ol, ul {
 		left: var(--align-guide-width);
 		width: var(--align-guide-main-width);
 	}
