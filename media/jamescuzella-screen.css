@@ -269,6 +269,8 @@ a:hover {
 	#webaddress table {
 		border-collapse: collapse;
 		empty-cells: hide;
+		/* text-indent: initial; */
+		box-sizing: content-box;
 		& th {
 			display: none;
 			line-height: 0;	
