@@ -242,6 +242,8 @@ a:hover {
 	gap: var(--gap);
 	flex-flow: column nowrap;
 	align-items: center;
+	justify-content: center;
+	/* inline-size: fit-content; */
 
 	h1, h2, h3 {
 		text-align: center;
