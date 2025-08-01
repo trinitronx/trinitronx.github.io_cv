@@ -706,6 +706,9 @@ strong {
 			#webaddress {
 				color: #32c3a6; /* contrast-ratio: 7.95:1 */
 			}
+			#webaddress td {
+				border-left-color: #ffffff; /* contrast-ratio: 17.59:1 */
+			}
 		}
 	}
 	@media (forced-colors: none) and (prefers-color-scheme: light),
@@ -722,6 +725,9 @@ strong {
 			#webaddress {
 				/* color: #0c6453; contrast ratio: 7.08:1 */
 				color: #0b5b4d; /* contrast ration: 8.02:1 */
+			}
+			#webaddress td {
+				border-left-color: #141a1b; /* contrast-ratio: 17.59:1 */
 			}
 		}
 	}
