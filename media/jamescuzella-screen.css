@@ -458,7 +458,7 @@ strong {
 		min-width: max-content;
 	}
 
-	& > p, ol, ul {
+	& > p, & > ol, & > ul {
 		left: var(--align-guide-width);
 		width: var(--align-guide-main-width);
 	}
