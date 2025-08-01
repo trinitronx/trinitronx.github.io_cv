@@ -565,7 +565,21 @@ strong {
 
 /* tablet portrait */
 @media only screen and (min-width: 600px) and (orientation:portrait) {
-	/* Tablets in portrait orientation */
+	@media (min-resolution: 2dppx) {
+		/* High DPI screens (e.g. Retina, 4k displays) */
+		:root, html {
+			/* font-size: 26px; // at 1em = 16px */
+			font-size: 1.625em;
+		}
+	}
+	@media (min-resolution: 3dppx) {
+		/* High DPI screens (e.g. Retina, 4k displays) */
+		:root, html {
+			/* font-size: 26px; // at 1em = 16px */
+			font-size: 1.625em;
+		}
+	}
+	/* Tablets & large screen phones in portrait orientation */
 	body {
 		/* background-color: magenta; */
 		background-color: unset;
