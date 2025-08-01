@@ -497,7 +497,7 @@ strong {
 			border-bottom: 0.0625rem solid black;
 			text-wrap: balance;
 			display: flex;
-			justify-content: space-between;
+			justify-content: center;
 			align-items: center;
 			flex-flow: row wrap;
 		}
