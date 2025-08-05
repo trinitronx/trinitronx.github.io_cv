@@ -699,6 +699,10 @@ strong {
 	@media (forced-colors: none) and (prefers-color-scheme: dark),
 	       (-ms-high-contrast: active) and (prefers-color-scheme: dark),
 		   (-ms-high-contrast: white-on-black) {
+		::selection {
+			color: #000000; /* contrast-ratio: 12.13:1 */
+			background: #93d1c1;
+		}
 		html {
 			color: #ffffff; /* contrast-ratio: 17.59:1 */
 			background-color: #141a1b;
@@ -718,6 +722,10 @@ strong {
 	@media (forced-colors: none) and (prefers-color-scheme: light),
 	       (-ms-high-contrast: active) and (prefers-color-scheme: light),
 		   (-ms-high-contrast: black-on-white) {
+		::selection {
+			color: #93d1c1; /* contrast-ratio: 12.13:1 */
+			background: #000000;
+		}
 		html {
 			color: #141a1b; /* contrast ratio: 17.59:1 */
 			background-color: #fff;
@@ -750,6 +758,11 @@ strong {
 
 @media screen and (prefers-contrast: no-preference) and (forced-colors: none) {
 	@media (prefers-color-scheme: dark) {
+		::selection {
+			color: #93d1c1; /* contrast-ratio: 12.13:1 */
+			background-color: #000000;
+			text-shadow: #000000 1px 1px 15px, #000000 -1px -1px 15px;
+		}
 		html {
 			color: #d6d6d6; /* contrast-ratio: 9.92:1 */
 			background-color: #282a2b;
@@ -767,6 +780,11 @@ strong {
 		}
 	}
 	@media (prefers-color-scheme: light) {
+		::selection {
+			color: #000000;
+			background: #93d1c1;
+			text-shadow: #93d1c1 1px 1px 15px, #93d1c1 -1px -1px 15px;
+		}
 		code {
 			color: #777;
 		}
