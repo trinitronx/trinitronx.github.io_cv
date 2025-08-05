@@ -344,10 +344,10 @@ a:hover {
 		}
 	}
 	table > tbody > tr {
-		margin-top: 0.5rem;
 		/* border-top: 0.0625rem groove #222; */
 		border-bottom: 0.0625rem groove #444; /* TODO: Remove this */
 		td {
+			padding-top: 0.5rem;
 			padding-bottom: var(--line-height);
 			vertical-align: bottom;
 		}
