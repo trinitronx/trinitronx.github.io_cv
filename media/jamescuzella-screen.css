@@ -55,6 +55,7 @@ body {
 	--heading-font-size-h1: calc(3 * var(--default-font-size));
 	--heading-font-size-h2: calc(1.1 * var(--default-font-size));
 	--heading-font-size-h3: var(--default-font-size);
+	--heading-font-size-h4: var(--default-font-size);
 	--table-bottom-margin: var(--default-font-size);
 	--page-margin-top: calc(1.5 * var(--default-font-size));
 	--page-margin-left: var(--default-font-size);
@@ -463,6 +464,10 @@ strong {
 		text-align: right;
     	width: var(--align-guide-width);
 		min-width: max-content;
+		font-size: var(--heading-font-size-h4);
+		line-height: var(--heading-font-size-h4);
+		margin-bottom: var(--heading-font-size-h4);
+		font-weight: 800;
 	}
 
 	& > p, & > ol, & > ul {
