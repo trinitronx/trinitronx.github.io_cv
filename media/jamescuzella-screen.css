@@ -514,6 +514,15 @@ strong {
 			border-bottom: none;
 		}
 	}
+	#experience {
+		&> h3 + p code {
+			position: relative;
+			text-align: right;
+			left: unset;
+			top: unset;
+			right: 0;
+		}
+	}
 }
 
 @media only screen and (min-width: 376px) and (max-width: 599px) {
@@ -535,6 +544,13 @@ strong {
 		& h2, h3 {
 			text-align: left;
 			width: unset;
+		}
+		&> h3 + p code {
+			position: relative;
+			text-align: right;
+			left: unset;
+			top: unset;
+			right: 0;
 		}
 	}
 	/* Override Flexbox layout for table fit on small screen */
