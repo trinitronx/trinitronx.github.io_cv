@@ -571,12 +571,12 @@ strong {
 	/* iPhone 5/5SE and smaller */
 	body {
 		background-color: blue;
-		--line-height: 0.75rem;
-		--table-bottom-margin: 0.75rem;
-		--page-margin-top: 1.5rem;
+		--line-height: var(--default-font-size);
+		--table-bottom-margin: calc(0.75 * var(--default-font-size));
+		--page-margin-top: calc(1.5 * var(--default-font-size));
 		--page-margin-left: 0;
 		--page-margin-right: 0;
-		--align-guide-width: 5vw;
+		--align-guide-width: 0vw;
 	}
 
 	/* Override Flexbox layout for table fit on small screen */
