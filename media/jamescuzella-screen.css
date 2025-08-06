@@ -608,6 +608,37 @@ strong {
 			border-bottom: none;
 		}
 	}
+
+	#skills {
+		& table {
+			margin-bottom: var(--table-bottom-margin);
+		}
+		& td {
+			padding-left: 1rem;
+			padding-right: 1rem;
+			/* border-left: 0.0625rem solid black; */
+			border-left: none;
+			border-right: none;
+			padding-top:  var(--table-td-padding-top);
+			padding-bottom:  var(--table-td-padding-bottom);
+			/* border-bottom: 0.0625rem solid black; */
+			text-wrap: balance;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-flow: row wrap;
+		}
+		& table tr td:first-child,
+		& table tr th:first-child {
+			border-top: none;
+		}
+
+		& table tr td:last-child,
+		& table tr th:last-child {
+			border-top: none;
+			border-bottom: none;
+		}
+	}
 	#experience {
 		&> h3 + p code {
 			position: relative;
