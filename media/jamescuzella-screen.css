@@ -190,6 +190,12 @@ a:hover {
 	color: #43a5d5;
 }
 
+a:focus-visible {
+	outline: #43a5d5 dotted 2px;
+	outline-offset: calc(0.5 * var(--table-td-padding-top));
+	border-radius: calc(0.5 * var(--table-td-padding-top));
+}
+
 /* Flexbox layout */
 #cv {
 	--gap: 0rem;
