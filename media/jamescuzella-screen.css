@@ -20,7 +20,6 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font: inherit;
-	font-size: 1rem; /* default element font size = base */
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -50,17 +49,18 @@ table {
 /* end of reset */
 
 body {
-	--line-height: 1.5rem;
-	--heading-line-height: 2rem;
-	--heading-font-size-h1: 3rem;
-	--heading-font-size-h2: 1.1rem;
-	--heading-font-size-h3: 1rem;
-	--table-bottom-margin: 1rem;
-	--page-margin-top: 1.5rem;
-	--page-margin-left: 1rem;
-	--page-margin-right: 1rem;
-	--table-td-padding-top: 0.5rem;
-	--table-td-padding-bottom: 0.5rem;
+	--default-font-size: 1rem; /* default element font size = base */
+	--line-height: calc(1.5 * var(--default-font-size));
+	--heading-line-height: calc(2 * var(--default-font-size));
+	--heading-font-size-h1: calc(3 * var(--default-font-size));
+	--heading-font-size-h2: calc(1.1 * var(--default-font-size));
+	--heading-font-size-h3: var(--default-font-size);
+	--table-bottom-margin: var(--default-font-size);
+	--page-margin-top: calc(1.5 * var(--default-font-size));
+	--page-margin-left: var(--default-font-size);
+	--page-margin-right: var(--default-font-size);
+	--table-td-padding-top: calc(0.5 * var(--default-font-size));
+	--table-td-padding-bottom: calc(0.5 * var(--default-font-size));
 
 	/* Alignment guide for main centered content */
 	--align-guide-main-width: calc(100vw - 2 * var(--align-guide-width) - var(--page-margin-left) - var(--page-margin-right));
@@ -75,6 +75,7 @@ body {
 	line-height: var(--line-height);
 	font-family: sans-serif;
 	font-size-adjust: none;
+	font-size: var(--default-font-size);
 
 	line-height: var(--line-height);
 	/*also written as...  font: normal normal 400 100%/1rem;*/
@@ -278,8 +279,8 @@ a:hover {
 	}
 	
 	#webaddress td {
-		padding-left: 1rem;
-		padding-right: 1rem;
+		padding-left: var(--default-font-size);
+		padding-right: var(--default-font-size);
 		border-left: 0.0625rem solid black;
 		text-wrap: balance;
 		font-weight: 800;
@@ -517,6 +518,9 @@ strong {
 
 @media only screen and (min-width: 376px) and (max-width: 599px) {
 	/* mobile browsers < 600px; (iPhone) */
+	:root {
+		font-size: clamp(1em, 3vw, 2.5em);
+	}
 	body {
 		background-color: pink;
 		--line-height: 1rem;
@@ -571,23 +575,21 @@ strong {
 		/* High DPI screens (e.g. Retina, 4k displays) */
 		:root, html {
 			/* font-size: 26px; // at 1em = 16px */
-			font-size: 1.625em;
 		}
 	}
 	@media (min-resolution: 3dppx) {
 		/* High DPI screens (e.g. Retina, 4k displays) */
 		:root, html {
 			/* font-size: 26px; // at 1em = 16px */
-			font-size: 1.625em;
 		}
+	}
+	:root {
+		font-size: clamp(1em, 2vw, 2.5em);
 	}
 	/* Tablets & large screen phones in portrait orientation */
 	body {
-		/* background-color: magenta; */
-		background-color: unset;
-		--line-height: 1.5rem;
-		--table-bottom-margin: 1rem;
-		--page-margin-top: 1.9rem;
+		--line-height: calc(1.5 * var(--default-font-size));
+		--page-margin-top: calc(1.9 * var(--default-font-size));
 		--page-margin-left: 0.2rem;
 		--page-margin-right: 0rem; /* use max device width */
 		--align-guide-width: 1.5vw;
@@ -612,10 +614,9 @@ strong {
 	body {
 		background-color: rgb(255, 184, 60);
 		--line-height: 1.5rem;
-		--table-bottom-margin: 1rem;
-		--page-margin-top: 1.5rem;
-		--page-margin-left: 1.5rem;
-		--page-margin-right: 0rem; /* use max device width */
+		/* use more device width */
+		--page-margin-left: calc(0.75 * var(--default-font-size));
+		--page-margin-right: calc(0.75 * var(--default-font-size));
 		--align-guide-width: 1vw;
 	}
 	#experience {
@@ -628,13 +629,12 @@ strong {
 }
 /* desktop */
 @media only screen and (min-width: 1200px) {
+	:root {
+		font-size: clamp(1em, 1.2vw, 2.5em);
+	}
 	body {
 		background-color: moccasin;
-		--line-height: 1.5rem;
-		--table-bottom-margin: 1rem;
-		--page-margin-top: 2rem;
-		--page-margin-left: 2rem;
-		--page-margin-right: 2rem;
+		--default-font-size: 1.35rem;
 		--align-guide-width: 25vw;
 	}
  }
@@ -642,10 +642,6 @@ strong {
 /* large desktop */
 @media only screen and (min-width: 1800px) {
 	body {
-		/* background-color: rgb(136, 201, 177); */
-		background-color: unset;
-		--line-height: 2rem;
-		--table-bottom-margin: 1.5rem;
 		--align-guide-width: 25vw;
 	}
  }
