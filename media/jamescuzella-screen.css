@@ -754,7 +754,7 @@ strong {
 	/* Tablets in landscape orientation */
 	body {
 		background-color: rgb(255, 184, 60);
-		--line-height: 1.5rem;
+		--line-height: calc(1.5 * var(--default-font-size));
 		/* use more device width */
 		--page-margin-left: calc(0.75 * var(--default-font-size));
 		--page-margin-right: calc(0.75 * var(--default-font-size));
