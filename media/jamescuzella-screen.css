@@ -476,9 +476,98 @@ strong {
 	}
 }
 
+/* watches & LCDs */
+/* Reference: https://yesviz.com/devices/apple-watch-series-6-44mm/ */
+@media only screen and (max-width: 224px) {
+		/* Apple Watch series 6 and smaller (224px x 184px) */
+		body {
+			/* background-color: gray; */
+			--line-height: var(--default-font-size);
+			--table-bottom-margin: var(--default-font-size);
+			--page-margin-top: calc(1 * var(--default-font-size));
+			--page-margin-left: 0;
+			--page-margin-right: 0;
+			--align-guide-width: 0vw;
+			--heading-font-size-h1: calc(2 * var(--default-font-size));
+		}
+
+		#header {
+			& #webaddress td {
+				padding-left: 1rem;
+				padding-right: 1rem;
+				border-left: none;
+				border-right: none;
+				padding-top:  var(--table-td-padding-top);
+				padding-bottom:  var(--table-td-padding-bottom);
+				border-bottom: 0.0625rem solid black;
+				text-wrap: balance;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-flow: row wrap;
+			}
+
+			& #webaddress table tr td:first-child,
+			& #webaddress table tr th:first-child {
+				border-top: none;
+			}
+
+			& #webaddress table tr td:last-child,
+			& #webaddress table tr th:last-child {
+				border-top: none;
+				border-bottom: none;
+			}
+		}
+
+		#skills {
+			& table {
+				margin-bottom: var(--table-bottom-margin);
+			}
+			& td {
+				padding-left: 1rem;
+				padding-right: 1rem;
+				/* border-left: 0.0625rem solid black; */
+				border-left: none;
+				border-right: none;
+				padding-top:  var(--table-td-padding-top);
+				padding-bottom:  var(--table-td-padding-bottom);
+				/* border-bottom: 0.0625rem solid black; */
+				text-wrap: balance;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-flow: row wrap;
+			}
+			& table tr td:first-child,
+			& table tr th:first-child {
+				border-top: none;
+			}
+
+			& table tr td:last-child,
+			& table tr th:last-child {
+				border-top: none;
+				border-bottom: none;
+			}
+		}
+		#experience {
+			& h2, & h3, & h4 {
+				text-align: left;
+				min-width: fit-content;
+			}
+
+			&> h3 + p code {
+				position: relative;
+				text-align: right;
+				left: unset;
+				top: unset;
+				right: 0;
+			}
+		}
+}
+
 /* phones */
 
-@media only screen and (max-width: 375px) {
+@media only screen and (min-width: 225px) and (max-width: 375px) {
 	/* iPhone 5/5SE and smaller */
 	body {
 		background-color: blue;
