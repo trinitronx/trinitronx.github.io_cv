@@ -565,6 +565,59 @@ strong {
 		}
 }
 
+/* max-width: 106px @ 1rem = 16px */
+@media only screen and (max-width: 6.625rem) {
+	/* Wrap anywhere for extra small displays */
+	#header {
+		& h1 {
+			min-width: fit-content;
+			overflow-wrap: anywhere;
+		}
+		& #webaddress td {
+			overflow-wrap: anywhere;
+		}
+	}
+	#skills {
+		/* Wrap skills h2 text anywhere */
+		& h2 {
+			min-width: fit-content;
+			overflow-wrap: anywhere;
+		}
+		/* Wrap skills table text anywhere */
+		& table tr td {
+			overflow-wrap: anywhere;
+			min-width: fit-content;
+		}
+		& table > tbody > tr {
+			& td:first-child {
+				min-width: min-content;
+			}
+		}
+	}
+}
+/* max-width: 192px @ 1rem = 16px */
+@media only screen and (min-width: 6.626rem) and (max-width: 12rem) {
+	/* Wrap webaddress table text anywhere */
+	#header {
+		& #webaddress td {
+			overflow-wrap: anywhere;
+		}
+	}
+	/* Wrap skills table text anywhere */
+	#skills {
+		/* Wrap skills table text anywhere */
+		& table tr td {
+			overflow-wrap: anywhere;
+			min-width: fit-content;
+		}
+		& table > tbody > tr {
+			& td:first-child {
+				min-width: min-content;
+			}
+		}
+	}
+}
+
 /* phones */
 
 @media only screen and (min-width: 225px) and (max-width: 375px) {
@@ -646,6 +699,17 @@ strong {
 			left: unset;
 			top: unset;
 			right: 0;
+		}
+	}
+}
+
+/* max-width: ~284.4px @ 1rem = 16px */
+@media only screen and (max-width: 17.775rem) {
+	/* Reflow experience workplace headers to fit content */
+	#experience {
+		& h3 {
+			text-align: left;
+			min-width: fit-content;
 		}
 	}
 }
