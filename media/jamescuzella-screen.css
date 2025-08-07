@@ -1003,7 +1003,7 @@ strong {
 		::selection {
 			color: #93d1c1; /* contrast-ratio: 12.13:1 */
 			background-color: #000000;
-			text-shadow: 1px 1px 1rem #000000, -1px -1px 1rem #000000;
+			text-shadow: 1px 1px 0.9375rem #000000, -1px -1px 0.9375rem #000000;
 		}
 		html {
 			--fg-color: #d6d6d6;
@@ -1026,11 +1026,12 @@ strong {
 	}
 	@media (prefers-color-scheme: light) {
 		::selection {
-			color: #000000;
+			color: #000000; /* contrast-ratio: 12.13:1 */
 			background: #93d1c1;
 			/* Note: used luminance trick with base color: #0b5b4d
 			   Reference: https://www.joshwcomeau.com/css/designing-shadows/ */
-			text-shadow: hsl(169.5, 78.43%, 57%) 10px 10px 15px, hsl(169.5, 78.43%, 38%) -10px -10px 15px
+			/* With shadow, bg color darkens to #7dcdbb, fg:bg contrast-ratio: 11.32:1 */
+			text-shadow: 1px 1px 0.9375rem hsl(169.5, 78.43%, 57%), -1px -1px 0.9375rem hsl(169.5, 78.43%, 38%);
 		}
 		html {
 			--fg-color: #000000;
