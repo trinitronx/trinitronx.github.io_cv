@@ -1,5 +1,5 @@
 ---
-layout: cv-textsize-js
+layout: cv
 title: "James Cuzella's CV"
 ---
 <!-- markdownlint-disable-file MD024 MD025 -->
@@ -15,11 +15,6 @@ title: "James Cuzella's CV"
 </div>
 
 ---
-
-<!-- <label for="myRange">
-  Base font-size
- <input type="range" min="1" max="3" value="1" step="0.01" class="slider" id="myRange">
-</label> -->
 
 </div>
 
