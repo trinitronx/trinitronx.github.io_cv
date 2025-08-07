@@ -48,7 +48,8 @@ table {
 
 /* end of reset */
 
-body {
+
+html body {
 	--default-font-size: 1rem; /* default element font size = base */
 	--line-height: calc(1.5 * var(--default-font-size));
 	--heading-line-height: calc(2 * var(--default-font-size));
