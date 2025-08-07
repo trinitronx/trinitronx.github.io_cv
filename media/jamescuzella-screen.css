@@ -855,8 +855,10 @@ strong {
 /* breakpoint was when tablet defaults kicked in above */
 /* max-width: 55.6875rem = ~891px @ 1rem = 16px */
 /* max-width: 74.9375rem = ~1199px @ 1rem = 16px */
+/* max-width: 70.25rem = ~1124px @ 1rem = 16px */
 @media screen and (max-width: 55.6875rem),
-       screen and (max-width: 74.9375rem) and (orientation: portrait) {
+       screen and (max-width: 74.9375rem) and (orientation: portrait),
+       screen and (max-width: 70.25rem) and (orientation: landscape) {
 	#school {
 		/* Flexbox column layout for tables (tr as flex container) */
 		& > table tr {
