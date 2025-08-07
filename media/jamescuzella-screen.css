@@ -113,10 +113,9 @@ ul {
 }*/
 
 li {
-	/*second line indent*/
+	/* second line indent */
 	padding-left: 1.25rem;
 	text-indent: -1.25rem;
-	/*color: #777;*/
 }
 
 li ul {
@@ -137,7 +136,7 @@ h1 {
 }
 
 h1+p {
-	/*subtitle*/
+	/* subtitle */
 	font-style: italic;
 	font-size: 110%;
 }
@@ -195,35 +194,6 @@ a:focus-visible {
 
 #cv > div {
 	position: relative;
-	/* background-color: magenta; */
-	/* &::after, &::before {
-		content: 'THING';
-		position: absolute;
-		background-color: var(--line-color);
-		z-index: 1;
-	} */
-	/* &::after {
-		content: '';
-		position: absolute;
-		background-color: var(--line-color);
-		z-index: 1;
-
-		inline-size: 100vw;
-		block-size: var(--line-thickness);
-		inset-inline-start: 0;
-		inset-block-start: calc(var(--line-offset) * -1);
-	}
-	&::before {
-		content: '';
-		position: absolute;
-		background-color: #ffac10;
-		z-index: 1;
-
-		inline-size: var(--line-thickness);
-		block-size: 100vh;
-		inset-block-start: 0;
-		inset-inline-start: calc(var(--line-offset) * -1);
-	} */
 }
 
 /* Header flexbox layout */
@@ -347,35 +317,6 @@ a:focus-visible {
 
 #skills > * {
 	position: relative;
-	/* background-color: magenta; */
-	&::after, &::before {
-		content: '';
-		position: absolute;
-		background-color: var(--line-color);
-		z-index: 1;
-	}
-	&::after {
-		content: '';
-		position: absolute;
-		background-color: var(--line-color);
-		z-index: 1;
-
-		inline-size: 100vw;
-		block-size: var(--line-thickness);
-		inset-inline-start: 0;
-		inset-block-start: calc(var(--line-offset) * -1);
-	}
-	&::before {
-		content: '';
-		position: absolute;
-		background-color: #ffac10;
-		z-index: 1;
-
-		inline-size: var(--line-thickness);
-		block-size: 100vh;
-		inset-block-start: 0;
-		inset-inline-start: calc(var(--line-offset) * -1);
-	}
 }
 
 #skills > p {
@@ -383,15 +324,9 @@ a:focus-visible {
 	margin-left: unset;
 	margin-top: var(--line-height);
 	text-align: justify;
-	/* TODO: Fix alignment */
-	/* position: absolute; */
-    /* text-align: left; */
-    /* right: -20%; */
-	/* width: 92%; */
 }
 
 em {
-	/* font-weight: bold; */
 	font-style: italic;
 }
 
@@ -895,27 +830,6 @@ strong {
 		--align-guide-width: 25vw;
 	}
  }
-
-/* @media only screen and (min-width: 1440px) {
-	/* styles for browsers larger than 1440px; 
-}
-@media only screen and (min-width: 2000px) {
-	/* for sumo sized (mac) screens 
-} */
-
-/* 
-@media only screen and (max-width: 768px) {
-   /* default iPad 
-} */
-/* different techniques for iPad screening */
-/* @media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation:portrait) {
-  /* iPad portrait layout
-}
-
-@media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation:landscape) {
-  /* iPad landscape layout
-} */
-
 
 @media screen and (prefers-contrast: more),
        screen and (prefers-contrast: more) and (forced-colors: active) {
