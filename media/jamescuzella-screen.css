@@ -161,11 +161,11 @@ a {
 }
 
 a:hover {
-	color: #43a5d5;
+	color: var(--link-highlight-color);
 }
 
 a:focus-visible {
-	outline: #43a5d5 dotted 2px;
+	outline: var(--link-highlight-color) dotted 2px;
 	outline-offset: calc(0.5 * var(--table-td-padding-top));
 	border-radius: calc(0.5 * var(--table-td-padding-top));
 }
@@ -925,8 +925,12 @@ strong {
 		html {
 			--fg-color: #ffffff;
 			--bg-color: #141a1b;
+			--link-highlight-color: #84d9ff; /* contrast-ratio: 11.18:1 */
 			color: var(--fg-color); /* contrast-ratio: 17.59:1 */
 			background-color: var(--bg-color);
+		}
+		a:hover {
+			font-weight: bolder;
 		}
 		code {
 			color: #ddd; /* contrast-ratio: 12.95:1 */
@@ -950,8 +954,12 @@ strong {
 		html {
 			--fg-color: #141a1b;
 			--bg-color: #ffffff;
+			--link-highlight-color: #005c8a; /* contrast-ratio: 7.24:1 */
 			color: var(--fg-color); /* contrast ratio: 17.59:1 */
 			background-color: var(--bg-color);
+		}
+		a:hover {
+			font-weight: bolder;
 		}
 		code {
 			color: #222; /* contrast ratio: 15.9:1 */
@@ -989,6 +997,7 @@ strong {
 		html {
 			--fg-color: #d6d6d6;
 			--bg-color: #282a2b;
+			--link-highlight-color: #43a5d5; /* contrast-ratio: 5.2:1 */
 			color: var(--fg-color); /* contrast-ratio: 9.92:1 */
 			background-color: var(--bg-color);
 		}
@@ -1008,11 +1017,14 @@ strong {
 		::selection {
 			color: #000000;
 			background: #93d1c1;
-			text-shadow: #93d1c1 1px 1px 15px, #93d1c1 -1px -1px 15px;
+			/* Note: used luminance trick with base color: #0b5b4d
+			   Reference: https://www.joshwcomeau.com/css/designing-shadows/ */
+			text-shadow: hsl(169.5, 78.43%, 57%) 10px 10px 15px, hsl(169.5, 78.43%, 38%) -10px -10px 15px
 		}
 		html {
 			--fg-color: #000000;
 			--bg-color: #ffffff;
+			--link-highlight-color: #24759E; /* contrast-ratio: 5.1:1 */
 			color: var(--fg-color); /* contrast-ratio: 21:1 */
 			background-color: var(--bg-color);
 		}
