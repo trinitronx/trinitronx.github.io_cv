@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <meta name="viewport" content="width=device-width initial-scale=1.0" />
+  <title>{% if page.title %} {{ page.title }} | {% endif %}</title>
+  <link href="{{ 'media/' | append: site.style | append: '-screen.css' | relative_url }}" type="text/css" rel="stylesheet" media="screen">
+  <link href="{{ 'media/' | append: site.style | append: '-print.css'  | relative_url }}" type="text/css" rel="stylesheet" media="print">
+  <style>
+    label {
+      font-size:  18px;
+    }
+  </style>
+  <script type="text/javascript">
+    function setupFontRangeSlider() {
+      var headerDiv = document.querySelector('#header');
+      var myRange = document.querySelector('#myRange');
+      if (!myRange) {
+        var myLabel = document.createElement('label');
+        myLabel.setAttribute('for', 'myRange');
+        myLabel.textContent = 'Base font-size';
+        if (!headerDiv) {
+          document.body.appendChild(myLabel);
+        } else {
+          headerDiv.appendChild(myLabel);
+        }
+        myRange = document.createElement('input');
+        myRange.type = 'range';
+        myRange.min = 1;
+        myRange.max = 3;
+        myRange.value = 1;
+        myRange.step = 0.01;
+        myRange.className = 'slider';
+        myRange.id = 'myRange';
+        myLabel.appendChild(myRange);
+      }
+      myRange.addEventListener('input', ()=>{
+        const html = document.querySelector('html')
+        html.style.fontSize = myRange.value + 'em'
+      })
+    }
+
+    function ready(fn) {
+      if (document.readyState !== 'loading') {
+        console.log("readyState !== 'loading': " + document.readyState);
+        fn();
+      } else {
+        console.log("else readyState: " + document.readyState);
+        document.addEventListener('DOMContentLoaded', fn);
+      }
+    }
+
+    ready(setupFontRangeSlider);
+  </script>
+</head>
+<body>
+  <div id="main">
+    <div id="cv">
+    {{ content }}
+    </div>
+  </div>
+</body>
+</html>
