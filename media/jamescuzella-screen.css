@@ -1003,7 +1003,7 @@ strong {
 		::selection {
 			color: #93d1c1; /* contrast-ratio: 12.13:1 */
 			background-color: #000000;
-			text-shadow: #000000 1px 1px 15px, #000000 -1px -1px 15px;
+			text-shadow: 1px 1px 1rem #000000, -1px -1px 1rem #000000;
 		}
 		html {
 			--fg-color: #d6d6d6;
