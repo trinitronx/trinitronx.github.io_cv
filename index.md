@@ -218,7 +218,7 @@ Developed and programmed a concept inventory website designed to assess student 
 
 </div>
 
-<div id="education">
+<div id="school">
 
 ## EDUCATION
 

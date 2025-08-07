@@ -485,6 +485,52 @@ strong {
 	}
 }
 
+#school {
+
+	& > table {
+		width: 100%;
+		text-align: center;
+		border-collapse: collapse;
+		empty-cells: hide;
+		/* text-indent: initial; */
+		box-sizing: content-box;
+		& th {
+			display: none;
+			line-height: 0;
+		}
+	}
+
+	/* Flexbox layout for tables using tr as flex container */
+	& > table tr {
+		display: inline-flex;
+		flex-flow: row wrap;
+		/* justify-content: center; */
+		align-items: center;
+		/* gap: var(--default-font-size); */
+		justify-content: space-between;
+
+		min-width: fit-content;
+		max-width: max-content;
+	}
+
+	& > table tr td {
+		/* flex: 1; */
+		padding-left: var(--default-font-size);
+		padding-right: var(--default-font-size);
+		text-wrap: balance;
+		font-weight: 800;
+		text-align: center;
+
+		flex-grow: 1;
+		flex-shrink: 1;
+		flex-basis: fit-content;
+	}
+
+	& > table tr td + td {
+		border-left: solid 1px white;
+	}
+}
+
 /* watches & LCDs */
 /* Reference: https://yesviz.com/devices/apple-watch-series-6-44mm/ */
 @media only screen and (max-width: 224px) {
@@ -806,6 +852,34 @@ strong {
 		& h2, h3, h4 {
 			text-align: left;
 			width: unset;
+		}
+	}
+}
+
+/* Reflow inline-flex as columns for portrait tablets and below ~55.7rem viewport width */
+/* breakpoint was when tablet defaults kicked in above */
+/* max-width: 55.6875rem = ~891px @ 1rem = 16px */
+/* max-width: 74.9375rem = ~1199px @ 1rem = 16px */
+@media screen and (max-width: 55.6875rem),
+       screen and (max-width: 74.9375rem) and (orientation: portrait) {
+	#school {
+		/* Flexbox column layout for tables (tr as flex container) */
+		& > table tr {
+			flex-direction: column;
+		}
+
+		& > table tr td {
+			/* flex: 1; */
+			padding-left: none;
+			padding-right: none;
+			padding-top: var(--default-font-size);
+			padding-bottom: var(--default-font-size);
+			align-self: stretch;
+		}
+
+		& > table tr td + td {
+			border-left: none;
+			border-top: solid 1px white;
 		}
 	}
 }
