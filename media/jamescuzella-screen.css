@@ -527,7 +527,7 @@ strong {
 	}
 
 	& > table tr td + td {
-		border-left: solid 1px white;
+		border-left: solid 1px var(--fg-color);
 	}
 }
 
@@ -879,7 +879,7 @@ strong {
 
 		& > table tr td + td {
 			border-left: none;
-			border-top: solid 1px white;
+			border-top: solid 1px var(--fg-color);
 		}
 	}
 }
@@ -1013,8 +1013,10 @@ strong {
 			background: #93d1c1;
 		}
 		html {
-			color: #ffffff; /* contrast-ratio: 17.59:1 */
-			background-color: #141a1b;
+			--fg-color: #ffffff;
+			--bg-color: #141a1b;
+			color: var(--fg-color); /* contrast-ratio: 17.59:1 */
+			background-color: var(--bg-color);
 		}
 		code {
 			color: #ddd; /* contrast-ratio: 12.95:1 */
@@ -1024,7 +1026,7 @@ strong {
 				color: #32c3a6; /* contrast-ratio: 7.95:1 */
 			}
 			#webaddress td {
-				border-left-color: #ffffff; /* contrast-ratio: 17.59:1 */
+				border-left-color: var(--fg-color); /* contrast-ratio: 17.59:1 */
 			}
 		}
 	}
@@ -1036,8 +1038,10 @@ strong {
 			background: #000000;
 		}
 		html {
-			color: #141a1b; /* contrast ratio: 17.59:1 */
-			background-color: #fff;
+			--fg-color: #141a1b;
+			--bg-color: #ffffff;
+			color: var(--fg-color); /* contrast ratio: 17.59:1 */
+			background-color: var(--bg-color);
 		}
 		code {
 			color: #222; /* contrast ratio: 15.9:1 */
@@ -1048,7 +1052,7 @@ strong {
 				color: #0b5b4d; /* contrast ration: 8.02:1 */
 			}
 			#webaddress td {
-				border-left-color: #141a1b; /* contrast-ratio: 17.59:1 */
+				border-left-color: var(--fg-color); /* contrast-ratio: 17.59:1 */
 			}
 		}
 	}
@@ -1073,8 +1077,10 @@ strong {
 			text-shadow: #000000 1px 1px 15px, #000000 -1px -1px 15px;
 		}
 		html {
-			color: #d6d6d6; /* contrast-ratio: 9.92:1 */
-			background-color: #282a2b;
+			--fg-color: #d6d6d6;
+			--bg-color: #282a2b;
+			color: var(--fg-color); /* contrast-ratio: 9.92:1 */
+			background-color: var(--bg-color);
 		}
 		code {
 			color: #918f8e; /* contrast-ratio: 4.47:1 */
@@ -1084,7 +1090,7 @@ strong {
 				color: #2eb398; /* contrast-ratio: 5.5:1 */
 			}
 			#webaddress td {
-				border-left-color: #d6d6d6; /* contrast-ratio: 9.92:1 */
+				border-left-color: var(--fg-color); /* contrast-ratio: 9.92:1 */
 			}
 		}
 	}
@@ -1093,6 +1099,12 @@ strong {
 			color: #000000;
 			background: #93d1c1;
 			text-shadow: #93d1c1 1px 1px 15px, #93d1c1 -1px -1px 15px;
+		}
+		html {
+			--fg-color: #000000;
+			--bg-color: #ffffff;
+			color: var(--fg-color); /* contrast-ratio: 21:1 */
+			background-color: var(--bg-color);
 		}
 		code {
 			color: #777;
