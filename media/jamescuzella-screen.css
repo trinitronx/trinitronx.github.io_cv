@@ -769,16 +769,12 @@ strong {
  }
 
 /* tablet defaults */
-/* @media only screen and (min-width: 600px) and (max-width: 1199px) and (not(orientation: landscape)){ */
-/* TODO: Fix for iPhone vs tablet landscape? */
 @media only screen and (min-width: 600px) and (max-width: 1199px) {
 	/* Tablets or legacy VGA defaults */
 	body {
 		/* background-color: whitesmoke; */
 		--line-height: 1.5rem;
 		/* use more device width */
-		/* --page-margin-left: calc(0.75 * var(--default-font-size)); */
-		/* --page-margin-right: calc(0.75 * var(--default-font-size)); */
 		--align-guide-width: 1vw;
 	}
 	#experience {
