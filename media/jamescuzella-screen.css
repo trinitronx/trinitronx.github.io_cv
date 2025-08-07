@@ -434,7 +434,6 @@ strong {
 }
 
 #experience {
-	
 	h2 {
 		font-size: var(--heading-font-size-h2);
 		color: #cd3f45;
@@ -492,7 +491,6 @@ strong {
 		text-align: center;
 		border-collapse: collapse;
 		empty-cells: hide;
-		/* text-indent: initial; */
 		box-sizing: content-box;
 		& th {
 			display: none;
@@ -504,9 +502,7 @@ strong {
 	& > table tr {
 		display: inline-flex;
 		flex-flow: row wrap;
-		/* justify-content: center; */
 		align-items: center;
-		/* gap: var(--default-font-size); */
 		justify-content: space-between;
 
 		min-width: fit-content;
@@ -514,7 +510,6 @@ strong {
 	}
 
 	& > table tr td {
-		/* flex: 1; */
 		padding-left: var(--default-font-size);
 		padding-right: var(--default-font-size);
 		text-wrap: balance;
