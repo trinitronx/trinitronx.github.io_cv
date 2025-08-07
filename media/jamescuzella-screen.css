@@ -165,9 +165,20 @@ a:hover {
 }
 
 a:focus-visible {
-	outline: var(--link-highlight-color) dotted 2px;
+	outline-style: dotted;
+	outline-width: 2px;
+	outline-color: var(--link-highlight-color);
 	outline-offset: calc(0.5 * var(--table-td-padding-top));
 	border-radius: calc(0.5 * var(--table-td-padding-top));
+}
+@supports not selector(:focus-visible) {
+	a:focus {
+		outline-style: dotted;
+		outline-width: 2px;
+		outline-color: var(--link-highlight-color);
+		outline-offset: calc(0.5 * var(--table-td-padding-top));
+		border-radius: calc(0.5 * var(--table-td-padding-top));
+	}
 }
 
 /* Flexbox layout */
