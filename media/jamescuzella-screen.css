@@ -999,11 +999,44 @@ strong {
 }
 
 @media screen and (prefers-contrast: no-preference) and (forced-colors: none) {
+	/* Only use drop-shadow when contrast accessibility mode is off */
+	/* References:
+	     - https://www.joshwcomeau.com/css/designing-shadows/
+	     - https://www.joshwcomeau.com/shadow-palette/
+
+	   Note: omitted the 4th value, as it's only valid for box-shadow, not
+	   drop-shadow filter
+	*/
+	html {
+		--shadow-elevation-low:
+		drop-shadow(0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34))
+		drop-shadow(0.4px 0.8px 1px hsl(var(--shadow-color) / 0.34))
+		drop-shadow(1px 2px 2.5px hsl(var(--shadow-color) / 0.34));
+	  --shadow-elevation-medium:
+		drop-shadow(0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36))
+		drop-shadow(0.8px 1.6px 2px hsl(var(--shadow-color) / 0.36))
+		drop-shadow(2.1px 4.1px 5.2px hsl(var(--shadow-color) / 0.36))
+		drop-shadow(5px 10px 12.6px hsl(var(--shadow-color) / 0.36));
+	  --shadow-elevation-high:
+		drop-shadow(0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34))
+		drop-shadow(1.5px 2.9px 3.7px hsl(var(--shadow-color) / 0.34))
+		drop-shadow(2.7px 5.4px 6.8px hsl(var(--shadow-color) / 0.34))
+		drop-shadow(4.5px 8.9px 11.2px hsl(var(--shadow-color) / 0.34))
+		drop-shadow(7.1px 14.3px 18px hsl(var(--shadow-color) / 0.34))
+		drop-shadow(11.2px 22.3px 28.1px hsl(var(--shadow-color) / 0.34))
+		drop-shadow(17px 33.9px 42.7px hsl(var(--shadow-color) / 0.34))
+		drop-shadow(25px 50px 62.9px hsl(var(--shadow-color) / 0.34));
+	}
+
 	@media (prefers-color-scheme: dark) {
 		::selection {
 			color: #93d1c1; /* contrast-ratio: 12.13:1 */
 			background-color: #000000;
-			text-shadow: 1px 1px 0.9375rem #000000, -1px -1px 0.9375rem #000000;
+			text-shadow: 0.3px 0.5px 0.7px hsl(167.82, 59.11%, 18.12%),
+			             0.4px 0.8px 1px hsl(167.82, 59.11%, 18.12%),
+						   1px 2px 2.5px hsl(167.82 59.11% 18.12% / 0.34),
+						   -1px -1px 1.1vw #000000,
+						   1px 1px 1.1vw #000000;
 		}
 		html {
 			--fg-color: #d6d6d6;
@@ -1011,6 +1044,15 @@ strong {
 			--link-highlight-color: #43a5d5; /* contrast-ratio: 5.2:1 */
 			color: var(--fg-color); /* contrast-ratio: 9.92:1 */
 			background-color: var(--bg-color);
+			--shadow-color: 199.73deg 63.48% 10%;
+		}
+		a:hover {
+			text-decoration-line: underline overline;
+			text-decoration-style: solid;
+			text-decoration-color: var(--link-highlight-color);
+			text-decoration-skip-ink: all;
+			text-decoration-thickness: calc((1/16) * var(--default-font-size) / 11);
+			filter: var(--shadow-elevation-low);
 		}
 		code {
 			color: #918f8e; /* contrast-ratio: 4.47:1 */
@@ -1031,7 +1073,8 @@ strong {
 			/* Note: used luminance trick with base color: #0b5b4d
 			   Reference: https://www.joshwcomeau.com/css/designing-shadows/ */
 			/* With shadow, bg color darkens to #7dcdbb, fg:bg contrast-ratio: 11.32:1 */
-			text-shadow: 1px 1px 0.9375rem hsl(169.5, 78.43%, 57%), -1px -1px 0.9375rem hsl(169.5, 78.43%, 38%);
+			text-shadow: 1px 1px 1.1vw hsl(169.5, 78.43%, 57%), -1px -1px 1.1vw hsl(169.5, 78.43%, 38%);
+			/* filter: drop-shadow(1px 2px 8px var(hsl(169.5, 78.43%, 57%))); */
 		}
 		html {
 			--fg-color: #000000;
@@ -1039,6 +1082,16 @@ strong {
 			--link-highlight-color: #24759E; /* contrast-ratio: 5.1:1 */
 			color: var(--fg-color); /* contrast-ratio: 21:1 */
 			background-color: var(--bg-color);
+
+			/* --shadow-color: 0deg 0% 63%; */
+			/* --shadow-color: 169.5deg 78.43% 63%; */
+			--shadow-color: 200.16 62.89% 38.04%;
+		}
+		a:hover {
+			text-decoration: underline overline solid var(--link-highlight-color);
+			text-decoration-skip-ink: all;
+			text-decoration-thickness: calc((1/16) * var(--default-font-size) / 11);
+			filter: var(--shadow-elevation-low);
 		}
 		code {
 			color: #777;
@@ -1062,5 +1115,9 @@ strong {
 		animation-duration: 0.001ms !important;
 		animation-iteration-count: 1 !important;
 		transition-duration: 0.001ms !important;
+	}
+	a:hover {
+		text-decoration: none;
+		filter: none;
 	}
 }
