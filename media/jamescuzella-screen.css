@@ -1036,7 +1036,9 @@ strong {
 			             0.4px 0.8px 1px hsl(167.82, 59.11%, 18.12%),
 						   1px 2px 2.5px hsl(167.82 59.11% 18.12% / 0.34),
 						   -1px -1px 1.1vw #000000,
-						   1px 1px 1.1vw #000000;
+						   1px 1px 1.1vw #000000,
+						   -4px -5px 8px hsl(167.82deg, 17%, 24.8%),
+						   6px 6px 5px hsl(167.82deg, 20%, 18.8%);
 		}
 		html {
 			--fg-color: #d6d6d6;
@@ -1073,7 +1075,15 @@ strong {
 			/* Note: used luminance trick with base color: #0b5b4d
 			   Reference: https://www.joshwcomeau.com/css/designing-shadows/ */
 			/* With shadow, bg color darkens to #7dcdbb, fg:bg contrast-ratio: 11.32:1 */
-			text-shadow: 1px 1px 1.1vw hsl(169.5, 78.43%, 57%), -1px -1px 1.1vw hsl(169.5, 78.43%, 38%);
+			/* text-shadow: 1px 1px 1.1vw hsl(169.5, 78.43%, 57%), -1px -1px 1.1vw hsl(169.5, 78.43%, 38%); */
+			text-shadow: 0.3px 0.5px 0.7px hsl(169.5, 78.43%, 57%),
+			  0.4px 0.8px 1px hsl(169.5, 78.43%, 38%),
+			  1px 2px 2.5px hsl(169.5 78.43% 38% / 0.34),
+			  -1px -1px 1.1vw #93d1c1,
+			  1px 1px 1.1vw #93d1c1,
+			  -4px -5px 8px hsl(164.52deg, 40.26%, 46.8%),
+			  6px 6px 5px hsl(164.52deg, 40.26%, 38.8%);
+
 			/* filter: drop-shadow(1px 2px 8px var(hsl(169.5, 78.43%, 57%))); */
 		}
 		html {
