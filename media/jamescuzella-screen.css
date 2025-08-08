@@ -76,11 +76,9 @@ html body {
 	font-weight: 400;
 
 	line-height: var(--line-height);
-	font-family: sans-serif;
 	font-size-adjust: none;
 	font-size: var(--default-font-size);
 
-	line-height: var(--line-height);
 	/*also written as...  font: normal normal 400 100%/1rem;*/
 	font-family: Avenir,Verdana,sans-serif;
 	margin-top: var(--page-margin-top);
