@@ -1163,6 +1163,16 @@ strong {
 	}
 }
 
+@media (prefers-reduced-transparency: reduce) {
+	::selection {
+		text-shadow: none;
+	}
+
+	a:hover {
+		filter: none;
+	}
+}
+
 @media screen and (prefers-reduced-motion: no-preference) {
 	html {
 		scroll-behavior: smooth;
