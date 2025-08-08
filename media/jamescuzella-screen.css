@@ -48,6 +48,10 @@ table {
 
 /* end of reset */
 
+/* Heavily modified, but originally based on Dave Whipp's CV style
+   Original Source: media/davewhipp-screen.css
+   License: MIT
+*/
 
 html body {
 	--default-font-size: 1rem; /* default element font size = base */
@@ -145,7 +149,7 @@ h1+p {
 h2 {
 	font-size: var(--heading-font-size-h2);
 	line-height: var(--heading-font-size-h2);
-	color: #cd3f45;
+	color: var(--h2-color);
 	margin-top: calc(0.5 * var(--heading-font-size-h2));
 	margin-bottom: calc(0.5 * var(--heading-font-size-h2));
 }
@@ -285,7 +289,7 @@ a:focus-visible {
 		/* TODO: Setup print CSS */
 		line-height: var(--heading-line-height);
 		font-size: var(--heading-font-size-h2);
-		color: #9fca56;
+		color: var(--skills-h2-color);
 		margin-top: var(--line-height);
 		margin-bottom: unset;
 		width: unset;
@@ -342,7 +346,7 @@ strong {
 #experience {
 	h2 {
 		font-size: var(--heading-font-size-h2);
-		color: #cd3f45;
+		color: var(--h2-color);
 		text-align: right;
 		width: var(--align-guide-width);
 	}
@@ -849,21 +853,25 @@ strong {
 			background: #93d1c1;
 		}
 		html {
-			--fg-color: #ffffff;
+			--fg-color: #ffffff; /* contrast-ratio: 17.59:1 */
 			--bg-color: #141a1b;
 			--link-highlight-color: #84d9ff; /* contrast-ratio: 11.18:1 */
-			color: var(--fg-color); /* contrast-ratio: 17.59:1 */
+			--h2-color: #fe8686; /* contrast-ratio: 7.51:1 */
+			--code-color: #ddd; /* contrast-ratio: 12.95:1 */
+			--webaddress-link-color: #32c3a6; /* contrast-ratio: 7.95:1 */
+			--skills-h2-color: #9fca56; /* contrast-ratio: 9.26:1 */
+			color: var(--fg-color);
 			background-color: var(--bg-color);
 		}
 		a:hover {
 			font-weight: bolder;
 		}
 		code {
-			color: #ddd; /* contrast-ratio: 12.95:1 */
+			color: var(--code-color);
 		}
 		#header {
 			#webaddress {
-				color: #32c3a6; /* contrast-ratio: 7.95:1 */
+				color: var(--webaddress-link-color);
 			}
 			#webaddress td {
 				border-left-color: var(--fg-color); /* contrast-ratio: 17.59:1 */
@@ -878,22 +886,31 @@ strong {
 			background: #000000;
 		}
 		html {
-			--fg-color: #141a1b;
+			--fg-color: #000000; /* contrast-ratio: 21:1 */
 			--bg-color: #ffffff;
 			--link-highlight-color: #005c8a; /* contrast-ratio: 7.24:1 */
-			color: var(--fg-color); /* contrast ratio: 17.59:1 */
+			--h2-color: #86181d; /* contrast-ratio: 9.71:1 */
+			--code-color: #222; /* contrast-ratio: 15.9:1 */
+			--webaddress-link-color: #044e42; /* contrast-ratio: 9.66:1 */
+			--skills-h2-color: #264200; /* contrast-ratio: 11.28:1 */
+			color: var(--fg-color);
 			background-color: var(--bg-color);
 		}
 		a:hover {
 			font-weight: bolder;
 		}
 		code {
-			color: #222; /* contrast ratio: 15.9:1 */
+			color: var(--code-color);
+		}
+		#skills {
+			h2 {
+				color: var(--skills-h2-color);
+			}
 		}
 		#header {
 			#webaddress {
 				/* color: #0c6453; contrast ratio: 7.08:1 */
-				color: #0b5b4d; /* contrast ration: 8.02:1 */
+				color: var(--webaddress-link-color);
 			}
 			#webaddress td {
 				border-left-color: var(--fg-color); /* contrast-ratio: 17.59:1 */
@@ -908,7 +925,7 @@ strong {
 	/* @media (prefers-color-scheme: dark) {} */
 	@media (prefers-color-scheme: light) {
 		code {
-			color: #AAA;
+				border-left-color: var(--fg-color);
 		}
 	}
 }
@@ -956,10 +973,14 @@ strong {
 						   6px 6px 5px hsl(167.82deg, 20%, 18.8%);
 		}
 		html {
-			--fg-color: #d6d6d6;
+			--fg-color: #d6d6d6; /* contrast-ratio: 9.92:1 */
 			--bg-color: #282a2b;
 			--link-highlight-color: #43a5d5; /* contrast-ratio: 5.2:1 */
-			color: var(--fg-color); /* contrast-ratio: 9.92:1 */
+			--h2-color: #d4595f; /* contrast-ratio: 4.51:1 */
+			--code-color: #918f8e; /* contrast-ratio: 4.47:1 */
+			--webaddress-link-color: #2eb398; /* contrast-ratio: 5.5:1 */
+			--skills-h2-color: #9fca56; /* contrast-ratio: 7.59:1 */
+			color: var(--fg-color);
 			background-color: var(--bg-color);
 			--shadow-color: 199.73deg 63.48% 10%;
 		}
@@ -972,11 +993,16 @@ strong {
 			filter: var(--shadow-elevation-low);
 		}
 		code {
-			color: #918f8e; /* contrast-ratio: 4.47:1 */
+			color: var(--code-color);
+		}
+		#skills {
+			h2 {
+				color: var(--skills-h2-color);
+			}
 		}
 		#header {
 			#webaddress {
-				color: #2eb398; /* contrast-ratio: 5.5:1 */
+				color: var(--webaddress-link-color);
 			}
 			#webaddress td {
 				border-left-color: var(--fg-color); /* contrast-ratio: 9.92:1 */
@@ -990,7 +1016,6 @@ strong {
 			/* Note: used luminance trick with base color: #0b5b4d
 			   Reference: https://www.joshwcomeau.com/css/designing-shadows/ */
 			/* With shadow, bg color darkens to #7dcdbb, fg:bg contrast-ratio: 11.32:1 */
-			/* text-shadow: 1px 1px 1.1vw hsl(169.5, 78.43%, 57%), -1px -1px 1.1vw hsl(169.5, 78.43%, 38%); */
 			text-shadow: 0.3px 0.5px 0.7px hsl(169.5, 78.43%, 57%),
 			  0.4px 0.8px 1px hsl(169.5, 78.43%, 38%),
 			  1px 2px 2.5px hsl(169.5 78.43% 38% / 0.34),
@@ -1002,10 +1027,14 @@ strong {
 			/* filter: drop-shadow(1px 2px 8px var(hsl(169.5, 78.43%, 57%))); */
 		}
 		html {
-			--fg-color: #000000;
+			--fg-color: #141a1b;  /* contrast ratio: 17.59:1 */
 			--bg-color: #ffffff;
 			--link-highlight-color: #24759E; /* contrast-ratio: 5.1:1 */
-			color: var(--fg-color); /* contrast-ratio: 21:1 */
+			--h2-color: #cd3f45; /* contrast-ratio: 4.78:1 */
+			--code-color: #777; /* contrast-ratio: 4.47:1 */
+			--webaddress-link-color: #09765e; /* contrast-ratio: 5.57:1 */
+			--skills-h2-color: #445b1f; /* contrast-ratio: 7.6:1 */
+			color: var(--fg-color);
 			background-color: var(--bg-color);
 
 			/* --shadow-color: 0deg 0% 63%; */
@@ -1019,16 +1048,16 @@ strong {
 			filter: var(--shadow-elevation-low);
 		}
 		code {
-			color: #777;
+			color: var(--code-color);
 		}
 		#skills {
 			h2 {
-				color: #445b1f;
+				color: var(--skills-h2-color);
 			}
 		}
 		#header {
 			#webaddress {
-				color: #09765e;
+				color: var(--webaddress-link-color);
 			}
 		}
 	}
