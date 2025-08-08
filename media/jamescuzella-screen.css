@@ -1141,8 +1141,6 @@ strong {
 			color: var(--fg-color);
 			background-color: var(--bg-color);
 
-			/* --shadow-color: 0deg 0% 63%; */
-			/* --shadow-color: 169.5deg 78.43% 63%; */
 			--shadow-color: 200.16 62.89% 38.04%;
 		}
 		a:hover {
