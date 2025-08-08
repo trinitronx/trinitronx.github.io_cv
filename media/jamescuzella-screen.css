@@ -1163,6 +1163,12 @@ strong {
 	}
 }
 
+@media screen and (prefers-reduced-motion: no-preference) {
+	html {
+		scroll-behavior: smooth;
+	}
+}
+
 @media screen and (prefers-reduced-motion: reduce) {
 	* {
 		/* Very short durations means JavaScript that relies on events still works */
