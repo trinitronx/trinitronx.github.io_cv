@@ -924,6 +924,25 @@ strong {
 				min-width: min-content;
 			}
 		}
+		/* Change school activities table direction back to column to avoid
+		alignment problem */
+		&#school {
+			& > table tr {
+				flex-direction: column;
+			}
+			& > table tr td {
+				padding-left: none;
+				padding-right: none;
+				padding-top: var(--default-font-size);
+				padding-bottom: var(--default-font-size);
+				align-self: stretch;
+			}
+
+			& > table tr td + td {
+				border-left: none;
+				border-top: solid 1px var(--fg-color);
+			}
+		}
 	}
  }
 
