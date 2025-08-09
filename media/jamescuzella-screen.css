@@ -426,6 +426,13 @@ strong {
 	}
 }
 
+#open-source {
+	& > h3 {
+		color: var(--oss-h3-color);
+		font-weight: bolder;
+	}
+}
+
 /* watches & LCDs */
 /* Reference: https://yesviz.com/devices/apple-watch-series-6-44mm/ */
 @media only screen and (max-width: 224px) {
@@ -859,6 +866,7 @@ strong {
 			--webaddress-link-color: #32c3a6; /* contrast-ratio: 7.95:1 */
 			--skills-h2-color: #9fca56; /* contrast-ratio: 9.26:1 */
 			--date-color: #ddd; /* contrast-ratio: 12.95:1 */
+			--oss-h3-color: #63d35f; /* contrast-ratio: 9.22:1 */
 			color: var(--fg-color);
 			background-color: var(--bg-color);
 		}
@@ -898,6 +906,7 @@ strong {
 			--webaddress-link-color: #044e42; /* contrast-ratio: 9.66:1 */
 			--skills-h2-color: #264200; /* contrast-ratio: 11.28:1 */
 			--date-color: #222; /* contrast-ratio: 15.9:1 */
+			--oss-h3-color: #245f21; /* contrast-ratio: 7.68:1 */
 			color: var(--fg-color);
 			background-color: var(--bg-color);
 		}
@@ -945,6 +954,7 @@ strong {
 			--webaddress-link-color: #2eb398; /* contrast-ratio: 6.71:1 */
 			--skills-h2-color: #9fca56; /* contrast-ratio: 9.26:1 */
 			--date-color: #a6a6a6; /* contrast-ratio: 7.22:1 */
+			--oss-h3-color: #3da639; /* contrast-ratio: 5.62:1 */
 			color: var(--fg-color);
 			background-color: var(--bg-color);
 			--shadow-color: 199.73deg 63.48% 10%;
@@ -994,6 +1004,7 @@ strong {
 			--webaddress-link-color: #0b5b4d; /* contrast-ratio: 8.02:1 */
 			--skills-h2-color: #3c6006; /* contrast-ratio: 7.32:1 */
 			--date-color: #4f4f4f; /* contrast-ratio: 8.19:1 */
+			--oss-h3-color: #2c7628; /* contrast-ratio: 5.63:1 */
 			color: var(--fg-color); /* contrast-ratio: 17.59:1 */
 			background-color: var(--bg-color);
 		}
@@ -1076,6 +1087,7 @@ strong {
 			--webaddress-link-color: #2eb398; /* contrast-ratio: 5.5:1 */
 			--skills-h2-color: #9fca56; /* contrast-ratio: 7.59:1 */
 			--date-color: #918f8e; /* contrast-ratio: 4.47:1 */
+			--oss-h3-color: #3ea638; /* contrast-ratio: 4.61:1 (increased further by drop-shadow filter below) */
 			color: var(--fg-color);
 			background-color: var(--bg-color);
 			--shadow-color: 199.73deg 63.48% 10%;
@@ -1109,6 +1121,25 @@ strong {
 				color: var(--date-color);
 			}
 		}
+		#open-source {
+			& > h3 {
+				/* Subtle shadow layers with enough contrast between outline:dark-color */
+				/* Subtle contrast from shadow-*:bg-color */
+				--shadow-outline-color: 119 48% 50%; /* #44bd42 bg contrast-ratio: 5.9:1,
+																shadow-color contrast-ratio: 5.08:1,
+																dark-color contrast-ratio: 8.6:1 */
+				--shadow-color: 119 48% 16%; /* #163c15 bg contrast-ratio: 1.16:1 */
+				--shadow-dark-color: 119 48% 0%; /* #000000 bg contrast-ratio: 1.45:1 */
+				--shadow-elevation-low:
+				  drop-shadow(0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34))
+				  drop-shadow(0.4px 0.8px 1px hsl(var(--shadow-color) / 0.34))
+				  drop-shadow(1px 2px 2.5px hsl(var(--shadow-color) / 0.34));
+				text-shadow: -0.05px -0.3px 0.7px hsl(var(--shadow-outline-color)),
+				             0.3px 0.5px 0.7px hsl(var(--shadow-color)),
+				             0.4px 0.8px 1px hsl(var(--shadow-dark-color));
+				filter: var(--shadow-elevation-low);
+			}
+		}
 	}
 	@media (prefers-color-scheme: light) {
 		::selection {
@@ -1136,6 +1167,7 @@ strong {
 			--webaddress-link-color: #09765e; /* contrast-ratio: 5.57:1 */
 			--skills-h2-color: #445b1f; /* contrast-ratio: 7.6:1 */
 			--date-color: #777; /* contrast-ratio: 4.47:1 */
+			--oss-h3-color: #3ea638; /* contrast-ratio: 3.12:1 (increased by border drop-shadow filter below) */
 			color: var(--fg-color);
 			background-color: var(--bg-color);
 
@@ -1158,6 +1190,20 @@ strong {
 		#header {
 			#webaddress {
 				color: var(--webaddress-link-color);
+			}
+		}
+		#open-source {
+			& > h3 {
+				--shadow-outline-color: 119 48% 22%; /* #1e531d contrast-ratio: 9.08:1 */
+				--shadow-color: var(--shadow-outline-color);
+				--shadow-elevation-low:
+				  drop-shadow(0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34))
+				  drop-shadow(0.4px 0.8px 1px hsl(var(--shadow-color) / 0.34))
+				  drop-shadow(1px 2px 2.5px hsl(var(--shadow-color) / 0.34));
+				text-shadow: -0.05px -0.3px 0.7px hsl(var(--shadow-outline-color)),
+				             0.3px 0.5px 0.7px hsl(var(--shadow-color)),
+				             0.4px 0.8px 1px hsl(var(--shadow-color));
+				filter: var(--shadow-elevation-low);
 			}
 		}
 	}
