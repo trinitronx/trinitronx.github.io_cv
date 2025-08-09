@@ -571,6 +571,20 @@ strong {
 		}
 	}
 }
+/* max-width: ~160px @ 1rem = 16px */
+@media only screen and (max-width: 10rem) {
+	/* Wrap all headings anywhere */
+	#cv > div {
+		&#header, &#skills, &#experience, &#school, &#certifications, &#academic-projects, &#open-source {
+			& > h1, & > h2, & > h3, & > h4 {
+				overflow-wrap: anywhere;
+			}
+			& > p, & ul, & ol, & li, & td {
+				overflow-wrap: anywhere;
+			}
+		}
+	}
+}
 /* max-width: 192px @ 1rem = 16px */
 @media only screen and (min-width: 6.626rem) and (max-width: 12rem) {
 	/* Wrap webaddress table text anywhere */
@@ -579,6 +593,9 @@ strong {
 			overflow-wrap: anywhere;
 		}
 	}
+}
+/* max-width: ~215px @ 1rem = 16px */
+@media only screen and (max-width: 13.4375rem) {
 	/* Wrap skills table text anywhere */
 	#skills {
 		/* Wrap skills table text anywhere */
@@ -589,6 +606,17 @@ strong {
 		& table > tbody > tr {
 			& td:first-child {
 				min-width: min-content;
+			}
+		}
+	}
+}
+/* max-width: ~345px @ 1rem = 16px */
+@media only screen and (max-width: 21.5625rem) {
+	/* Allow open-source div code text to wrap anywhere */
+	#cv > div {
+		&#open-source {
+			& code {
+				overflow-wrap: anywhere;
 			}
 		}
 	}
