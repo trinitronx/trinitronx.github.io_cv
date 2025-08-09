@@ -1165,7 +1165,7 @@ strong {
 			--h2-color: #cd3f45; /* contrast-ratio: 4.78:1 */
 			--code-color: #6e6e6e; /* contrast-ratio: 4.47:1 */
 			--webaddress-link-color: #09765e; /* contrast-ratio: 5.57:1 */
-			--skills-h2-color: #445b1f; /* contrast-ratio: 7.6:1 */
+			--skills-h2-color: #8ebe41; /* #8ebe41 contrast-ratio: 2.18:1 (increased by outline text-shadow/drop-shadow filter below) */
 			--date-color: #777; /* contrast-ratio: 4.47:1 */
 			--oss-h3-color: #3ea638; /* contrast-ratio: 3.12:1 (increased by border drop-shadow filter below) */
 			color: var(--fg-color);
@@ -1182,9 +1182,33 @@ strong {
 		code {
 			color: var(--code-color);
 		}
+		h2 {
+			--shadow-outline-color: 358.22 59.76% 16%; /* #411012 contrast-ratio: 16.05:1 */
+			--shadow-color: 358.22 59.76% 22%; /* #5a1719 contrast-ratio: 13.36:1 */
+			--shadow-dark-color: 358.22 59.76% 0%; /* #000000 bg contrast-ratio: 21:1 */
+			--shadow-elevation-low:
+				drop-shadow(0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34))
+				drop-shadow(0.4px 0.8px 1px hsl(var(--shadow-color) / 0.34))
+				drop-shadow(1px 2px 2.5px hsl(var(--shadow-color) / 0.34));
+			text-shadow: -0.05px -0.3px 0.7px hsl(var(--shadow-outline-color)),
+							0.3px 0.5px 0.7px hsl(var(--shadow-color)),
+							0.4px 0.8px 1px hsl(var(--shadow-dark-color));
+			filter: var(--shadow-elevation-low);
+		}
 		#skills {
 			h2 {
 				color: var(--skills-h2-color);
+				--shadow-outline-color: 83 49.18% 16%; /* #411012 contrast-ratio: 16.05:1 */
+				--shadow-color: 83 49.18% 22%; /* #5a1719 contrast-ratio: 13.36:1 */
+				--shadow-dark-color: 83 49.18% 0%; /* #000000 bg contrast-ratio: 21:1 */
+				--shadow-elevation-low:
+					drop-shadow(0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34))
+					drop-shadow(0.4px 0.8px 1px hsl(var(--shadow-color) / 0.34))
+					drop-shadow(1px 2px 2.5px hsl(var(--shadow-color) / 0.34));
+				text-shadow: -0.05px -0.3px 0.7px hsl(var(--shadow-outline-color)),
+								0.3px 0.5px 0.7px hsl(var(--shadow-color)),
+								0.4px 0.8px 1px hsl(var(--shadow-dark-color));
+				filter: var(--shadow-elevation-low);
 			}
 		}
 		#header {
