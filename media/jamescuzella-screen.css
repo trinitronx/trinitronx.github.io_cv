@@ -193,6 +193,22 @@ a:focus-visible {
 	display: flex;
 	gap: var(--gap);
 	flex-flow: column nowrap;
+
+	/* Desktop center aligned */
+	& > div {
+		&#school, &#certifications, &#academic-projects, &#open-source {
+			& > h2, & > h3, & > h4 {
+				text-align: right;
+				width: var(--align-guide-width);
+				max-width: max-content;
+				min-width: fit-content;
+			}
+			& > p, & > ul, & > ol {
+				left: var(--align-guide-width);
+				width: var(--align-guide-main-width);
+			}
+		}
+	}
 }
 
 #cv > div {
@@ -347,6 +363,8 @@ strong {
 		color: var(--h2-color);
 		text-align: right;
 		width: var(--align-guide-width);
+		max-width: max-content;
+		min-width: fit-content;
 	}
 
 	h3 {
@@ -356,6 +374,7 @@ strong {
 		text-align: right;
 		width: var(--align-guide-width);
 		min-width: max-content;
+		max-width: fit-content;
 	}
 
 	&> h3 + p code {
@@ -364,6 +383,7 @@ strong {
 		left: calc(var(--align-guide-main-width));
 		top: calc(-1 * var(--heading-line-height));
 		min-width: max-content;
+		max-width: fit-content;
 		line-height: var(--heading-line-height);
 		font-size: var(--heading-font-size-h3);
 	}
@@ -372,6 +392,7 @@ strong {
 		text-align: right;
     	width: var(--align-guide-width);
 		min-width: max-content;
+		max-width: fit-content;
 		font-size: var(--heading-font-size-h4);
 		line-height: var(--heading-font-size-h4);
 		margin-bottom: var(--heading-font-size-h4);
@@ -572,6 +593,17 @@ strong {
 		}
 	}
 }
+/* max-width: ~375px @ 1rem = 16px */
+@media only screen and (max-width: 23.4375rem) {
+	/* Left align all headings */
+	#cv > div {
+		&#experience, &#school, &#certifications, &#academic-projects, &#open-source {
+			& > h2, & > h3, & > h4 {
+				text-align: left;
+			}
+		}
+	}
+}
 
 /* phones */
 
@@ -659,9 +691,18 @@ strong {
 @media only screen and (max-width: 17.775rem) {
 	/* Reflow experience workplace headers to fit content */
 	#experience {
-		& h3 {
+		& h2, & h3 {
 			text-align: left;
 			min-width: fit-content;
+		}
+	}
+	/* Reflow all other sections headers to fit content */
+	#cv > div {
+		/* Reset section alignment to left side */
+		&#school, &#certifications, &#academic-projects, &#open-source {
+			& > h2, & > h3, & > h4 {
+				text-align: left;
+			}
 		}
 	}
 }
@@ -682,7 +723,7 @@ strong {
 	}
 	/* Avoid trying to right-align by guide-width... screen too small */
 	#experience {
-		& h2, h3 {
+		& h2, & h3 {
 			text-align: left;
 			width: unset;
 		}
@@ -743,6 +784,21 @@ strong {
 		& h2, h3, h4 {
 			text-align: left;
 			width: unset;
+		}
+	}
+	#cv > div {
+		/* Reset section alignment to left side */
+		&#school, &#certifications, &#academic-projects, &#open-source {
+			& > h2, & > h3, & > h4 {
+				text-align: left;
+				width: unset;
+				max-width: max-content;
+				min-width: fit-content;
+			}
+			& > p, & > ul, & > ol {
+				left: var(--align-guide-width);
+				width: var(--align-guide-main-width);
+			}
 		}
 	}
 }
@@ -831,6 +887,15 @@ strong {
 		background-color: moccasin;
 		--default-font-size: 1.35rem;
 		--align-guide-width: 25vw;
+	}
+	#cv > div {
+		/* Reset max-width to right align headings */
+		&#experience, &#school, &#certifications, &#academic-projects, &#open-source {
+			& > h2, & > h3, & > h4 {
+				max-width: var(--align-guide-width);
+				min-width: min-content;
+			}
+		}
 	}
  }
 
