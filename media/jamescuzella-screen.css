@@ -1124,7 +1124,7 @@ strong {
 			h2 {
 				/* Subtle shadow layers with enough contrast between skills-h2-color:outline & outline:dark-color */
 				/* Subtle contrast from shadow-*:bg-color */
-				color: var(--skills-h2-color); /* #9fca56 outline contrast-ratio: 6.09:1 */
+				/* --skills-h2-color: #9fca56 outline contrast-ratio: 6.09:1 */
 				--shadow-outline-color: 82.24 52.25% 16%;  /* #2e3e13 bg contrast-ratio: 1.24:1,
 																	  shadow-color contrast-ratio: 1.39:1,
 																	  dark-color contrast-ratio: 1.81:1 */
@@ -1229,9 +1229,11 @@ strong {
 		}
 		#skills {
 			h2 {
-				color: var(--skills-h2-color);
-				--shadow-outline-color: 83 49.18% 16%; /* #411012 contrast-ratio: 16.05:1 */
-				--shadow-color: 83 49.18% 22%; /* #5a1719 contrast-ratio: 13.36:1 */
+				/* --skills-h2-color: #8ebe41 outline contrast-ratio: 5.35:1 */
+				--shadow-outline-color: 83 49.18% 16%; /* #2d3d15 bg contrast-ratio: 11.73:1,
+																  shadow-color contrast-ratio: 1.39:1,
+																  dark-color contrast-ratio: 1.78:1 */
+				--shadow-color: 83 49.18% 22%; /* #3f541d contrast-ratio: 8.4:1 */
 				--shadow-dark-color: 83 49.18% 0%; /* #000000 bg contrast-ratio: 21:1 */
 				--shadow-elevation-low:
 					drop-shadow(0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34))
