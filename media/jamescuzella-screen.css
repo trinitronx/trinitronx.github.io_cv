@@ -1103,9 +1103,41 @@ strong {
 		code {
 			color: var(--code-color);
 		}
+		h2 {
+			/* Subtle shadow layers with enough contrast between h2 color:dark-color (contrast-ratio: 5.39:1) */
+			/* Subtle contrast from shadow-*:bg-color and others */
+			--shadow-outline-color: 358.22 59.76% 50%; /* #cc3338 bg contrast-ratio: 2.81:1,
+															shadow-color contrast-ratio: 3.13:1,
+															dark-color contrast-ratio: 4.09:1 */
+			--shadow-color: 358.22 59.76% 16%; /* #411012 bg contrast-ratio: 1.11:1 */
+			--shadow-dark-color: 358.22 59.76% 0%; /* #000000 bg contrast-ratio: 1.45:1 */
+			--shadow-elevation-low:
+				drop-shadow(0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34))
+				drop-shadow(0.4px 0.8px 1px hsl(var(--shadow-color) / 0.34))
+				drop-shadow(1px 2px 2.5px hsl(var(--shadow-color) / 0.34));
+			text-shadow: -0.05px -0.3px 0.7px hsl(var(--shadow-outline-color)),
+							0.3px 0.5px 0.7px hsl(var(--shadow-color)),
+							0.4px 0.8px 1px hsl(var(--shadow-dark-color));
+			filter: var(--shadow-elevation-low);
+		}
 		#skills {
 			h2 {
-				color: var(--skills-h2-color);
+				/* Subtle shadow layers with enough contrast between skills-h2-color:outline & outline:dark-color */
+				/* Subtle contrast from shadow-*:bg-color */
+				color: var(--skills-h2-color); /* #9fca56 outline contrast-ratio: 6.09:1 */
+				--shadow-outline-color: 82.24 52.25% 16%;  /* #2e3e13 bg contrast-ratio: 1.24:1,
+																	  shadow-color contrast-ratio: 1.39:1,
+																	  dark-color contrast-ratio: 1.81:1 */
+				--shadow-color: 82.24 52.25% 22%; /* #40551b bg contrast-ratio: 1.73:1 */
+				--shadow-dark-color: 82.24 52.25% 0%; /* #000000 bg contrast-ratio: 1.45:1 */
+				--shadow-elevation-low:
+					drop-shadow(0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34))
+					drop-shadow(0.4px 0.8px 1px hsl(var(--shadow-color) / 0.34))
+					drop-shadow(1px 2px 2.5px hsl(var(--shadow-color) / 0.34));
+				text-shadow: -0.05px -0.3px 0.7px hsl(var(--shadow-outline-color)),
+								0.3px 0.5px 0.7px hsl(var(--shadow-color)),
+								0.4px 0.8px 1px hsl(var(--shadow-dark-color));
+				filter: var(--shadow-elevation-low);
 			}
 		}
 		#header {
