@@ -647,6 +647,16 @@ strong {
 		--align-guide-width: 0vw;
 	}
 
+	/* TODO: [x] Fix :root, html font-size for HiDPI displays >=2dppx in tablet media */
+	/* TODO: [x] Check webaddress table on small display */
+	/* TODO: [ ] Maybe add bullets for nested list items or all? */
+	/* TODO: [x] Fix ~~education, certifications header top/bottom spacing~~
+	/* TODO: [x] Fix left margin on landscape & wide screens */
+	/* TODO: [x] Fix open-source h3 sub-headings - needs color, sizing and/or bold */
+	/* TODO: [x] Fix date right-alignment for landscape tablet @media query (lower below this) */
+	/* TODO: [x] Experiment with setting @media queries to trigger based on rem (root element base font size) */
+	/* TODO: [x] Fix quirk with mobile viewports being larger than the display size, need to account for this */
+
 	/* Override Flexbox layout for table fit on small screen */
 	#header {
 		& #webaddress td {
