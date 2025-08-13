@@ -4,6 +4,11 @@
   <meta charset=utf-8 />
   <meta name="viewport" content="width=device-width initial-scale=1.0" />
   <title>{% if page.title %}{{ page.title }}{% endif %}</title>
+  <link rel="preload" as="font" type="font/woff2" href="/media/fonts/NotoSansDisplay-VariableFont_wdth,wght.woff2" crossorigin/>
+  <link rel="preload" as="font" type="font/woff2" href="/media/fonts/JetBrainsMonoNerdFontPropo-Regular.woff2" crossorigin/>
+  <link rel="preload" as="font" type="font/woff2" href="/media/fonts/JetBrainsMonoNerdFontMono-Regular.woff2" crossorigin/>
+  <link rel="preload" as="font" type="font/woff2" href="/media/fonts/JetBrainsMonoNerdFontMono-ExtraBold.woff2" crossorigin/>
+
   <link href="{{ 'media/' | append: site.style | append: '-screen.css' | relative_url }}" type="text/css" rel="stylesheet" media="screen">
   <link href="{{ 'media/' | append: site.style | append: '-print.css'  | relative_url }}" type="text/css" rel="stylesheet" media="print">
 </head>
