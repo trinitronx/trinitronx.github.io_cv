@@ -20,7 +20,7 @@ title: "James Cuzella's CV"
 
 <div id="skills">
 
-## DEVOPS ENGINEER | SITE RELIABILITY ENGINEER | CLOUD ENGINEER
+## DevOps Engineer | Site Reliability Engineer | Cloud Engineer
 
 A talented, dynamic DevOps Engineer with strong expertise in building cloud infrastructure from the ground up, as well as maintaining
 existing networks through designing, planning, and testing. Adept at collaborating with other IT staff, system operators, and software

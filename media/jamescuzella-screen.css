@@ -472,6 +472,8 @@ a:focus-visible {
 
 		/* font-family: "JetBrainsMono Nerd Font Propo", Avenir, Cousine, Verdana, sans-serif; */
 		font-family: var(--font-family-headings);
+		letter-spacing: 0.089em;
+		font-variant-caps: small-caps;
 	}
 	table {
 		margin-top: var(--line-height);
