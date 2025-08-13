@@ -208,9 +208,8 @@ html body {
 	line-height: var(--line-height);
 	font-size-adjust: none;
 	font-size: var(--default-font-size);
+	font-family: var(--font-family-main);
 
-	/*also written as...  font: normal normal 400 100%/1rem;*/
-	font-family: Avenir,Verdana,sans-serif;
 	margin-top: var(--page-margin-top);
 	margin-left: var(--page-margin-left);
 	margin-right: var(--page-margin-right);
@@ -222,7 +221,7 @@ p {
 }
 
 code {
-	font-family: Monaco,Menlo,monospace,sans-serif;
+	font-family: var(--font-family-code-mono);
 	color: #aaa;
 }
 
@@ -258,7 +257,8 @@ li ul {
 
 h1,h2,h3,h4 {
 	font-weight: 400;
-	font-family: Avenir,Cousine,Verdana,sans-serif;
+	font-family: var(--font-family-headings);
+	/* font-family: RobotoMono Nerd Font,Avenir,Cousine,Verdana,sans-serif; */
 }
 
 h1 {
@@ -437,6 +437,9 @@ a:focus-visible {
 		margin-top: var(--line-height);
 		margin-bottom: unset;
 		width: unset;
+
+		/* font-family: "JetBrainsMono Nerd Font Propo", Avenir, Cousine, Verdana, sans-serif; */
+		font-family: var(--font-family-headings);
 	}
 	table {
 		margin-top: var(--line-height);
