@@ -223,6 +223,10 @@ p {
 code {
 	font-family: var(--font-family-code-mono);
 	color: #aaa;
+	font-variant-alternates: character-variant(curly-t, curly-j, curly-l, short-w, sharp-k, curly-y, split-dollarsign, hl-cyrillic-c)
+							 styleset(broken-equals-ligatures, hi-f);
+	font-variant-numeric: slashed-zero; /* zero */
+	font-variant-ligatures: contextual; /* calt */
 }
 
 p code {
