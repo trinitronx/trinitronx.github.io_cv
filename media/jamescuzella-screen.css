@@ -59,10 +59,10 @@ table {
 	font-weight: 100 1000;
 	font-stretch: 0% 100%;
 	font-display: swap;
-	src: url("/media/fonts/NotoSansDisplay-VariableFont_wdth,wght.woff2") format("woff2 supports variations"),
-		 url("/media/fonts/NotoSansDisplay-VariableFont_wdth,wght.woff2") format("woff2-variations");
-		 /* url("/media/fonts/NotoSansDisplay-VariableFont_wdth,wght.ttf ") format('truetype supports variations'),
-		 url("/media/fonts/NotoSansDisplay-VariableFont_wdth,wght.ttf ") format('truetype-variations'); */
+	src: url("./fonts/NotoSansDisplay-VariableFont_wdth,wght.woff2") format("woff2 supports variations"),
+		 url("./fonts/NotoSansDisplay-VariableFont_wdth,wght.woff2") format("woff2-variations");
+		 /* url("./fonts/NotoSansDisplay-VariableFont_wdth,wght.ttf ") format('truetype supports variations'),
+		 url("./fonts/NotoSansDisplay-VariableFont_wdth,wght.ttf ") format('truetype-variations'); */
 }
 
 @font-face {
