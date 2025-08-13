@@ -379,6 +379,24 @@ a:focus-visible {
 	hr {
 		width: var(--align-guide-main-width);
 	}
+	hr::before {
+		content: '';
+		font-family: var(--font-family-code-mono);
+		position: absolute;
+		left: calc(var(--align-guide-width) - 1rem);
+		line-height: 0rem;
+	}
+	hr::after {
+		content: '';
+		font-family: var(--font-family-code-mono);
+		position: absolute;
+		left: calc(var(--align-guide-main-width) + var(--align-guide-width));
+		line-height: 0rem;
+		/* Mirror it 180 degrees */
+		unicode-bidi: bidi-override;
+		direction: rtl;
+		transform:rotateY(180deg);
+	}
 
 	#webaddress {
 		margin-top: 1rem;
