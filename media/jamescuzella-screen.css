@@ -553,6 +553,8 @@ strong {
 		max-width: fit-content;
 		line-height: var(--heading-line-height);
 		font-size: var(--heading-font-size-h3);
+		letter-spacing: -0.08rem;
+		word-spacing: -0.125rem;
 	}
 
 	h4 {
