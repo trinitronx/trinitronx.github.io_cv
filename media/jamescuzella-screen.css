@@ -197,6 +197,10 @@ html body {
 	/* Alignment guide for main centered content */
 	--align-guide-main-width: calc(100vw - 2 * var(--align-guide-width) - var(--page-margin-left) - var(--page-margin-right));
 
+	--font-family-main: 'Noto Sans Display', Avenir, Verdana, sans-serif;
+	--font-family-code-propo: 'JetBrainsMono Nerd Font Propo', Monaco, Menlo, monospace, sans-serif;
+	--font-family-code-mono:  'JetBrainsMono Nerd Font Mono',  Monaco, Menlo, monospace, sans-serif;
+	--font-family-headings: 'Noto Sans Display', Avenir, Cousine, Verdana, sans-serif;
 	font-style: normal;
 	font-variant-caps: normal;
 	font-weight: 400;
