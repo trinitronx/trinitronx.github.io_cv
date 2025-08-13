@@ -200,6 +200,11 @@ html body {
 	--font-family-code-propo: 'JetBrainsMono Nerd Font Propo', Monaco, Menlo, monospace, sans-serif;
 	--font-family-code-mono:  'JetBrainsMono Nerd Font Mono',  Monaco, Menlo, monospace, sans-serif;
 	--font-family-headings: 'Noto Sans Display', Avenir, Cousine, Verdana, sans-serif;
+	--link-hover-initial-font-weight: 400;
+	--link-hover-initial-font-width: 100;
+	--link-hover-final-font-weight: 990;
+	--link-hover-final-font-width: 84;
+
 	font-style: normal;
 	font-variant-caps: normal;
 	font-weight: 400;
@@ -1394,7 +1399,7 @@ strong {
 			text-decoration-thickness: calc((1/16) * var(--default-font-size) / 11);
 			filter: var(--shadow-elevation-low);
 
-			font-variation-settings: var(--link-hover-font-variation-settings-final, "wght" 990, "wdth" 84);
+			font-variation-settings: "wght" var(--link-hover-final-font-weight, 990), "wdth" var(--link-hover-final-font-width, 84);
 		}
 		code {
 			color: var(--code-color);
@@ -1579,20 +1584,36 @@ strong {
 	}
 	@keyframes scale-font {
 		0% {
-			font-variation-settings: var(--link-hover-font-variation-settings-final, "wght" 400, "wdth" 100);
+			font-variation-settings: "wght" var(--link-hover-initial-font-weight, 400),
+									 "wdth" var(--link-hover-initial-font-width, 100);
+			letter-spacing: var(--link-hover-initial-letter-spacing, normal);
 		}
 		100% {
-			font-variation-settings: var(--link-hover-font-variation-settings-final, "wght" 990, "wdth" 84);
+			font-variation-settings: "wght" var(--link-hover-final-font-weight, 990),
+									 "wdth" var(--link-hover-final-font-width, 84);
+			letter-spacing: var(--link-hover-final-letter-spacing, normal);
 		}
 	}
 	a:hover {
-		font-variation-settings: var(--link-hover-font-variation-settings-final, "wght" 990, "wdth" 84);
+		font-variation-settings: "wght" var(--link-hover-final-font-weight, 990),
+								 "wdth" var(--link-hover-final-font-width, 84);
 
 		animation-name: scale-font;
 		animation-duration: 0.25s;
 		animation-direction: normal;
 		animation-iteration-count: 1;
 		animation-timing-function:cubic-bezier(0.19, 1, 0.22, 1); /* ease-out exponential 2^10 */
+	}
+	/* More subtle hover animation for webaddress links */
+	#webaddress a:hover {
+		--link-hover-initial-font-weight: 800;
+		--link-hover-final-font-weight: 900;
+		--link-hover-initial-font-width: 100;
+		--link-hover-final-font-width: 84.72;
+		--link-hover-initial-letter-spacing: normal;
+		--link-hover-final-letter-spacing: 0.028125rem;
+		animation-name: scale-font;
+		letter-spacing: var(--link-hover-final-letter-spacing);
 	}
 }
 
