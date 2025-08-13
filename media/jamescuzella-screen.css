@@ -1016,8 +1016,8 @@ strong {
 		}
 
 		& > table tr td {
-			padding-left: none;
-			padding-right: none;
+			padding-left: unset;
+			padding-right: unset;
 			padding-top: var(--default-font-size);
 			padding-bottom: var(--default-font-size);
 			align-self: stretch;
@@ -1101,8 +1101,8 @@ strong {
 				flex-direction: column;
 			}
 			& > table tr td {
-				padding-left: none;
-				padding-right: none;
+				padding-left: unset;
+				padding-right: unset;
 				padding-top: var(--default-font-size);
 				padding-bottom: var(--default-font-size);
 				align-self: stretch;
