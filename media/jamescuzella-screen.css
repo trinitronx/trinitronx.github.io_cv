@@ -107,6 +107,78 @@ table {
 	src: url("./fonts/JetBrainsMonoNerdFontMono-ExtraBold.woff2") format('woff2'),
 		 url("./fonts/JetBrainsMonoNerdFontMono-ExtraBold.ttf") format('truetype');
 }
+
+/* NOSONAR css:S4654 */
+@font-feature-values "Noto Sans Display" {
+	@styleset {
+		two-story-a: 1; /* ss01: Double storey a */
+		tailless-f: 2; /* ss02: Tailless f */
+		florin-symbol: 3; /* ss03: Florin symbol */
+		titling-alt-I-J: 4; /* ss04: Titling Alternates I and J for titling and all cap settings */
+		accented-greek-smcp: 6; /* ss06: Accented Greek Small Caps */
+		iota-adscript: 7; /* ss07: Iota adscript */
+	}
+	/* font-variant-numeric: slashed-zero; zero */
+	/* font-variant-ligatures: contextual; calt */
+}
+
+/* NOSONAR css:S4654 */
+@font-feature-values "JetBrainsMono Nerd Font Propo" {
+	/* Match my VSCode config:
+	   JetBrainsMono OpenType features:
+	   "editor.fontLigatures": "'cv02', 'cv04', 'cv05', 'cv07', 'cv08', 'cv11', 'cv14', 'cv99', 'ss19', 'zero', 'calt', 
+	   // FiraCode OpenType features:
+	   'ss04', 'ss08', 'ss09', 'cv23'"
+	*/
+	@styleset {
+		classic: 1; /* ss01 – Classic construction. JetBrains Mono but even more neutral. Performs better in big paragraph of text. */
+		closed: 2; /* ss02 – Closed construction. Change the rhythm to a more lively one. */
+		broken-equals-ligatures: 19; /* ss19 – Adds gaps in ≠ ≠= == === ligatures. */
+		hi-f: 20; /* ss20 – Shift horizontal stroke in f to match x-height. */
+	}
+	@character-variant {
+		curly-t: 2; /* cv02 */
+		curly-j: 4; /* cv04 */
+		curly-l: 5; /* cv05 */
+		short-w: 7; /* cv07 */
+		sharp-k: 8; /* cv08 */
+		curly-y: 11; /* cv11 */
+		split-dollarsign: 14; /* cv14 */
+		hl-cyrillic-c: 99; /* cv99 */
+	}
+	/* font-variant-numeric: slashed-zero; zero */
+	/* font-variant-ligatures: contextual; calt */
+}
+
+/* NOSONAR css:S4654 */
+@font-feature-values "JetBrainsMono Nerd Font Mono" {
+	/* Match my VSCode config:
+	   JetBrainsMono OpenType features:
+	   "editor.fontLigatures": "'cv02', 'cv04', 'cv05', 'cv07', 'cv08', 'cv11', 'cv14', 'cv99', 'ss19', 'zero', 'calt', 
+	   // FiraCode OpenType features:
+	   'ss04', 'ss08', 'ss09', 'cv23'"
+	*/
+	@styleset {
+		classic: 1; /* ss01 – Classic construction. JetBrains Mono but even more neutral. Performs better in big paragraph of text. */
+		closed: 2; /* ss02 – Closed construction. Change the rhythm to a more lively one. */
+		broken-equals-ligatures: 19; /* ss19 – Adds gaps in ≠ ≠= == === ligatures. */
+		hi-f: 20; /* ss20 – Shift horizontal stroke in f to match x-height. */
+	}
+	@character-variant {
+		curly-t: 2; /* cv02 */
+		curly-j: 4; /* cv04 */
+		curly-l: 5; /* cv05 */
+		short-w: 7; /* cv07 */
+		sharp-k: 8; /* cv08 */
+		curly-y: 11; /* cv11 */
+		split-dollarsign: 14; /* cv14 */
+		hl-cyrillic-c: 99; /* cv99 */
+	}
+	/* font-variant-numeric: slashed-zero; zero */
+	/* font-variant-ligatures: contextual; calt */
+}
+
+
 html body {
 	--default-font-size: 1rem; /* default element font size = base */
 	--line-height: calc(1.5 * var(--default-font-size));
