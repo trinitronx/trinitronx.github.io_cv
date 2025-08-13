@@ -241,12 +241,22 @@ ul {
 	margin-top: 0.5rem;
 }
 
-/*uncomment to get dashes in the list*/
-/*li:before {
-	content: "-";
+ul > li:before {
+	content: '';
+	/* TODO: provide woff font + fallback for prefers-reduced-data: reduce */
+	/* font-family: 'JetBrainsMono Nerd Font Propo', sans-serif; */
+	font-family: var(--font-family-code-propo);
+	position: relative;
+	left: -0.75rem;
+}
+
+ul > li > ul > li:before {
+	content: '◦';
+	/* font-family: 'JetBrainsMono Nerd Font Propo', sans-serif; */
+	font-family: var(--font-family-code-propo);
 	position: relative;
 	left: -0.25rem;
-}*/
+}
 
 li {
 	/* second line indent */
@@ -786,7 +796,7 @@ strong {
 
 	/* TODO: [x] Fix :root, html font-size for HiDPI displays >=2dppx in tablet media */
 	/* TODO: [x] Check webaddress table on small display */
-	/* TODO: [ ] Maybe add bullets for nested list items or all? */
+	/* TODO: [x] Maybe add bullets for nested list items or all? */
 	/* TODO: [x] Fix ~~education, certifications header top/bottom spacing~~
 	/* TODO: [x] Fix left margin on landscape & wide screens */
 	/* TODO: [x] Fix open-source h3 sub-headings - needs color, sizing and/or bold */
