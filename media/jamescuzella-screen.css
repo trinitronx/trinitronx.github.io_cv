@@ -291,7 +291,6 @@ li ul {
 h1,h2,h3,h4 {
 	font-weight: 400;
 	font-family: var(--font-family-headings);
-	/* font-family: RobotoMono Nerd Font,Avenir,Cousine,Verdana,sans-serif; */
 }
 
 h1 {
@@ -666,7 +665,6 @@ strong {
 @media only screen and (max-width: 224px) {
 		/* Apple Watch series 6 and smaller (224px x 184px) */
 		body {
-			/* background-color: gray; */
 			--line-height: var(--default-font-size);
 			--table-bottom-margin: var(--default-font-size);
 			--page-margin-top: calc(1 * var(--default-font-size));
@@ -850,7 +848,6 @@ strong {
 @media only screen and (min-width: 225px) and (max-width: 375px) {
 	/* iPhone 5/5SE and smaller */
 	body {
-		/* background-color: blue; */
 		--line-height: var(--default-font-size);
 		--table-bottom-margin: calc(0.75 * var(--default-font-size));
 		--page-margin-top: calc(1.5 * var(--default-font-size));
@@ -954,7 +951,6 @@ strong {
 		font-size: clamp(1em, 3vw, 2.5em);
 	}
 	body {
-		/* background-color: pink; */
 		--line-height: 1rem;
 		--table-bottom-margin: 0.75rem;
 		--page-margin-top: 1.5rem;
@@ -1010,7 +1006,6 @@ strong {
 @media only screen and (min-width: 600px) and (max-width: 1199px) {
 	/* Tablets or legacy VGA defaults */
 	body {
-		/* background-color: whitesmoke; */
 		--line-height: 1.5rem;
 		/* use more device width */
 		--align-guide-width: 1vw;
@@ -1080,7 +1075,6 @@ strong {
 	}
 	/* Tablets & large screen phones in portrait orientation */
 	body {
-		/* background-color: magenta; */
 		--line-height: calc(1.5 * var(--default-font-size));
 		--page-margin-top: calc(1.9 * var(--default-font-size));
 		--page-margin-left: 0.2rem;
@@ -1105,7 +1099,6 @@ strong {
 @media only screen and (min-width: 900px) and (orientation:landscape) {
 	/* Tablets in landscape orientation */
 	body {
-		/* background-color: rgb(255, 184, 60); */
 		--line-height: calc(1.5 * var(--default-font-size));
 		/* use more device width */
 		--page-margin-left: calc(0.75 * var(--default-font-size));
@@ -1126,7 +1119,6 @@ strong {
 		font-size: clamp(1em, 1.2vw, 2.5em);
 	}
 	body {
-		/* background-color: moccasin; */
 		--default-font-size: 1.35rem;
 		--align-guide-width: 25vw;
 	}
@@ -1163,7 +1155,6 @@ strong {
 /* large desktop */
 @media only screen and (min-width: 1800px) {
 	body {
-		/* background-color: rgb(136, 201, 177); */
 		--align-guide-width: 25vw;
 	}
  }
@@ -1527,8 +1518,6 @@ strong {
 			  1px 1px 1.1vw #93d1c1,
 			  -4px -5px 8px hsl(164.52deg, 40.26%, 46.8%),
 			  6px 6px 5px hsl(164.52deg, 40.26%, 38.8%);
-
-			/* filter: drop-shadow(1px 2px 8px var(hsl(169.5, 78.43%, 57%))); */
 		}
 		html {
 			--fg-color: #141a1b;  /* contrast ratio: 17.59:1 */
