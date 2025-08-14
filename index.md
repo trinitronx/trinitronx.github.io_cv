@@ -318,7 +318,7 @@ Colorado School of Mines Linux User Group | BlueKey Honor Society Member | CSM B
   - [Add support for multiple Makefiles][oss.2.2]
   - [Fix security vulnerability detections (bump dependencies)][oss.2.3]
 - [nwg-drawer][oss.3] (Go)
-  - [Add keyboard mode flag to support both: "on-demand" & "exclusive" GTK layer-shell modes][oss.3.1]
+  - [Add keyboard mode flag to support both: "on-demand" & "exclusive" GTK layer shell modes][oss.3.1]
 - [doctl][oss.4] (Go)
   - [Add offline app spec validate / `--schema-only` command][oss.4.1]
   - [Made for hackathon: Major League Hacking Global Hack Week - Open Source - October 2023][oss.4.2]
@@ -331,7 +331,7 @@ Colorado School of Mines Linux User Group | BlueKey Honor Society Member | CSM B
   - [input: Add new keys: Back, Tools, ZoomIn, ZoomOut][oss.7.1]
   - Support mapping all keycodes on a popular RF Remote used with Linux HTPC apps under Wayland, Xorg + patched `xf86-input-evdev`
 - [node-qrusage][oss.8] (C++, Node.JS)
-  - [Fix #2: Use new v8 GetBackingStore() API when supported][oss.8.1]
+  - [Fix #2: Use new v8 `GetBackingStore()` API when supported][oss.8.1]
 - [sov][oss.9] (C)
   - [fix: milgra/sov#42 CSS Colors don't follow standard #RRGGBBAA][oss.9.1]
 - [ohmyzsh][oss.10] (Zsh)
