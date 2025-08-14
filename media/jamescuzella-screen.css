@@ -1629,9 +1629,9 @@ strong {
 		--link-hover-initial-font-weight: 800;
 		--link-hover-final-font-weight: 900;
 		--link-hover-initial-font-width: 100;
-		--link-hover-final-font-width: 84.72;
+		--link-hover-final-font-width: 113;
 		--link-hover-initial-letter-spacing: normal;
-		--link-hover-final-letter-spacing: 0.028125rem;
+		--link-hover-final-letter-spacing: -0.082rem;
 		animation-name: scale-font;
 		letter-spacing: var(--link-hover-final-letter-spacing);
 	}
