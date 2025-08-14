@@ -70,15 +70,17 @@ table {
 		 url("./fonts/NotoSansDisplay-Italic-VariableFont_wdth,wght.ttf") format('truetype supports variations'); */
 }
 
-@font-face {
-	/* Wider bullet, but shorter powerline glyphs */
-	font-family: 'JetBrainsMono Nerd Font Propo';
-	font-style: normal;
-	font-weight: normal;
-	font-stretch: 100%;
-	font-display: swap;
-	src: url("./fonts/JetBrainsMonoNerdFontPropo-Regular.woff2") format('woff2'),
-		 url("./fonts/JetBrainsMonoNerdFontPropo-Regular.ttf") format('truetype');
+@media not (prefers-reduced-data: reduce) {
+	@font-face {
+		/* Wider bullet, but shorter powerline glyphs */
+		font-family: 'JetBrainsMono Nerd Font Propo';
+		font-style: normal;
+		font-weight: normal;
+		font-stretch: 100%;
+		font-display: swap;
+		src: url("./fonts/JetBrainsMonoNerdFontPropo-Regular.woff2") format('woff2'),
+			url("./fonts/JetBrainsMonoNerdFontPropo-Regular.ttf") format('truetype');
+	}
 }
 
 @font-face {
@@ -195,6 +197,7 @@ html body {
 	--font-family-code-mono:  'JetBrainsMono Nerd Font Mono',  Monaco, Menlo, monospace, sans-serif;
 	--font-family-headings: 'Noto Sans Display', Avenir, Cousine, Verdana, sans-serif;
 	--font-family-webaddress: 'Monaspace Neon Var', monospace, sans-serif;
+	--font-family-li-bullet-system-fallback: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Ubuntu, Roboto, Cantarell, Noto Sans, sans-serif;
 	--link-hover-initial-font-weight: 400;
 	--link-hover-initial-font-width: 100;
 	--link-hover-final-font-weight: 990;
@@ -242,20 +245,36 @@ ul {
 }
 
 ul > li:before {
+	 /* Non-standard NerdFont \uf4c3 'nf-oct-dot'  */
 	content: '';
-	/* TODO: provide woff font + fallback for prefers-reduced-data: reduce */
-	/* font-family: 'JetBrainsMono Nerd Font Propo', sans-serif; */
 	font-family: var(--font-family-code-propo);
 	position: relative;
 	left: -0.75rem;
 }
 
 ul > li > ul > li:before {
+	/* Standard UTF-8 U+25E6 'White Bullet' ◦ */
 	content: '◦';
-	/* font-family: 'JetBrainsMono Nerd Font Propo', sans-serif; */
 	font-family: var(--font-family-code-propo);
 	position: relative;
 	left: -0.25rem;
+}
+
+@media (prefers-reduced-data: reduce) {
+	ul > li:before {
+		/* Standard UTF-8 U+25CB 'White Circle' ○ */
+		content: '○';
+		font-family: var(--font-family-li-bullet-system-fallback);
+		/* letter-spacing: 1.4px;
+		word-spacing: 2.5px; */
+		letter-spacing: 0.45px;
+	}
+
+	ul > li > ul > li:before {
+		/* Standard UTF-8 U+25E6 'White Bullet' ◦ */
+		content: '◦';
+		font-family: var(--font-family-li-bullet-system-fallback);
+	}
 }
 
 li {
