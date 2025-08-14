@@ -8,9 +8,9 @@ title: "James Cuzella's CV"
 
 <div id="webaddress">
 
-|             |                                    |                           |
-|:-----------:|:----------------------------------:|:-------------------------:|
-| @trinitronx | [linkedin.com/in/james-cuzella][1] | [trinitronx.github.io][2] |
+|                  |                                    |                           |
+|:----------------:|:----------------------------------:|:-------------------------:|
+| [@trinitronx][1] | [linkedin.com/in/james-cuzella][2] | [trinitronx.github.io][3] |
 
 </div>
 
@@ -302,9 +302,9 @@ Colorado School of Mines Linux User Group | BlueKey Honor Society Member | CSM B
   - Updated & maintained fork of `soloist` Ruby gem
   - Refactored to support Chef 18 + Berkshelf, (deprecated `librarian-chef`)
 
-[... And many more (scroll)][3]
+[... And many more (scroll)][4]
 
-[Hackathon Portfolio][4]
+[Hackathon Portfolio][5]
 
 ### Notable Contributions
 
@@ -358,15 +358,15 @@ Colorado School of Mines Linux User Group | BlueKey Honor Society Member | CSM B
 - [pre-commit-ruby][oss.17] (Ruby, pre-commit, Chef)
   - [cookstyle: Pass-through exit status (Fixes #15)][oss.17.1]
 
-[... Plus too many to list][5]
+[... Plus too many to list][1]
 
 </div>
 
-[1]: https://linkedin.com/in/james-cuzella
-[2]: https://trinitronx.github.io
-[3]: https://trinitronx.github.io/#os_projects
-[4]: https://devpost.com/trinitronx
-[5]: https://github.com/trinitronx
+[1]: https://github.com/trinitronx
+[2]: https://linkedin.com/in/james-cuzella
+[3]: https://trinitronx.github.io
+[4]: https://trinitronx.github.io/#os_projects
+[5]: https://devpost.com/trinitronx
 
 [proj.0]: https://github.com/trinitronx/vncpasswd.py
 [proj.0.1]: https://archiveprogram.github.com/arctic-vault/
