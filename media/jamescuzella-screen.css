@@ -53,6 +53,18 @@ table {
 */
 
 @font-face {
+	font-family: 'Monaspace Neon Var';
+	font-style: normal italic;
+	font-weight: 40 1000;
+	font-stretch: 0% 125%;
+	font-display: swap;
+	src: url("./fonts/MonaspaceNeonVarVF_wght,wdth,slnt.woff2") format("woff2 supports variations"),
+		 url("./fonts/MonaspaceNeonVarVF_wght,wdth,slnt.woff2") format("woff2-variations");
+		 /* url("./fonts/NotoSansDisplay-VariableFont_wdth,wght.ttf ") format('truetype supports variations'),
+		 url("./fonts/NotoSansDisplay-VariableFont_wdth,wght.ttf ") format('truetype-variations'); */
+}
+
+@font-face {
 	font-family: 'Noto Sans Display';
 	font-style: normal;
 	font-weight: 100 1000;
@@ -200,6 +212,7 @@ html body {
 	--font-family-code-propo: 'JetBrainsMono Nerd Font Propo', Monaco, Menlo, monospace, sans-serif;
 	--font-family-code-mono:  'JetBrainsMono Nerd Font Mono',  Monaco, Menlo, monospace, sans-serif;
 	--font-family-headings: 'Noto Sans Display', Avenir, Cousine, Verdana, sans-serif;
+	--font-family-webaddress: 'Monaspace Neon Var', monospace, sans-serif;
 	--link-hover-initial-font-weight: 400;
 	--link-hover-initial-font-width: 100;
 	--link-hover-final-font-weight: 990;
@@ -409,7 +422,7 @@ a:focus-visible {
 	#webaddress {
 		margin-top: 1rem;
 		text-align: center;
-		font-family: Monaco,Menlo,monospace,sans-serif;
+		font-family: var(--font-family-webaddress);
 	}
 	
 	#webaddress a {
@@ -478,7 +491,6 @@ a:focus-visible {
 		margin-bottom: unset;
 		width: unset;
 
-		/* font-family: "JetBrainsMono Nerd Font Propo", Avenir, Cousine, Verdana, sans-serif; */
 		font-family: var(--font-family-headings);
 		letter-spacing: 0.089em;
 		font-variant-caps: small-caps;
