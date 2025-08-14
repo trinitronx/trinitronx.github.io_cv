@@ -91,7 +91,7 @@ table {
 	src: url("./fonts/JetBrainsMonoNerdFontMono-Regular.woff2") format('woff2'),
 		 url("./fonts/JetBrainsMonoNerdFontMono-Regular.ttf") format('truetype');
 }
-@font-face {
+/* @font-face {
 	font-family: 'JetBrainsMono Nerd Font Mono';
 	font-style: normal;
 	font-weight: 800;
@@ -99,7 +99,7 @@ table {
 	font-display: swap;
 	src: url("./fonts/JetBrainsMonoNerdFontMono-ExtraBold.woff2") format('woff2'),
 		 url("./fonts/JetBrainsMonoNerdFontMono-ExtraBold.ttf") format('truetype');
-}
+} */
 
 /* NOSONAR css:S4654 */
 @font-feature-values "Noto Sans Display" {
