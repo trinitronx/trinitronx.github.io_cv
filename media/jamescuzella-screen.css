@@ -382,20 +382,24 @@ a:focus-visible {
 
 	hr {
 		width: var(--align-guide-main-width);
+		overflow: visible;
+		height: 0px;
 	}
 	hr::before {
 		content: '';
 		font-family: var(--font-family-code-mono);
-		position: absolute;
-		left: calc(var(--align-guide-width) - 1rem);
-		line-height: 0rem;
+		position: relative;
+		float: left;
+		top: calc(-0.5 * var(--line-height));
+		left: -1.09375rem;
 	}
 	hr::after {
 		content: '';
 		font-family: var(--font-family-code-mono);
-		position: absolute;
-		left: calc(var(--align-guide-main-width) + var(--align-guide-width));
-		line-height: 0rem;
+		position: relative;
+		float: right;
+		top: calc(-0.5 * var(--line-height));
+		left: 1.09375rem;
 		/* Mirror it 180 degrees */
 		unicode-bidi: bidi-override;
 		direction: rtl;
@@ -628,6 +632,22 @@ strong {
 }
 
 /* watches & LCDs */
+/* max-width: 78px @ 1rem = 16px */
+@media only screen and (max-width: 4.875rem) {
+	/* Remove header hr bandeau decoration (screen too small) */
+	#cv > #header hr {
+		&::before, &::after {
+			content: '';
+			position: relative;
+			float: none;
+			top: unset;
+			left: unset;
+			width: 0;
+			height: 0;
+		}
+	}
+}
+
 /* Reference: https://yesviz.com/devices/apple-watch-series-6-44mm/ */
 @media only screen and (max-width: 224px) {
 		/* Apple Watch series 6 and smaller (224px x 184px) */
@@ -803,6 +823,11 @@ strong {
 				text-align: left;
 			}
 		}
+	}
+	/* Start adjusting header bandeau width & don't wrap the encaps */
+	#cv > #header hr {
+		width: calc(90vw - 2rem);
+		text-wrap-mode: nowrap;
 	}
 }
 
