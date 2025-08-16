@@ -267,7 +267,8 @@ ul > li > ul > li:before {
 		font-family: var(--font-family-li-bullet-system-fallback);
 		/* letter-spacing: 1.4px;
 		word-spacing: 2.5px; */
-		letter-spacing: 0.45px;
+		letter-spacing: 0.028125rem; /* 0.45 px @ 1rem = 16px */
+		word-spacing: 0.546875rem; /* 8.75 px @ 1rem = 16px */
 	}
 
 	ul > li > ul > li:before {
