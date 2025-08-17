@@ -9,6 +9,8 @@ style: jamescuzella
 exclude: ["README.md", "LICENSE"]
 sass:
   style: compressed
+plugins:
+  - "jekyll-sass-converter"
 kramdown:
   input: GFM
   parse_block_html: true

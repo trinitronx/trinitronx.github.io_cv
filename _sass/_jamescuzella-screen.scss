@@ -40,10 +40,10 @@ table {
 	font-weight: 40 1000;
 	font-stretch: 0% 125%;
 	font-display: swap;
-	src: url("./fonts/MonaspaceNeonVarVF_wght,wdth,slnt.woff2") format("woff2 supports variations"),
-		 url("./fonts/MonaspaceNeonVarVF_wght,wdth,slnt.woff2") format("woff2-variations");
-		 /* url("./fonts/NotoSansDisplay-VariableFont_wdth,wght.ttf ") format('truetype supports variations'),
-		 url("./fonts/NotoSansDisplay-VariableFont_wdth,wght.ttf ") format('truetype-variations'); */
+	src: url("../fonts/MonaspaceNeonVarVF_wght,wdth,slnt.woff2") format("woff2 supports variations"),
+		 url("../fonts/MonaspaceNeonVarVF_wght,wdth,slnt.woff2") format("woff2-variations");
+		 /* url("../fonts/NotoSansDisplay-VariableFont_wdth,wght.ttf ") format('truetype supports variations'),
+		 url("../fonts/NotoSansDisplay-VariableFont_wdth,wght.ttf ") format('truetype-variations'); */
 }
 
 @font-face {
@@ -52,10 +52,10 @@ table {
 	font-weight: 100 1000;
 	font-stretch: 0% 100%;
 	font-display: swap;
-	src: url("./fonts/NotoSansDisplay-VariableFont_wdth,wght.woff2") format("woff2 supports variations"),
-		 url("./fonts/NotoSansDisplay-VariableFont_wdth,wght.woff2") format("woff2-variations");
-		 /* url("./fonts/NotoSansDisplay-VariableFont_wdth,wght.ttf ") format('truetype supports variations'),
-		 url("./fonts/NotoSansDisplay-VariableFont_wdth,wght.ttf ") format('truetype-variations'); */
+	src: url("../fonts/NotoSansDisplay-VariableFont_wdth,wght.woff2") format("woff2 supports variations"),
+		 url("../fonts/NotoSansDisplay-VariableFont_wdth,wght.woff2") format("woff2-variations");
+		 /* url("../fonts/NotoSansDisplay-VariableFont_wdth,wght.ttf ") format('truetype supports variations'),
+		 url("../fonts/NotoSansDisplay-VariableFont_wdth,wght.ttf ") format('truetype-variations'); */
 }
 
 @font-face {
@@ -64,13 +64,13 @@ table {
 	font-weight: 100 1000;
 	font-stretch: 0% 100%;
 	font-display: swap;
-	src: url("./fonts/NotoSansDisplay-Italic-VariableFont_wdth,wght.woff2") format("woff2 supports variations"),
-		 url("./fonts/NotoSansDisplay-Italic-VariableFont_wdth,wght.woff2") format("woff2-variations");
-		 /* url("./fonts/NotoSansDisplay-Italic-VariableFont_wdth,wght.ttf") format('truetype supports variations'),
-		 url("./fonts/NotoSansDisplay-Italic-VariableFont_wdth,wght.ttf") format('truetype supports variations'); */
+	src: url("../fonts/NotoSansDisplay-Italic-VariableFont_wdth,wght.woff2") format("woff2 supports variations"),
+		 url("../fonts/NotoSansDisplay-Italic-VariableFont_wdth,wght.woff2") format("woff2-variations");
+		 /* url("../fonts/NotoSansDisplay-Italic-VariableFont_wdth,wght.ttf") format('truetype supports variations'),
+		 url("../fonts/NotoSansDisplay-Italic-VariableFont_wdth,wght.ttf") format('truetype supports variations'); */
 }
 
-@media not (prefers-reduced-data: reduce) {
+@media not (prefers-reduced-data) {
 	@font-face {
 		/* Wider bullet, but shorter powerline glyphs */
 		font-family: 'JetBrainsMono Nerd Font Propo';
@@ -78,8 +78,8 @@ table {
 		font-weight: normal;
 		font-stretch: 100%;
 		font-display: swap;
-		src: url("./fonts/JetBrainsMonoNerdFontPropo-Regular.woff2") format('woff2'),
-			url("./fonts/JetBrainsMonoNerdFontPropo-Regular.ttf") format('truetype');
+		src: url("../fonts/JetBrainsMonoNerdFontPropo-Regular.woff2") format('woff2'),
+			url("../fonts/JetBrainsMonoNerdFontPropo-Regular.ttf") format('truetype');
 	}
 }
 
@@ -90,8 +90,8 @@ table {
 	font-weight: normal;
 	font-stretch: 100%;
 	font-display: swap;
-	src: url("./fonts/JetBrainsMonoNerdFontMono-Regular.woff2") format('woff2'),
-		 url("./fonts/JetBrainsMonoNerdFontMono-Regular.ttf") format('truetype');
+	src: url("../fonts/JetBrainsMonoNerdFontMono-Regular.woff2") format('woff2'),
+		 url("../fonts/JetBrainsMonoNerdFontMono-Regular.ttf") format('truetype');
 }
 /* @font-face {
 	font-family: 'JetBrainsMono Nerd Font Mono';
@@ -99,8 +99,8 @@ table {
 	font-weight: 800;
 	font-stretch: 100%;
 	font-display: swap;
-	src: url("./fonts/JetBrainsMonoNerdFontMono-ExtraBold.woff2") format('woff2'),
-		 url("./fonts/JetBrainsMonoNerdFontMono-ExtraBold.ttf") format('truetype');
+	src: url("../fonts/JetBrainsMonoNerdFontMono-ExtraBold.woff2") format('woff2'),
+		 url("../fonts/JetBrainsMonoNerdFontMono-ExtraBold.ttf") format('truetype');
 } */
 
 /* NOSONAR css:S4654 */
