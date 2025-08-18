@@ -81,17 +81,22 @@ table {
 		 url("../fonts/NotoSansDisplay-Italic-VariableFont_wdth,wght.ttf") format('truetype supports variations'); */
 }
 
-@media not (prefers-reduced-data) {
-	@font-face {
-		/* Wider bullet, but shorter powerline glyphs */
-		font-family: 'JetBrainsMono Nerd Font Propo';
-		font-style: normal;
-		font-weight: normal;
-		font-stretch: 100%;
-		font-display: swap;
-		src: url("../fonts/JetBrainsMonoNerdFontPropo-Regular.woff2") format('woff2'),
-			url("../fonts/JetBrainsMonoNerdFontPropo-Regular.ttf") format('truetype');
-	}
+/* Note: Older browsers did not support nested @media queries.
+         So, we rely on browser default behavior to load the font when the user
+         has not requested reduced data usage, and fallback to UTF-8 bullets
+         otherwise.
+		 Defining the font-face should not automatically download it unless it
+         is used for the first time.
+*/
+@font-face {
+	/* Wider bullet, but shorter powerline glyphs */
+	font-family: 'JetBrainsMono Nerd Font Propo';
+	font-style: normal;
+	font-weight: normal;
+	font-stretch: 100%;
+	font-display: swap;
+	src: url("../fonts/JetBrainsMonoNerdFontPropo-Regular.woff2") format('woff2'),
+		url("../fonts/JetBrainsMonoNerdFontPropo-Regular.ttf") format('truetype');
 }
 
 @font-face {
