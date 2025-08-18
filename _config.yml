@@ -11,6 +11,7 @@ sass:
   style: compressed
 plugins:
   - "jekyll-sass-converter"
+  - "jekyll-postcss-v2"
 kramdown:
   input: GFM
   parse_block_html: true
@@ -21,3 +22,6 @@ webrick:
     Access-Control-Allow-Origin: "http://localhost:4000" # Allows requests from a specific origin
     Access-Control-Allow-Methods: "GET, POST, PUT, DELETE, OPTIONS"
     Access-Control-Allow-Headers: "Content-Type, Authorization"
+postcss:
+#  script: node_modules/.bin/postcss
+  config: postcss.config.js
