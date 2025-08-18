@@ -4,5 +4,10 @@
 			"path": ".."
 		}
 	],
-	"settings": {}
+	"settings": {},
+	"extensions": {
+		"recommendations": [
+			"arturodent.custom-language-syntax"
+		]
+	}
 }
