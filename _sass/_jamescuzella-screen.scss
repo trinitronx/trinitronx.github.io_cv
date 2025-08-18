@@ -36,14 +36,25 @@ table {
 
 @font-face {
 	font-family: 'Monaspace Neon Var';
-	font-style: normal italic;
+	font-style: normal;
 	font-weight: 40 1000;
 	font-stretch: 0% 125%;
 	font-display: swap;
 	src: url("../fonts/MonaspaceNeonVarVF_wght,wdth,slnt.woff2") format("woff2 supports variations"),
 		 url("../fonts/MonaspaceNeonVarVF_wght,wdth,slnt.woff2") format("woff2-variations");
-		 /* url("../fonts/NotoSansDisplay-VariableFont_wdth,wght.ttf ") format('truetype supports variations'),
-		 url("../fonts/NotoSansDisplay-VariableFont_wdth,wght.ttf ") format('truetype-variations'); */
+		 /* url("../fonts/MonaspaceNeonVarVF_wght,wdth,slnt.ttf ") format('truetype supports variations'),
+		 url("../fonts/MonaspaceNeonVarVF_wght,wdth,slnt.ttf ") format('truetype-variations'); */
+}
+@font-face {
+	font-family: 'Monaspace Neon Var';
+	font-style: italic;
+	font-weight: 40 1000;
+	font-stretch: 0% 125%;
+	font-display: swap;
+	src: url("../fonts/MonaspaceNeonVarVF_wght,wdth,slnt.woff2") format("woff2 supports variations"),
+		 url("../fonts/MonaspaceNeonVarVF_wght,wdth,slnt.woff2") format("woff2-variations");
+		 /* url("../fonts/MonaspaceNeonVarVF_wght,wdth,slnt.ttf ") format('truetype supports variations'),
+		 url("../fonts/MonaspaceNeonVarVF_wght,wdth,slnt.ttf ") format('truetype-variations'); */
 }
 
 @font-face {
