@@ -4,7 +4,11 @@
 			"path": ".."
 		}
 	],
-	"settings": {},
+	"settings": {
+		"custom-language-properties": {
+			"scss.comments.lineComment": ""
+		}
+	},
 	"extensions": {
 		"recommendations": [
 			"arturodent.custom-language-syntax"
