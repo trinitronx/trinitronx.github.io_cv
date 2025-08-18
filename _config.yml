@@ -15,3 +15,9 @@ kramdown:
   input: GFM
   parse_block_html: true
   parse_span_html: true
+webrick:
+  headers:
+    Access-Control-Allow-Origin: "*" # Allows requests from any origin
+    Access-Control-Allow-Origin: "http://localhost:4000" # Allows requests from a specific origin
+    Access-Control-Allow-Methods: "GET, POST, PUT, DELETE, OPTIONS"
+    Access-Control-Allow-Headers: "Content-Type, Authorization"
