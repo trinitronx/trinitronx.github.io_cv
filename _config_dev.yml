@@ -1,0 +1,6 @@
+#url: "http://saturn.internal:4000"
+host: "0.0.0.0"
+baseurl: "" # the subpath of your site, e.g. /blog
+sass:
+  style: expanded
+
