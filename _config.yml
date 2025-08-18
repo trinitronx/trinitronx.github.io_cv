@@ -6,7 +6,12 @@ description: markdown-cv is a simple template to list all your accomplishments i
 # Build settings
 markdown: kramdown
 style: jamescuzella
-exclude: ["README.md", "LICENSE"]
+exclude:
+  - "README.md"
+  - "LICENSE"
+  - "package.json"
+  - "package-lock.json"
+  - "postcss.config.js"
 sass:
   style: compressed
 plugins:
