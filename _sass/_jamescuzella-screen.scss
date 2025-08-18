@@ -280,8 +280,9 @@ ul > li > ul > li:before {
 
 li {
 	/* second line indent */
-	padding-left: 1.25rem;
 	text-indent: -1.25rem;
+	padding-left: 1.25rem;
+	padding-right: 1rem;
 }
 
 li ul {
@@ -789,6 +790,10 @@ strong {
 				overflow-wrap: anywhere;
 			}
 		}
+		/* Remove even more left margin from list items */
+		li {
+			margin-left: -2.75rem;
+		}
 	}
 }
 /* max-width: 192px @ 1rem = 16px */
@@ -825,6 +830,11 @@ strong {
 				overflow-wrap: anywhere;
 			}
 		}
+	}
+	/* Remove extra left margin from list items */
+	li {
+		margin-left: -2rem;
+		padding-right: 1.25rem;
 	}
 }
 /* max-width: ~375px @ 1rem = 16px */
