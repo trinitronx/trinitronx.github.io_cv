@@ -1186,6 +1186,207 @@ strong {
 	}
  }
 
+@media (prefers-color-scheme: dark) {
+	::selection {
+		color: #93d1c1; /* contrast-ratio: 12.13:1 */
+		background-color: #000000;
+		text-shadow: 0.3px 0.5px 0.7px hsl(167.82, 59.11%, 18.12%),
+					 0.4px 0.8px 1px hsl(167.82, 59.11%, 18.12%),
+					   1px 2px 2.5px hsl(167.82 59.11% 18.12% / 0.34),
+					   -1px -1px 1.1vw #000000,
+					   1px 1px 1.1vw #000000,
+					   -4px -5px 8px hsl(167.82deg, 17%, 24.8%),
+					   6px 6px 5px hsl(167.82deg, 20%, 18.8%);
+	}
+	html {
+		--fg-color: #d6d6d6; /* contrast-ratio: 9.92:1 */
+		--bg-color: #282a2b;
+		--link-highlight-color: #43a5d5; /* contrast-ratio: 5.2:1 */
+		--h2-color: #d4595f; /* contrast-ratio: 4.51:1 */
+		--code-color: #9a9898; /* contrast-ratio: 5.02:1 */
+		--webaddress-link-color: #2eb398; /* contrast-ratio: 5.5:1 */
+		--skills-h2-color: #9fca56; /* contrast-ratio: 7.59:1 */
+		--date-color: #918f8e; /* contrast-ratio: 4.47:1 */
+		--oss-h3-color: #3ea638; /* contrast-ratio: 4.61:1 (increased further by drop-shadow filter below) */
+		color: var(--fg-color);
+		background-color: var(--bg-color);
+		--shadow-color: 199.73deg 63.48% 10%;
+	}
+	a:hover {
+		text-decoration-line: underline overline;
+		text-decoration-style: solid;
+		text-decoration-color: var(--link-highlight-color);
+		text-decoration-skip-ink: all;
+		text-decoration-thickness: calc((1/16) * var(--default-font-size) / 11);
+		filter: var(--shadow-elevation-low);
+
+		font-variation-settings: "wght" var(--link-hover-final-font-weight, 990), "wdth" var(--link-hover-final-font-width, 84);
+	}
+	code {
+		color: var(--code-color);
+	}
+	h2 {
+		/* Subtle shadow layers with enough contrast between h2 color:dark-color (contrast-ratio: 5.39:1) */
+		/* Subtle contrast from shadow-*:bg-color and others */
+		--shadow-outline-color: 358.22 59.76% 50%; /* #cc3338 bg contrast-ratio: 2.81:1,
+														shadow-color contrast-ratio: 3.13:1,
+														dark-color contrast-ratio: 4.09:1 */
+		--shadow-color: 358.22 59.76% 16%; /* #411012 bg contrast-ratio: 1.11:1 */
+		--shadow-dark-color: 358.22 59.76% 0%; /* #000000 bg contrast-ratio: 1.45:1 */
+		--shadow-elevation-low:
+			drop-shadow(0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34))
+			drop-shadow(0.4px 0.8px 1px hsl(var(--shadow-color) / 0.34))
+			drop-shadow(1px 2px 2.5px hsl(var(--shadow-color) / 0.34));
+		text-shadow: -0.05px -0.3px 0.7px hsl(var(--shadow-outline-color)),
+						0.3px 0.5px 0.7px hsl(var(--shadow-color)),
+						0.4px 0.8px 1px hsl(var(--shadow-dark-color));
+		filter: var(--shadow-elevation-low);
+	}
+	#skills {
+		h2 {
+			/* Subtle shadow layers with enough contrast between skills-h2-color:outline & outline:dark-color */
+			/* Subtle contrast from shadow-*:bg-color */
+			/* --skills-h2-color: #9fca56 outline contrast-ratio: 6.09:1 */
+			--shadow-outline-color: 82.24 52.25% 16%;  /* #2e3e13 bg contrast-ratio: 1.24:1,
+																  shadow-color contrast-ratio: 1.39:1,
+																  dark-color contrast-ratio: 1.81:1 */
+			--shadow-color: 82.24 52.25% 22%; /* #40551b bg contrast-ratio: 1.73:1 */
+			--shadow-dark-color: 82.24 52.25% 0%; /* #000000 bg contrast-ratio: 1.45:1 */
+			--shadow-elevation-low:
+				drop-shadow(0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34))
+				drop-shadow(0.4px 0.8px 1px hsl(var(--shadow-color) / 0.34))
+				drop-shadow(1px 2px 2.5px hsl(var(--shadow-color) / 0.34));
+			text-shadow: -0.05px -0.3px 0.7px hsl(var(--shadow-outline-color)),
+							0.3px 0.5px 0.7px hsl(var(--shadow-color)),
+							0.4px 0.8px 1px hsl(var(--shadow-dark-color));
+			filter: var(--shadow-elevation-low);
+		}
+	}
+	#header {
+		#webaddress {
+			color: var(--webaddress-link-color);
+		}
+		#webaddress td {
+			border-left-color: var(--fg-color); /* contrast-ratio: 9.92:1 */
+		}
+	}
+	#experience {
+		&> h3 + p code {
+			color: var(--date-color);
+		}
+	}
+	#open-source {
+		& > h3 {
+			/* Subtle shadow layers with enough contrast between outline:dark-color */
+			/* Subtle contrast from shadow-*:bg-color */
+			--shadow-outline-color: 119 48% 50%; /* #44bd42 bg contrast-ratio: 5.9:1,
+															shadow-color contrast-ratio: 5.08:1,
+															dark-color contrast-ratio: 8.6:1 */
+			--shadow-color: 119 48% 16%; /* #163c15 bg contrast-ratio: 1.16:1 */
+			--shadow-dark-color: 119 48% 0%; /* #000000 bg contrast-ratio: 1.45:1 */
+			--shadow-elevation-low:
+			  drop-shadow(0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34))
+			  drop-shadow(0.4px 0.8px 1px hsl(var(--shadow-color) / 0.34))
+			  drop-shadow(1px 2px 2.5px hsl(var(--shadow-color) / 0.34));
+			text-shadow: -0.05px -0.3px 0.7px hsl(var(--shadow-outline-color)),
+						 0.3px 0.5px 0.7px hsl(var(--shadow-color)),
+						 0.4px 0.8px 1px hsl(var(--shadow-dark-color));
+			filter: var(--shadow-elevation-low);
+		}
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	::selection {
+		color: #000000; /* contrast-ratio: 12.13:1 */
+		background: #93d1c1;
+		/* Note: used luminance trick with base color: #0b5b4d
+		   Reference: https://www.joshwcomeau.com/css/designing-shadows/ */
+		/* With shadow, bg color darkens to #7dcdbb, fg:bg contrast-ratio: 11.32:1 */
+		text-shadow: 0.3px 0.5px 0.7px hsl(169.5, 78.43%, 57%),
+		  0.4px 0.8px 1px hsl(169.5, 78.43%, 38%),
+		  1px 2px 2.5px hsl(169.5 78.43% 38% / 0.34),
+		  -1px -1px 1.1vw #93d1c1,
+		  1px 1px 1.1vw #93d1c1,
+		  -4px -5px 8px hsl(164.52deg, 40.26%, 46.8%),
+		  6px 6px 5px hsl(164.52deg, 40.26%, 38.8%);
+	}
+	html {
+		--fg-color: #141a1b;  /* contrast ratio: 17.59:1 */
+		--bg-color: #ffffff;
+		--link-highlight-color: #24759E; /* contrast-ratio: 5.1:1 */
+		--h2-color: #cd3f45; /* contrast-ratio: 4.78:1 */
+		--code-color: #6e6e6e; /* contrast-ratio: 4.47:1 */
+		--webaddress-link-color: #09765e; /* contrast-ratio: 5.57:1 */
+		--skills-h2-color: #8ebe41; /* #8ebe41 contrast-ratio: 2.18:1 (increased by outline text-shadow/drop-shadow filter below) */
+		--date-color: #777; /* contrast-ratio: 4.47:1 */
+		--oss-h3-color: #3ea638; /* contrast-ratio: 3.12:1 (increased by border drop-shadow filter below) */
+		color: var(--fg-color);
+		background-color: var(--bg-color);
+
+		--shadow-color: 200.16 62.89% 38.04%;
+	}
+	a:hover {
+		text-decoration: underline overline solid var(--link-highlight-color);
+		text-decoration-skip-ink: all;
+		text-decoration-thickness: calc((1/16) * var(--default-font-size) / 11);
+		filter: var(--shadow-elevation-low);
+	}
+	code {
+		color: var(--code-color);
+	}
+	h2 {
+		--shadow-outline-color: 358.22 59.76% 16%; /* #411012 contrast-ratio: 16.05:1 */
+		--shadow-color: 358.22 59.76% 22%; /* #5a1719 contrast-ratio: 13.36:1 */
+		--shadow-dark-color: 358.22 59.76% 0%; /* #000000 bg contrast-ratio: 21:1 */
+		--shadow-elevation-low:
+			drop-shadow(0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34))
+			drop-shadow(0.4px 0.8px 1px hsl(var(--shadow-color) / 0.34))
+			drop-shadow(1px 2px 2.5px hsl(var(--shadow-color) / 0.34));
+		text-shadow: -0.05px -0.3px 0.7px hsl(var(--shadow-outline-color)),
+						0.3px 0.5px 0.7px hsl(var(--shadow-color)),
+						0.4px 0.8px 1px hsl(var(--shadow-dark-color));
+		filter: var(--shadow-elevation-low);
+	}
+	#skills {
+		h2 {
+			/* --skills-h2-color: #8ebe41 outline contrast-ratio: 5.35:1 */
+			--shadow-outline-color: 83 49.18% 16%; /* #2d3d15 bg contrast-ratio: 11.73:1,
+															  shadow-color contrast-ratio: 1.39:1,
+															  dark-color contrast-ratio: 1.78:1 */
+			--shadow-color: 83 49.18% 22%; /* #3f541d contrast-ratio: 8.4:1 */
+			--shadow-dark-color: 83 49.18% 0%; /* #000000 bg contrast-ratio: 21:1 */
+			--shadow-elevation-low:
+				drop-shadow(0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34))
+				drop-shadow(0.4px 0.8px 1px hsl(var(--shadow-color) / 0.34))
+				drop-shadow(1px 2px 2.5px hsl(var(--shadow-color) / 0.34));
+			text-shadow: -0.05px -0.3px 0.7px hsl(var(--shadow-outline-color)),
+							0.3px 0.5px 0.7px hsl(var(--shadow-color)),
+							0.4px 0.8px 1px hsl(var(--shadow-dark-color));
+			filter: var(--shadow-elevation-low);
+		}
+	}
+	#header {
+		#webaddress {
+			color: var(--webaddress-link-color);
+		}
+	}
+	#open-source {
+		& > h3 {
+			--shadow-outline-color: 119 48% 22%; /* #1e531d contrast-ratio: 9.08:1 */
+			--shadow-color: var(--shadow-outline-color);
+			--shadow-elevation-low:
+			  drop-shadow(0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34))
+			  drop-shadow(0.4px 0.8px 1px hsl(var(--shadow-color) / 0.34))
+			  drop-shadow(1px 2px 2.5px hsl(var(--shadow-color) / 0.34));
+			text-shadow: -0.05px -0.3px 0.7px hsl(var(--shadow-outline-color)),
+						 0.3px 0.5px 0.7px hsl(var(--shadow-color)),
+						 0.4px 0.8px 1px hsl(var(--shadow-color));
+			filter: var(--shadow-elevation-low);
+		}
+	}
+}
+
 @media screen and (prefers-contrast: more),
        screen and (prefers-contrast: more) and (forced-colors: active) {
 	/* The foreground:background contrast-ratio should be >= 7:1 */
@@ -1420,206 +1621,6 @@ strong {
 		drop-shadow(11.2px 22.3px 28.1px hsl(var(--shadow-color) / 0.34))
 		drop-shadow(17px 33.9px 42.7px hsl(var(--shadow-color) / 0.34))
 		drop-shadow(25px 50px 62.9px hsl(var(--shadow-color) / 0.34));
-	}
-
-	@media (prefers-color-scheme: dark) {
-		::selection {
-			color: #93d1c1; /* contrast-ratio: 12.13:1 */
-			background-color: #000000;
-			text-shadow: 0.3px 0.5px 0.7px hsl(167.82, 59.11%, 18.12%),
-			             0.4px 0.8px 1px hsl(167.82, 59.11%, 18.12%),
-						   1px 2px 2.5px hsl(167.82 59.11% 18.12% / 0.34),
-						   -1px -1px 1.1vw #000000,
-						   1px 1px 1.1vw #000000,
-						   -4px -5px 8px hsl(167.82deg, 17%, 24.8%),
-						   6px 6px 5px hsl(167.82deg, 20%, 18.8%);
-		}
-		html {
-			--fg-color: #d6d6d6; /* contrast-ratio: 9.92:1 */
-			--bg-color: #282a2b;
-			--link-highlight-color: #43a5d5; /* contrast-ratio: 5.2:1 */
-			--h2-color: #d4595f; /* contrast-ratio: 4.51:1 */
-			--code-color: #9a9898; /* contrast-ratio: 5.02:1 */
-			--webaddress-link-color: #2eb398; /* contrast-ratio: 5.5:1 */
-			--skills-h2-color: #9fca56; /* contrast-ratio: 7.59:1 */
-			--date-color: #918f8e; /* contrast-ratio: 4.47:1 */
-			--oss-h3-color: #3ea638; /* contrast-ratio: 4.61:1 (increased further by drop-shadow filter below) */
-			color: var(--fg-color);
-			background-color: var(--bg-color);
-			--shadow-color: 199.73deg 63.48% 10%;
-		}
-		a:hover {
-			text-decoration-line: underline overline;
-			text-decoration-style: solid;
-			text-decoration-color: var(--link-highlight-color);
-			text-decoration-skip-ink: all;
-			text-decoration-thickness: calc((1/16) * var(--default-font-size) / 11);
-			filter: var(--shadow-elevation-low);
-
-			font-variation-settings: "wght" var(--link-hover-final-font-weight, 990), "wdth" var(--link-hover-final-font-width, 84);
-		}
-		code {
-			color: var(--code-color);
-		}
-		h2 {
-			/* Subtle shadow layers with enough contrast between h2 color:dark-color (contrast-ratio: 5.39:1) */
-			/* Subtle contrast from shadow-*:bg-color and others */
-			--shadow-outline-color: 358.22 59.76% 50%; /* #cc3338 bg contrast-ratio: 2.81:1,
-															shadow-color contrast-ratio: 3.13:1,
-															dark-color contrast-ratio: 4.09:1 */
-			--shadow-color: 358.22 59.76% 16%; /* #411012 bg contrast-ratio: 1.11:1 */
-			--shadow-dark-color: 358.22 59.76% 0%; /* #000000 bg contrast-ratio: 1.45:1 */
-			--shadow-elevation-low:
-				drop-shadow(0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34))
-				drop-shadow(0.4px 0.8px 1px hsl(var(--shadow-color) / 0.34))
-				drop-shadow(1px 2px 2.5px hsl(var(--shadow-color) / 0.34));
-			text-shadow: -0.05px -0.3px 0.7px hsl(var(--shadow-outline-color)),
-							0.3px 0.5px 0.7px hsl(var(--shadow-color)),
-							0.4px 0.8px 1px hsl(var(--shadow-dark-color));
-			filter: var(--shadow-elevation-low);
-		}
-		#skills {
-			h2 {
-				/* Subtle shadow layers with enough contrast between skills-h2-color:outline & outline:dark-color */
-				/* Subtle contrast from shadow-*:bg-color */
-				/* --skills-h2-color: #9fca56 outline contrast-ratio: 6.09:1 */
-				--shadow-outline-color: 82.24 52.25% 16%;  /* #2e3e13 bg contrast-ratio: 1.24:1,
-																	  shadow-color contrast-ratio: 1.39:1,
-																	  dark-color contrast-ratio: 1.81:1 */
-				--shadow-color: 82.24 52.25% 22%; /* #40551b bg contrast-ratio: 1.73:1 */
-				--shadow-dark-color: 82.24 52.25% 0%; /* #000000 bg contrast-ratio: 1.45:1 */
-				--shadow-elevation-low:
-					drop-shadow(0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34))
-					drop-shadow(0.4px 0.8px 1px hsl(var(--shadow-color) / 0.34))
-					drop-shadow(1px 2px 2.5px hsl(var(--shadow-color) / 0.34));
-				text-shadow: -0.05px -0.3px 0.7px hsl(var(--shadow-outline-color)),
-								0.3px 0.5px 0.7px hsl(var(--shadow-color)),
-								0.4px 0.8px 1px hsl(var(--shadow-dark-color));
-				filter: var(--shadow-elevation-low);
-			}
-		}
-		#header {
-			#webaddress {
-				color: var(--webaddress-link-color);
-			}
-			#webaddress td {
-				border-left-color: var(--fg-color); /* contrast-ratio: 9.92:1 */
-			}
-		}
-		#experience {
-			&> h3 + p code {
-				color: var(--date-color);
-			}
-		}
-		#open-source {
-			& > h3 {
-				/* Subtle shadow layers with enough contrast between outline:dark-color */
-				/* Subtle contrast from shadow-*:bg-color */
-				--shadow-outline-color: 119 48% 50%; /* #44bd42 bg contrast-ratio: 5.9:1,
-																shadow-color contrast-ratio: 5.08:1,
-																dark-color contrast-ratio: 8.6:1 */
-				--shadow-color: 119 48% 16%; /* #163c15 bg contrast-ratio: 1.16:1 */
-				--shadow-dark-color: 119 48% 0%; /* #000000 bg contrast-ratio: 1.45:1 */
-				--shadow-elevation-low:
-				  drop-shadow(0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34))
-				  drop-shadow(0.4px 0.8px 1px hsl(var(--shadow-color) / 0.34))
-				  drop-shadow(1px 2px 2.5px hsl(var(--shadow-color) / 0.34));
-				text-shadow: -0.05px -0.3px 0.7px hsl(var(--shadow-outline-color)),
-				             0.3px 0.5px 0.7px hsl(var(--shadow-color)),
-				             0.4px 0.8px 1px hsl(var(--shadow-dark-color));
-				filter: var(--shadow-elevation-low);
-			}
-		}
-	}
-	@media (prefers-color-scheme: light) {
-		::selection {
-			color: #000000; /* contrast-ratio: 12.13:1 */
-			background: #93d1c1;
-			/* Note: used luminance trick with base color: #0b5b4d
-			   Reference: https://www.joshwcomeau.com/css/designing-shadows/ */
-			/* With shadow, bg color darkens to #7dcdbb, fg:bg contrast-ratio: 11.32:1 */
-			text-shadow: 0.3px 0.5px 0.7px hsl(169.5, 78.43%, 57%),
-			  0.4px 0.8px 1px hsl(169.5, 78.43%, 38%),
-			  1px 2px 2.5px hsl(169.5 78.43% 38% / 0.34),
-			  -1px -1px 1.1vw #93d1c1,
-			  1px 1px 1.1vw #93d1c1,
-			  -4px -5px 8px hsl(164.52deg, 40.26%, 46.8%),
-			  6px 6px 5px hsl(164.52deg, 40.26%, 38.8%);
-		}
-		html {
-			--fg-color: #141a1b;  /* contrast ratio: 17.59:1 */
-			--bg-color: #ffffff;
-			--link-highlight-color: #24759E; /* contrast-ratio: 5.1:1 */
-			--h2-color: #cd3f45; /* contrast-ratio: 4.78:1 */
-			--code-color: #6e6e6e; /* contrast-ratio: 4.47:1 */
-			--webaddress-link-color: #09765e; /* contrast-ratio: 5.57:1 */
-			--skills-h2-color: #8ebe41; /* #8ebe41 contrast-ratio: 2.18:1 (increased by outline text-shadow/drop-shadow filter below) */
-			--date-color: #777; /* contrast-ratio: 4.47:1 */
-			--oss-h3-color: #3ea638; /* contrast-ratio: 3.12:1 (increased by border drop-shadow filter below) */
-			color: var(--fg-color);
-			background-color: var(--bg-color);
-
-			--shadow-color: 200.16 62.89% 38.04%;
-		}
-		a:hover {
-			text-decoration: underline overline solid var(--link-highlight-color);
-			text-decoration-skip-ink: all;
-			text-decoration-thickness: calc((1/16) * var(--default-font-size) / 11);
-			filter: var(--shadow-elevation-low);
-		}
-		code {
-			color: var(--code-color);
-		}
-		h2 {
-			--shadow-outline-color: 358.22 59.76% 16%; /* #411012 contrast-ratio: 16.05:1 */
-			--shadow-color: 358.22 59.76% 22%; /* #5a1719 contrast-ratio: 13.36:1 */
-			--shadow-dark-color: 358.22 59.76% 0%; /* #000000 bg contrast-ratio: 21:1 */
-			--shadow-elevation-low:
-				drop-shadow(0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34))
-				drop-shadow(0.4px 0.8px 1px hsl(var(--shadow-color) / 0.34))
-				drop-shadow(1px 2px 2.5px hsl(var(--shadow-color) / 0.34));
-			text-shadow: -0.05px -0.3px 0.7px hsl(var(--shadow-outline-color)),
-							0.3px 0.5px 0.7px hsl(var(--shadow-color)),
-							0.4px 0.8px 1px hsl(var(--shadow-dark-color));
-			filter: var(--shadow-elevation-low);
-		}
-		#skills {
-			h2 {
-				/* --skills-h2-color: #8ebe41 outline contrast-ratio: 5.35:1 */
-				--shadow-outline-color: 83 49.18% 16%; /* #2d3d15 bg contrast-ratio: 11.73:1,
-																  shadow-color contrast-ratio: 1.39:1,
-																  dark-color contrast-ratio: 1.78:1 */
-				--shadow-color: 83 49.18% 22%; /* #3f541d contrast-ratio: 8.4:1 */
-				--shadow-dark-color: 83 49.18% 0%; /* #000000 bg contrast-ratio: 21:1 */
-				--shadow-elevation-low:
-					drop-shadow(0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34))
-					drop-shadow(0.4px 0.8px 1px hsl(var(--shadow-color) / 0.34))
-					drop-shadow(1px 2px 2.5px hsl(var(--shadow-color) / 0.34));
-				text-shadow: -0.05px -0.3px 0.7px hsl(var(--shadow-outline-color)),
-								0.3px 0.5px 0.7px hsl(var(--shadow-color)),
-								0.4px 0.8px 1px hsl(var(--shadow-dark-color));
-				filter: var(--shadow-elevation-low);
-			}
-		}
-		#header {
-			#webaddress {
-				color: var(--webaddress-link-color);
-			}
-		}
-		#open-source {
-			& > h3 {
-				--shadow-outline-color: 119 48% 22%; /* #1e531d contrast-ratio: 9.08:1 */
-				--shadow-color: var(--shadow-outline-color);
-				--shadow-elevation-low:
-				  drop-shadow(0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34))
-				  drop-shadow(0.4px 0.8px 1px hsl(var(--shadow-color) / 0.34))
-				  drop-shadow(1px 2px 2.5px hsl(var(--shadow-color) / 0.34));
-				text-shadow: -0.05px -0.3px 0.7px hsl(var(--shadow-outline-color)),
-				             0.3px 0.5px 0.7px hsl(var(--shadow-color)),
-				             0.4px 0.8px 1px hsl(var(--shadow-color));
-				filter: var(--shadow-elevation-low);
-			}
-		}
 	}
 }
 
