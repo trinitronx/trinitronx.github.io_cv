@@ -276,6 +276,13 @@ ul > li > ul > li:before {
 	left: -0.25rem;
 }
 
+/* Fallback to standard UTF-8 bullet & font when the user has requested reduced
+   data usage.
+
+  References:
+  - https://github.com/w3c/csswg-drafts/issues/5272#issuecomment-651954249
+  - https://blog.tomayac.com/2019/09/16/not-all-is-nothing-finding-out-if-the-browser-supports-a-given-media-query/#update-august-2023
+*/
 @media (prefers-reduced-data: reduce) {
 	ul > li:before {
 		/* Standard UTF-8 U+25CB 'White Circle' ○ */
