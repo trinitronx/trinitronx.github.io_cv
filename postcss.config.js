@@ -1,6 +1,6 @@
 const postcss = require('postcss');
 const postcssPresetEnv = require('postcss-preset-env');
-
+const cssNano = require('cssnano');
 
 module.exports = {
 	plugins: [
@@ -22,6 +22,9 @@ module.exports = {
                 'focus-within-pseudo-class': false,
                 'has-pseudo-class': false
             }
-        })
+        }),
+        ...process.env.NODE_ENV === 'production'
+            ? [cssNano({preset: 'default'})]
+            : []
 	]
 }
