@@ -137,7 +137,7 @@ table {
 @font-feature-values "JetBrainsMono Nerd Font Propo" {
 	/* Match my VSCode config:
 	   JetBrainsMono OpenType features:
-	   "editor.fontLigatures": "'cv02', 'cv04', 'cv05', 'cv07', 'cv08', 'cv11', 'cv14', 'cv99', 'ss19', 'zero', 'calt', 
+	   "editor.fontLigatures": "'cv02', 'cv04', 'cv05', 'cv07', 'cv08', 'cv11', 'cv14', 'cv99', 'ss19', 'zero', 'calt',
 	   // FiraCode OpenType features:
 	   'ss04', 'ss08', 'ss09', 'cv23'"
 	*/
@@ -165,7 +165,7 @@ table {
 @font-feature-values "JetBrainsMono Nerd Font Mono" {
 	/* Match my VSCode config:
 	   JetBrainsMono OpenType features:
-	   "editor.fontLigatures": "'cv02', 'cv04', 'cv05', 'cv07', 'cv08', 'cv11', 'cv14', 'cv99', 'ss19', 'zero', 'calt', 
+	   "editor.fontLigatures": "'cv02', 'cv04', 'cv05', 'cv07', 'cv08', 'cv11', 'cv14', 'cv99', 'ss19', 'zero', 'calt',
 	   // FiraCode OpenType features:
 	   'ss04', 'ss08', 'ss09', 'cv23'"
 	*/
@@ -451,18 +451,18 @@ a:focus-visible {
 		text-align: center;
 		font-family: var(--font-family-webaddress);
 	}
-	
+
 	#webaddress a {
 		text-decoration: none;
 	}
-	
+
 	#webaddress table {
 		border-collapse: collapse;
 		empty-cells: hide;
 		box-sizing: content-box;
 		& th {
 			display: none;
-			line-height: 0;	
+			line-height: 0;
 		}
 	}
 
@@ -473,7 +473,7 @@ a:focus-visible {
 		text-wrap: balance;
 		font-weight: 800;
 	}
-	
+
 	#webaddress table tr td:first-child,
 	#webaddress table tr th:first-child {
 		border-left: 0;
@@ -482,7 +482,7 @@ a:focus-visible {
 	#webaddress table tr th:last-child {
 		border-right: 0;
 	}
-	
+
 }
 
 /* Flexbox layout */
@@ -528,7 +528,7 @@ a:focus-visible {
 		empty-cells: hide;
 		& th {
 			display: none;
-			line-height: 0;	
+			line-height: 0;
 		}
 	}
 	table > tbody > tr {
