@@ -1,0 +1,30 @@
+{
+  "files": {
+    "includes": [
+      "_config*.yml",
+      "_layouts/*.html",
+      "_sass/*.scss",
+      "_sass/*.sass"
+    ]
+  },
+  "formatter": {
+    "useEditorconfig": true,
+    "includes": [
+      "_config*.yml",
+      "_layouts/*.html",
+      "_sass/*.scss",
+      "_sass/*.sass"
+    ]
+  },
+  "linter": {
+    "includes": [
+      "_config*.yml",
+      "_layouts/*.html",
+      "_sass/*.scss",
+      "_sass/*.sass"
+    ]
+  },
+  "vcs": {
+    "useIgnoreFile": true
+  }
+}
