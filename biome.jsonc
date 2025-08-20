@@ -26,5 +26,13 @@
   },
   "vcs": {
     "useIgnoreFile": true
+  },
+  "html": {
+    "parser": {
+      "interpolation": true
+    },
+    "formatter": {
+      "enabled": true
+    }
   }
 }
