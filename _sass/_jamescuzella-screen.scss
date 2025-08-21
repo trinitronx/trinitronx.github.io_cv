@@ -595,7 +595,7 @@ strong {
 		position: absolute;
 		text-align: right;
 		left: calc(var(--align-guide-main-width));
-		top: calc(-1 * var(--heading-line-height));
+		top: calc(-1.5 * var(--heading-line-height));
 		min-width: max-content;
 		max-width: fit-content;
 		line-height: var(--heading-line-height);
