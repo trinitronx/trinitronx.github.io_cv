@@ -868,6 +868,8 @@ strong {
 		&#experience, &#school, &#certifications, &#academic-projects, &#open-source {
 			& > h2, & > h3, & > h4 {
 				text-align: left;
+				/* Allow headings to wrap onto multiple lines */
+				min-width: fit-content;
 			}
 		}
 	}
