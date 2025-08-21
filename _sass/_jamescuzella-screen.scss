@@ -399,7 +399,7 @@ a:focus-visible {
 	}
 }
 
-#cv > div {
+#cv > article > div {
 	position: relative;
 }
 
@@ -595,7 +595,7 @@ strong {
 		position: absolute;
 		text-align: right;
 		left: calc(var(--align-guide-main-width));
-		top: calc(-1 * var(--heading-line-height));
+		top: calc(-1.5 * var(--heading-line-height));
 		min-width: max-content;
 		max-width: fit-content;
 		line-height: var(--heading-line-height);
@@ -674,7 +674,7 @@ strong {
 /* max-width: 78px @ 1rem = 16px */
 @media only screen and (max-width: 4.875rem) {
 	/* Remove header hr bandeau decoration (screen too small) */
-	#cv > #header hr {
+	#cv > article > #header hr {
 		&::before, &::after {
 			content: '';
 			position: relative;
@@ -805,7 +805,7 @@ strong {
 /* max-width: ~160px @ 1rem = 16px */
 @media only screen and (max-width: 10rem) {
 	/* Wrap all headings anywhere */
-	#cv > div {
+	#cv > article > div {
 		&#header, &#skills, &#experience, &#school, &#certifications, &#academic-projects, &#open-source {
 			& > h1, & > h2, & > h3, & > h4 {
 				overflow-wrap: anywhere;
@@ -848,7 +848,7 @@ strong {
 /* max-width: ~345px @ 1rem = 16px */
 @media only screen and (max-width: 21.5625rem) {
 	/* Allow open-source div code text to wrap anywhere */
-	#cv > div {
+	#cv > article > div {
 		&#open-source {
 			& code {
 				overflow-wrap: anywhere;
@@ -864,15 +864,15 @@ strong {
 /* max-width: ~375px @ 1rem = 16px */
 @media only screen and (max-width: 23.4375rem) {
 	/* Left align all headings */
-	#cv > div {
+	#cv > article > div {
 		&#experience, &#school, &#certifications, &#academic-projects, &#open-source {
 			& > h2, & > h3, & > h4 {
 				text-align: left;
 			}
 		}
 	}
-	/* Start adjusting header bandeau width & don't wrap the encaps */
-	#cv > #header hr {
+	/* Start adjusting header bandeau width & don't wrap the endcaps */
+	#cv > article > #header hr {
 		width: calc(90vw - 2rem);
 		text-wrap-mode: nowrap;
 	}
@@ -970,7 +970,7 @@ strong {
 		}
 	}
 	/* Reflow all other sections headers to fit content */
-	#cv > div {
+	#cv > article > div {
 		/* Reset section alignment to left side */
 		&#school, &#certifications, &#academic-projects, &#open-source {
 			& > h2, & > h3, & > h4 {
@@ -1057,7 +1057,7 @@ strong {
 			width: unset;
 		}
 	}
-	#cv > div {
+	#cv > article > div {
 		/* Reset section alignment to left side */
 		&#school, &#certifications, &#academic-projects, &#open-source {
 			& > h2, & > h3, & > h4 {
@@ -1157,12 +1157,18 @@ strong {
 		--default-font-size: 1.35rem;
 		--align-guide-width: 25vw;
 	}
-	#cv > div {
+	#cv > article > div {
 		/* Reset max-width to right align headings */
 		&#experience, &#school, &#certifications, &#academic-projects, &#open-source {
 			& > h2, & > h3, & > h4 {
 				max-width: var(--align-guide-width);
 				min-width: min-content;
+				width: var(--align-guide-width);
+				text-align: right;
+			}
+			& > p, & > ul, & > ol {
+				left: var(--align-guide-width);
+				width: var(--align-guide-main-width);
 			}
 		}
 		/* Change school activities table direction back to column to avoid
