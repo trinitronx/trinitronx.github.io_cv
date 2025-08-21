@@ -36,6 +36,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+      - name: Install npm dependencies (PostCSS, etc...)
+        run: npm ci --ignore-scripts
       - name: Setup Ruby
         # https://github.com/ruby/setup-ruby/releases/tag/v1.256.0
         uses: ruby/setup-ruby@v1.256.0
