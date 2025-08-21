@@ -12,6 +12,7 @@ exclude:
   - "package.json"
   - "package-lock.json"
   - "postcss.config.js"
+  - "biome.jsonc"
 sass:
   style: compressed
 plugins:

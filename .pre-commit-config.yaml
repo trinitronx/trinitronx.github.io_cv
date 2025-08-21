@@ -23,6 +23,18 @@ repos:
   rev: v0.18.1
   hooks:
   - id: markdownlint-cli2
+- repo: https://github.com/rhysd/actionlint.git
+  rev: v1.7.7
+  hooks:
+  - id: actionlint
+- repo: local
+  hooks:
+    - id: local-biome-check
+      name: biome check
+      entry: npx @biomejs/biome check --write --files-ignore-unknown=true --no-errors-on-unmatched
+      language: system
+      types: [text]
+      files: "\\.(jsx?|tsx?|c(js|ts)|m(js|ts)|d\\.(ts|cts|mts)|jsonc?|css|svelte|vue|astro|graphql|gql)$"
 -   repo: https://github.com/detailyang/pre-commit-shell.git
     rev: 1.0.2
     hooks:

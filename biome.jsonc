@@ -1,0 +1,41 @@
+{
+  "files": {
+    "includes": [
+      "_config*.yml",
+      "_layouts/*.html",
+      "_sass/*.scss",
+      "_sass/*.sass",
+      "package.json"
+    ]
+  },
+  "formatter": {
+    "useEditorconfig": true,
+    "includes": [
+      "_config*.yml",
+      "_layouts/*.html",
+      "_sass/*.scss",
+      "_sass/*.sass",
+      "package.json"
+    ]
+  },
+  "linter": {
+    "includes": [
+      "_config*.yml",
+      "_layouts/*.html",
+      "_sass/*.scss",
+      "_sass/*.sass",
+      "package.json"
+    ]
+  },
+  "vcs": {
+    "useIgnoreFile": true
+  },
+  "html": {
+    "parser": {
+      "interpolation": true
+    },
+    "formatter": {
+      "enabled": true
+    }
+  }
+}
