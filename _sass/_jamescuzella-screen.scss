@@ -1163,6 +1163,12 @@ strong {
 			& > h2, & > h3, & > h4 {
 				max-width: var(--align-guide-width);
 				min-width: min-content;
+				width: var(--align-guide-width);
+				text-align: right;
+			}
+			& > p, & > ul, & > ol {
+				left: var(--align-guide-width);
+				width: var(--align-guide-main-width);
 			}
 		}
 		/* Change school activities table direction back to column to avoid
