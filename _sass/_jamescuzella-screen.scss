@@ -11,6 +11,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1rem;
 	-webkit-text-size-adjust: none; /* Fix font scaling bug observed on iOS 15.7 */
+	-webkit-font-smoothing: subpixel-antialiased; /* Avoid blurry fonts (especially with position: fixed) */
 }
 ol, ul {
 	list-style: none;
