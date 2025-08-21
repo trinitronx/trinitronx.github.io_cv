@@ -4,7 +4,8 @@
       "_config*.yml",
       "_layouts/*.html",
       "_sass/*.scss",
-      "_sass/*.sass"
+      "_sass/*.sass",
+      "package.json"
     ]
   },
   "formatter": {
@@ -13,7 +14,8 @@
       "_config*.yml",
       "_layouts/*.html",
       "_sass/*.scss",
-      "_sass/*.sass"
+      "_sass/*.sass",
+      "package.json"
     ]
   },
   "linter": {
@@ -21,7 +23,8 @@
       "_config*.yml",
       "_layouts/*.html",
       "_sass/*.scss",
-      "_sass/*.sass"
+      "_sass/*.sass",
+      "package.json"
     ]
   },
   "vcs": {
