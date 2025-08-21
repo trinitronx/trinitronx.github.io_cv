@@ -10,6 +10,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1rem;
+	-webkit-text-size-adjust: none; /* Fix font scaling bug observed on iOS 15.7 */
 }
 ol, ul {
 	list-style: none;
