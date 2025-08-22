@@ -1,6 +1,5 @@
 const postcss = require('postcss');
 const postcssPresetEnv = require('postcss-preset-env');
-const postcssNested = require('postcss-nested');
 const cssNano = require('cssnano');
 
 module.exports = {
@@ -11,7 +10,7 @@ module.exports = {
             autoprefixer: { flexbox: 'no-2009' },
             enableClientSidePolyfills: true,
             features: {
-                'nesting-rules': false,
+                'nesting-rules': true,
                 'font-variant-property': true,
                 'overflow-property': true,
                 'overflow-wrap-property': true,
@@ -24,7 +23,6 @@ module.exports = {
                 'has-pseudo-class': false
             }
         }),
-        postcssNested(),
         ...process.env.NODE_ENV === 'production'
             ? [cssNano({preset: [
                 "default",
