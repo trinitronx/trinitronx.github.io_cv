@@ -1405,8 +1405,6 @@ strong {
 	}
 }
 
-@media screen and (prefers-contrast: more),
-       screen and (prefers-contrast: more) and (forced-colors: active) {
 /* 
   TODO: Fix the broken prefers-contrast: {more, less} modes when using PostCSS
         plugins.
@@ -1417,6 +1415,7 @@ strong {
 
   Find out which PostCSS plugin is causing this and fix it.
 */
+@media (prefers-contrast: more) {
 	/* The foreground:background contrast-ratio should be >= 7:1 */
 	/* References:
 	*    - https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/25672185a29b8fdefab70996242ad03d6c5f4ef0/Accessibility/PrefersContrast/explainer.md
@@ -1425,8 +1424,8 @@ strong {
 	*    - https://webaim.org/resources/contrastchecker/
 	*/
 	@media (forced-colors: none) and (prefers-color-scheme: dark),
-	       (-ms-high-contrast: active) and (prefers-color-scheme: dark),
-		   (-ms-high-contrast: white-on-black) {
+		   only screen and (-ms-high-contrast: active) and (prefers-color-scheme: dark),
+		   only screen and (-ms-high-contrast: white-on-black) {
 		::selection {
 			color: #000000; /* contrast-ratio: 12.13:1 */
 			background: #93d1c1;
@@ -1465,8 +1464,8 @@ strong {
 		}
 	}
 	@media (forced-colors: none) and (prefers-color-scheme: light),
-	       (-ms-high-contrast: active) and (prefers-color-scheme: light),
-		   (-ms-high-contrast: black-on-white) {
+		   only screen and (-ms-high-contrast: active) and (prefers-color-scheme: light),
+		   only screen and (-ms-high-contrast: black-on-white) {
 		::selection {
 			color: #93d1c1; /* contrast-ratio: 12.13:1 */
 			background: #000000;
