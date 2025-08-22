@@ -1405,16 +1405,6 @@ strong {
 	}
 }
 
-/* 
-  TODO: Fix the broken prefers-contrast: {more, less} modes when using PostCSS
-        plugins.
-
-  Root Cause: The "and" operator in the media query is getting jammed up against
-  the previous "(...)" text in the de-nested & minified CSS output.
-  That breaks the media query and causes it to not match.
-
-  Find out which PostCSS plugin is causing this and fix it.
-*/
 @media (prefers-contrast: more) {
 	/* The foreground:background contrast-ratio should be >= 7:1 */
 	/* References:
