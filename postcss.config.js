@@ -16,7 +16,7 @@ module.exports = {
                 'overflow-property': true,
                 'overflow-wrap-property': true,
                 'system-ui-font-family': true,
-                'prefers-color-scheme-query': true,
+                'prefers-color-scheme-query': false,
                 'text-decoration-shorthand': true,
                 'blank-pseudo-class': false,
                 'focus-visible-pseudo-class': false,
