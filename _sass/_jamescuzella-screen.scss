@@ -1511,8 +1511,8 @@ strong {
 	}
 }
 
-@media screen and (prefers-contrast: custom),
-       screen and (prefers-contrast: custom) and (forced-colors: active) {
+@media (prefers-contrast: custom),
+       (prefers-contrast: custom) and (forced-colors: active) {
 	@media (prefers-color-scheme: dark) {
 		::selection {
 			color: #93d1c1; /* contrast-ratio: 12.13:1 */
@@ -1620,7 +1620,7 @@ strong {
 	}
 }
 
-@media screen and (prefers-contrast: no-preference) and (forced-colors: none) {
+@media (prefers-contrast: no-preference) and (forced-colors: none) {
 	/* Only use drop-shadow when contrast accessibility mode is off */
 	/* References:
 	     - https://www.joshwcomeau.com/css/designing-shadows/
@@ -1661,7 +1661,7 @@ strong {
 	}
 }
 
-@media screen and (prefers-reduced-motion: no-preference) {
+@media (prefers-reduced-motion: no-preference) {
 	html {
 		scroll-behavior: smooth;
 	}
@@ -1700,7 +1700,7 @@ strong {
 	}
 }
 
-@media screen and (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce) {
 	* {
 		/* Very short durations means JavaScript that relies on events still works */
 		animation-duration: 0.001ms !important;
