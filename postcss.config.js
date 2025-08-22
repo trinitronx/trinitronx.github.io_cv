@@ -30,8 +30,8 @@ module.exports = {
                     "discardComments": { "removeAll": true },
                     // Fix issue with @media (prefers-contrast: ...)...
                     // https://github.com/cssnano/cssnano/pull/921#issuecomment-3214722069
-                    "normalizeWhitespace": false,
-                    "minifyParams": false
+                    "normalizeWhitespace": true,
+                    "minifyParams": true
                 }]})
               ]
             : []
