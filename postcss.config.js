@@ -26,7 +26,16 @@ module.exports = {
         }),
         postcssNested(),
         ...process.env.NODE_ENV === 'production'
-            ? [cssNano({preset: 'default'})]
+            ? [cssNano({preset: [
+                "default",
+                {
+                    "discardComments": { "removeAll": true },
+                    // Fix issue with @media (prefers-contrast: ...)...
+                    // https://github.com/cssnano/cssnano/pull/921#issuecomment-3214722069
+                    "normalizeWhitespace": false,
+                    "minifyParams": false
+                }]})
+              ]
             : []
-	]
+    ]
 }
