@@ -18,11 +18,9 @@ ol, ul {
 }
 blockquote, q {
 	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+	&:before, &:after {
+		content: none;
+	}
 }
 table {
 	border-collapse: collapse;
@@ -111,15 +109,18 @@ table {
 	src: url("../fonts/JetBrainsMonoNerdFontMono-Regular.woff2") format('woff2'),
 		 url("../fonts/JetBrainsMonoNerdFontMono-Regular.ttf") format('truetype');
 }
-/* @font-face {
-	font-family: 'JetBrainsMono Nerd Font Mono';
-	font-style: normal;
-	font-weight: 800;
-	font-stretch: 100%;
-	font-display: swap;
-	src: url("../fonts/JetBrainsMonoNerdFontMono-ExtraBold.woff2") format('woff2'),
-		 url("../fonts/JetBrainsMonoNerdFontMono-ExtraBold.ttf") format('truetype');
-} */
+/* Disabled / Unused ExtraBold font-weight variant */
+@media not all and (prefers-reduced-data: no-preference) {
+	@font-face {
+		font-family: 'JetBrainsMono Nerd Font Mono';
+		font-style: normal;
+		font-weight: 800;
+		font-stretch: 100%;
+		font-display: swap;
+		src: url("../fonts/JetBrainsMonoNerdFontMono-ExtraBold.woff2") format('woff2'),
+			 url("../fonts/JetBrainsMonoNerdFontMono-ExtraBold.ttf") format('truetype');
+	}
+}
 
 /* NOSONAR css:S4654 */
 @font-feature-values "Noto Sans Display" {
@@ -290,8 +291,6 @@ ul > li > ul > li:before {
 		/* Standard UTF-8 U+25CB 'White Circle' ○ */
 		content: '○';
 		font-family: var(--font-family-li-bullet-system-fallback);
-		/* letter-spacing: 1.4px;
-		word-spacing: 2.5px; */
 		letter-spacing: 0.028125rem; /* 0.45 px @ 1rem = 16px */
 		word-spacing: 0.546875rem; /* 8.75 px @ 1rem = 16px */
 	}
@@ -548,10 +547,6 @@ a:focus-visible {
 			vertical-align: top;
 		}
 	}
-}
-
-#skills > * {
-	position: relative;
 }
 
 #skills > p {
@@ -1691,15 +1686,13 @@ strong {
 }
 
 @media (prefers-reduced-motion: reduce) {
-	* {
-		/* Very short durations means JavaScript that relies on events still works */
-		animation-duration: 0.001ms !important;
-		animation-iteration-count: 1 !important;
-		transition-duration: 0.001ms !important;
-	}
 	a:hover {
 		text-decoration: none;
 		filter: none;
 		font-weight: bolder;
+		/* Very short durations means JavaScript that relies on events still works */
+		animation-duration: 0.001ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.001ms !important;
 	}
 }
