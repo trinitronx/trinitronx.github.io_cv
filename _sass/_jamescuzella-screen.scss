@@ -547,7 +547,7 @@ a:focus-visible {
 		}
 	}
 	table > tbody > tr {
-		border-bottom: 0.0625rem groove #444; /* TODO: Remove this */
+		border-bottom: 0.0625rem groove #444;
 		td {
 			padding-top: var(--table-td-padding-top);
 			padding-bottom: var(--line-height); /* Incrased spacing from usual --table-td-padding-bottom */
