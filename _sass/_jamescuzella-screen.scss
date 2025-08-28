@@ -1204,6 +1204,12 @@ strong {
 				width: var(--align-guide-width);
 				text-align: right;
 			}
+			/* Adjust padding for extra indent & align with blockquotes */
+			& > ol, & > ul {
+				width: calc(var(--align-guide-main-width) - 1.25rem);
+				margin-left: 0.75rem;
+				padding-left: 0.5rem;
+			}
 		}
 		/* Change school activities table direction back to column to avoid
 		alignment problem */
