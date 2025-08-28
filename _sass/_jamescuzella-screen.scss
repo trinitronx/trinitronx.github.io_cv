@@ -18,6 +18,9 @@ ol, ul {
 }
 blockquote, q {
 	quotes: none;
+	position: relative;
+	margin-left: unset;
+	margin-right: unset;
 	&:before, &:after {
 		content: none;
 	}
@@ -207,6 +210,7 @@ html body {
 	--page-margin-right: var(--default-font-size);
 	--table-td-padding-top: calc(0.5 * var(--default-font-size));
 	--table-td-padding-bottom: calc(0.5 * var(--default-font-size));
+	--quote-left-indent: 2.5rem;
 
 	/* Alignment guide for main centered content */
 	--align-guide-main-width: calc(100vw - 2 * var(--align-guide-width) - var(--page-margin-left) - var(--page-margin-right));
@@ -396,6 +400,16 @@ a:focus-visible {
 				left: var(--align-guide-width);
 				width: var(--align-guide-main-width);
 			}
+		&#school, &#certifications, &#academic-projects, &#open-source, &#experience {
+			& > blockquote {
+				width: calc(var(--align-guide-main-width) - var(--quote-left-indent));
+				left: max(calc(var(--align-guide-width) + var(--quote-left-indent)), var(--quote-left-indent));
+				& > p {
+					width: fit-content;
+					max-width: max-content;
+					min-width: min-content;
+				}
+			}
 		}
 	}
 }
@@ -547,13 +561,26 @@ a:focus-visible {
 			vertical-align: top;
 		}
 	}
-}
 
-#skills > p {
-	width: var(--align-guide-main-width);
-	margin-left: unset;
-	margin-top: var(--line-height);
-	text-align: justify;
+	/* p & quote alignment */
+	& > p {
+		width: var(--align-guide-main-width);
+		margin-left: unset;
+		margin-top: var(--line-height);
+		text-align: justify;
+	}
+	& > blockquote {
+		width: calc(var(--align-guide-main-width) - var(--quote-left-indent));
+		left: calc(var(--align-guide-width) + var(--quote-left-indent)) !important;
+		margin-left: unset;
+		margin-right: unset;
+		text-align: justify;
+		& > p {
+			width: fit-content;
+			max-width: max-content;
+			min-width: min-content;
+		}
+	}
 }
 
 em {
@@ -695,6 +722,7 @@ strong {
 			--page-margin-right: 0;
 			--align-guide-width: 0vw;
 			--heading-font-size-h1: calc(2 * var(--default-font-size));
+			--quote-left-indent: 0rem;
 		}
 
 		#header {
@@ -807,7 +835,7 @@ strong {
 			& > h1, & > h2, & > h3, & > h4 {
 				overflow-wrap: anywhere;
 			}
-			& > p, & ul, & ol, & li, & td {
+			& > p, & ul, & ol, & li, & td, & blockquote, & q {
 				overflow-wrap: anywhere;
 			}
 		}
@@ -888,6 +916,7 @@ strong {
 		--page-margin-left: 0;
 		--page-margin-right: 0;
 		--align-guide-width: 0vw;
+		--quote-left-indent: 0.5rem;
 	}
 
 
