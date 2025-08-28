@@ -1196,6 +1196,12 @@ strong {
 		--align-guide-width: 25vw;
 	}
 	#cv > article > div {
+		&#header {
+			& hr {
+				/* Clamp width between 64rem & 70rem */
+				width: clamp(40rem, var(--align-guide-main-width), 64rem);
+			}
+		}
 		/* Reset max-width to right align headings */
 		&#experience, &#school, &#certifications, &#academic-projects, &#open-source {
 			& > h2, & > h3, & > h4 {
