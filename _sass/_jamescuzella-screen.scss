@@ -214,7 +214,7 @@ html body {
 	--quote-left-indent: 2.5rem;
 
 	/* Alignment guide for main centered content */
-	--align-guide-main-width: calc(100vw - 2 * var(--align-guide-width) - var(--page-margin-left) - var(--page-margin-right));
+	--align-guide-main-width: calc(100vw - var(--page-margin-left) - var(--page-margin-right) - 2 * var(--align-guide-width));
 
 	--font-family-main: 'Noto Sans Display', Avenir, Verdana, sans-serif;
 	--font-family-code-propo: 'JetBrainsMono Nerd Font Propo', Monaco, Menlo, monospace, sans-serif;
