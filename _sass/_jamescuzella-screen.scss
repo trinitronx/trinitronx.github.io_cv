@@ -924,11 +924,11 @@ strong {
 @media only screen and (min-width: 225px) and (max-width: 375px) {
 	/* iPhone 5/5SE and smaller */
 	html body {
-		--line-height: var(--default-font-size);
+		--line-height: calc(1.25 * var(--default-font-size));
 		--table-bottom-margin: calc(0.75 * var(--default-font-size));
 		--page-margin-top: calc(1.5 * var(--default-font-size));
-		--page-margin-left: 0;
-		--page-margin-right: 0;
+		--page-margin-left: calc(var(--default-font-size) * 0.5);
+		--page-margin-right: calc(var(--default-font-size) * 0.5);
 		--align-guide-width: 0vw;
 		--quote-left-indent: 0.5rem;
 	}
