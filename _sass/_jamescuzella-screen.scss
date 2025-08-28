@@ -15,6 +15,7 @@ body {
 }
 ol, ul {
 	list-style: none;
+	padding-left: unset;
 }
 blockquote, q {
 	quotes: none;
@@ -400,6 +401,13 @@ a:focus-visible {
 				left: var(--align-guide-width);
 				width: var(--align-guide-main-width);
 			}
+			/* Adjust for bullet unindent */
+			& > ol, & > ul {
+				width: calc(var(--align-guide-main-width) - 0.75rem);
+				margin-left: 0.75rem;
+			}
+		}
+
 		&#school, &#certifications, &#academic-projects, &#open-source, &#experience {
 			& > blockquote {
 				width: calc(var(--align-guide-main-width) - var(--quote-left-indent));
@@ -643,6 +651,10 @@ strong {
 		left: var(--align-guide-width);
 		width: var(--align-guide-main-width);
 	}
+	/* Adjust for bullet unindent */
+	& > ol, & > ul {
+		padding-left: 0.75rem;
+	}
 }
 
 #school {
@@ -841,7 +853,9 @@ strong {
 		}
 		/* Remove even more left margin from list items */
 		li {
-			margin-left: -2.75rem;
+			margin-left: 0rem;
+			padding-left: 1rem;
+			padding-right: 0.75rem;
 		}
 	}
 }
@@ -882,8 +896,8 @@ strong {
 	}
 	/* Remove extra left margin from list items */
 	li {
-		margin-left: -2rem;
-		padding-right: 1.25rem;
+		margin-left: 0.5rem;
+		padding-right: 0.5rem;
 	}
 }
 /* max-width: ~375px @ 1rem = 16px */
@@ -1094,10 +1108,6 @@ strong {
 				max-width: max-content;
 				min-width: fit-content;
 			}
-			& > p, & > ul, & > ol {
-				left: var(--align-guide-width);
-				width: var(--align-guide-main-width);
-			}
 		}
 	}
 }
@@ -1193,10 +1203,6 @@ strong {
 				min-width: min-content;
 				width: var(--align-guide-width);
 				text-align: right;
-			}
-			& > p, & > ul, & > ol {
-				left: var(--align-guide-width);
-				width: var(--align-guide-main-width);
 			}
 		}
 		/* Change school activities table direction back to column to avoid
