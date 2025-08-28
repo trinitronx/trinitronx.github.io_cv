@@ -388,7 +388,7 @@ a:focus-visible {
 	flex-flow: column nowrap;
 
 	/* Desktop center aligned */
-	& > div {
+	& > article > div {
 		&#school, &#certifications, &#academic-projects, &#open-source {
 			& > h2, & > h3, & > h4 {
 				text-align: right;
@@ -714,7 +714,7 @@ strong {
 /* Reference: https://yesviz.com/devices/apple-watch-series-6-44mm/ */
 @media only screen and (max-width: 224px) {
 		/* Apple Watch series 6 and smaller (224px x 184px) */
-		body {
+		html body {
 			--line-height: var(--default-font-size);
 			--table-bottom-margin: var(--default-font-size);
 			--page-margin-top: calc(1 * var(--default-font-size));
@@ -909,7 +909,7 @@ strong {
 
 @media only screen and (min-width: 225px) and (max-width: 375px) {
 	/* iPhone 5/5SE and smaller */
-	body {
+	html body {
 		--line-height: var(--default-font-size);
 		--table-bottom-margin: calc(0.75 * var(--default-font-size));
 		--page-margin-top: calc(1.5 * var(--default-font-size));
