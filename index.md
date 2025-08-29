@@ -330,7 +330,7 @@ Colorado School of Mines Linux User Group | BlueKey Honor Society Member | CSM B
   - [Add no auth option][oss.5.1]
   - [Made for hackathon: Major League Hacking Global Hack Week - Open Source - October 2023][oss.5.2]
 - [infnoise][oss.6] (Udev, C)
-  - [udev: Fix systemd tag for /dev/infnoise, mtp-probe, ModemManager: ignore][oss.6.1]
+  - [udev: Fix systemd tag for `/dev/infnoise`, mtp-probe, ModemManager: ignore][oss.6.1]
 - [mpv][oss.7] (C)
   - [input: Add new keys: Back, Tools, ZoomIn, ZoomOut][oss.7.1]
   - Support mapping all keycodes on a popular RF Remote used with Linux HTPC apps under Wayland, Xorg + patched `xf86-input-evdev`
@@ -355,7 +355,7 @@ Colorado School of Mines Linux User Group | BlueKey Honor Society Member | CSM B
 - [guifetch][oss.14] (C++, Flutter / Dart)
   - [Add manjaro OS image][oss.14.1]
 - [vendor-reset][oss.15] (C, Linux Kernel Module)
-  - [add RX6600XT support ([AMD/ATI] Navi 23 [Radeon RX 6600/6600 XT/6600M])][oss.15.1]
+  - [add RX6600XT support ([AMD/ATI] Navi 23 [`Radeon RX 6600/6600 XT/6600M`])][oss.15.1]
 - [mailtrap][oss.16] (Ruby)
   - [Many gem development updates + Better SMTP client support!][oss.16.1]
   - [Fix problem with minitest 5 + test/unit incompatibility][oss.16.2]
