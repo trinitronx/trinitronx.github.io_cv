@@ -390,6 +390,7 @@ a:focus-visible {
 
 	/* Desktop center aligned */
 	& > article > div {
+		position: relative;
 		&#school, &#certifications, &#academic-projects, &#open-source {
 			& > h2, & > h3, & > h4 {
 				text-align: right;
@@ -420,10 +421,6 @@ a:focus-visible {
 			}
 		}
 	}
-}
-
-#cv > article > div {
-	position: relative;
 }
 
 /* Header flexbox layout */
