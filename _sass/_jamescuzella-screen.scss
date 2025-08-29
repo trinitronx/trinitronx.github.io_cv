@@ -15,9 +15,13 @@ body {
 }
 ol, ul {
 	list-style: none;
+	padding-left: unset;
 }
 blockquote, q {
 	quotes: none;
+	position: relative;
+	margin-left: unset;
+	margin-right: unset;
 	&:before, &:after {
 		content: none;
 	}
@@ -207,9 +211,10 @@ html body {
 	--page-margin-right: var(--default-font-size);
 	--table-td-padding-top: calc(0.5 * var(--default-font-size));
 	--table-td-padding-bottom: calc(0.5 * var(--default-font-size));
+	--quote-left-indent: 2.5rem;
 
 	/* Alignment guide for main centered content */
-	--align-guide-main-width: calc(100vw - 2 * var(--align-guide-width) - var(--page-margin-left) - var(--page-margin-right));
+	--align-guide-main-width: calc(100vw - var(--page-margin-left) - var(--page-margin-right) - 2 * var(--align-guide-width));
 
 	--font-family-main: 'Noto Sans Display', Avenir, Verdana, sans-serif;
 	--font-family-code-propo: 'JetBrainsMono Nerd Font Propo', Monaco, Menlo, monospace, sans-serif;
@@ -384,7 +389,8 @@ a:focus-visible {
 	flex-flow: column nowrap;
 
 	/* Desktop center aligned */
-	& > div {
+	& > article > div {
+		position: relative;
 		&#school, &#certifications, &#academic-projects, &#open-source {
 			& > h2, & > h3, & > h4 {
 				text-align: right;
@@ -396,12 +402,25 @@ a:focus-visible {
 				left: var(--align-guide-width);
 				width: var(--align-guide-main-width);
 			}
+			/* Adjust for bullet unindent */
+			& > ol, & > ul {
+				width: calc(var(--align-guide-main-width) - 0.75rem);
+				margin-left: 0.75rem;
+			}
+		}
+
+		&#school, &#certifications, &#academic-projects, &#open-source, &#experience {
+			& > blockquote {
+				width: calc(var(--align-guide-main-width) - var(--quote-left-indent));
+				left: max(calc(var(--align-guide-width) + var(--quote-left-indent)), var(--quote-left-indent));
+				& > p {
+					width: fit-content;
+					max-width: max-content;
+					min-width: min-content;
+				}
+			}
 		}
 	}
-}
-
-#cv > article > div {
-	position: relative;
 }
 
 /* Header flexbox layout */
@@ -533,7 +552,7 @@ a:focus-visible {
 		}
 	}
 	table > tbody > tr {
-		border-bottom: 0.0625rem groove #444; /* TODO: Remove this */
+		border-bottom: 0.0625rem groove #444;
 		td {
 			padding-top: var(--table-td-padding-top);
 			padding-bottom: var(--line-height); /* Incrased spacing from usual --table-td-padding-bottom */
@@ -547,13 +566,26 @@ a:focus-visible {
 			vertical-align: top;
 		}
 	}
-}
 
-#skills > p {
-	width: var(--align-guide-main-width);
-	margin-left: unset;
-	margin-top: var(--line-height);
-	text-align: justify;
+	/* p & quote alignment */
+	& > p {
+		width: var(--align-guide-main-width);
+		margin-left: unset;
+		margin-top: var(--line-height);
+		text-align: justify;
+	}
+	& > blockquote {
+		width: calc(var(--align-guide-main-width) - var(--quote-left-indent));
+		left: calc(var(--align-guide-width) + var(--quote-left-indent)) !important;
+		margin-left: unset;
+		margin-right: unset;
+		text-align: justify;
+		& > p {
+			width: fit-content;
+			max-width: max-content;
+			min-width: min-content;
+		}
+	}
 }
 
 em {
@@ -615,6 +647,10 @@ strong {
 	& > p, & > ol, & > ul {
 		left: var(--align-guide-width);
 		width: var(--align-guide-main-width);
+	}
+	/* Adjust for bullet unindent */
+	& > ol, & > ul {
+		padding-left: 0.75rem;
 	}
 }
 
@@ -687,7 +723,7 @@ strong {
 /* Reference: https://yesviz.com/devices/apple-watch-series-6-44mm/ */
 @media only screen and (max-width: 224px) {
 		/* Apple Watch series 6 and smaller (224px x 184px) */
-		body {
+		html body {
 			--line-height: var(--default-font-size);
 			--table-bottom-margin: var(--default-font-size);
 			--page-margin-top: calc(1 * var(--default-font-size));
@@ -695,6 +731,7 @@ strong {
 			--page-margin-right: 0;
 			--align-guide-width: 0vw;
 			--heading-font-size-h1: calc(2 * var(--default-font-size));
+			--quote-left-indent: 0rem;
 		}
 
 		#header {
@@ -807,13 +844,15 @@ strong {
 			& > h1, & > h2, & > h3, & > h4 {
 				overflow-wrap: anywhere;
 			}
-			& > p, & ul, & ol, & li, & td {
+			& > p, & ul, & ol, & li, & td, & blockquote, & q {
 				overflow-wrap: anywhere;
 			}
 		}
 		/* Remove even more left margin from list items */
 		li {
-			margin-left: -2.75rem;
+			margin-left: 0rem;
+			padding-left: 1rem;
+			padding-right: 0.75rem;
 		}
 	}
 }
@@ -854,8 +893,8 @@ strong {
 	}
 	/* Remove extra left margin from list items */
 	li {
-		margin-left: -2rem;
-		padding-right: 1.25rem;
+		margin-left: 0.5rem;
+		padding-right: 0.5rem;
 	}
 }
 /* max-width: ~375px @ 1rem = 16px */
@@ -881,13 +920,14 @@ strong {
 
 @media only screen and (min-width: 225px) and (max-width: 375px) {
 	/* iPhone 5/5SE and smaller */
-	body {
-		--line-height: var(--default-font-size);
+	html body {
+		--line-height: calc(1.25 * var(--default-font-size));
 		--table-bottom-margin: calc(0.75 * var(--default-font-size));
 		--page-margin-top: calc(1.5 * var(--default-font-size));
-		--page-margin-left: 0;
-		--page-margin-right: 0;
+		--page-margin-left: calc(var(--default-font-size) * 0.5);
+		--page-margin-right: calc(var(--default-font-size) * 0.5);
 		--align-guide-width: 0vw;
+		--quote-left-indent: 0.5rem;
 	}
 
 
@@ -1065,10 +1105,6 @@ strong {
 				max-width: max-content;
 				min-width: fit-content;
 			}
-			& > p, & > ul, & > ol {
-				left: var(--align-guide-width);
-				width: var(--align-guide-main-width);
-			}
 		}
 	}
 }
@@ -1157,6 +1193,12 @@ strong {
 		--align-guide-width: 25vw;
 	}
 	#cv > article > div {
+		&#header {
+			& hr {
+				/* Clamp width between 64rem & 70rem */
+				width: clamp(40rem, var(--align-guide-main-width), 64rem);
+			}
+		}
 		/* Reset max-width to right align headings */
 		&#experience, &#school, &#certifications, &#academic-projects, &#open-source {
 			& > h2, & > h3, & > h4 {
@@ -1165,9 +1207,11 @@ strong {
 				width: var(--align-guide-width);
 				text-align: right;
 			}
-			& > p, & > ul, & > ol {
-				left: var(--align-guide-width);
-				width: var(--align-guide-main-width);
+			/* Adjust padding for extra indent & align with blockquotes */
+			& > ol, & > ul {
+				width: calc(var(--align-guide-main-width) - 1.25rem);
+				margin-left: 0.75rem;
+				padding-left: 0.5rem;
 			}
 		}
 		/* Change school activities table direction back to column to avoid
