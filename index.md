@@ -321,6 +321,7 @@ Colorado School of Mines Linux User Group | BlueKey Honor Society Member | CSM B
   - [Add `pre-commit` hook for use with GitHub Actions][oss.2.1]
   - [Add support for multiple Makefiles][oss.2.2]
   - [Fix security vulnerability detections (bump dependencies)][oss.2.3]
+  - [build: Bump tablewriter to `v0.0.5`][oss.2.4]
 - [nwg-drawer][oss.3] (Go)
   - [Add keyboard mode flag to support both: "on-demand" & "exclusive" GTK layer shell modes][oss.3.1]
 - [doctl][oss.4] (Go)
@@ -399,6 +400,7 @@ Colorado School of Mines Linux User Group | BlueKey Honor Society Member | CSM B
 [oss.2.1]: https://github.com/checkmake/checkmake/pull/69
 [oss.2.2]: https://github.com/checkmake/checkmake/pull/70
 [oss.2.3]: https://github.com/checkmake/checkmake/pull/121
+[oss.2.4]: https://github.com/checkmake/checkmake/pull/147
 [oss.3]: https://github.com/nwg-piotr/nwg-drawer
 [oss.3.1]: https://github.com/nwg-piotr/nwg-drawer/pull/95
 [oss.4]: https://github.com/digitalocean/doctl
