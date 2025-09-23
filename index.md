@@ -30,8 +30,8 @@ all levels.
 ### Core Skills
 
 Kubernetes Cluster Administration \| Linux System Administration \| Infrastructure as Code \| Continuous Integration / Continuous
-Deployment \| Amazon Web Services \| Cloud infrastructure \| Terraform \| Ansible \| Chef \| Linux Packaging \| Monitoring &
-Observability \| Cloud Architecture \| Distributed Systems Design \| Network Design & Administration \| DevOps Automation
+Deployment \| Amazon Web Services \| Cloud Infrastructure \| Monitoring & Observability \| Distributed Systems \| Network Design &
+Administration \| DevOps Automation \| Terraform \| Ansible \| Chef \| Linux Packaging
 
 ### Technical Knowledge & Skills
 
