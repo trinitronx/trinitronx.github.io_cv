@@ -586,6 +586,9 @@ a:focus-visible {
 			min-width: min-content;
 		}
 	}
+	& > #core-skills + p {
+		text-align-last: center;
+	}
 }
 
 em {
