@@ -29,8 +29,9 @@ all levels.
 
 ### Core Skills
 
-Kubernetes Cluster Administration \| Linux System Administration \| Infrastructure as Code \| Continuous Integration Continuous
-Deployment \| Amazon Web Services \| Cloud infrastructure \| Terraform \| Ansible \| Chef \| Linux Packaging \| NGINX \| Apache
+Kubernetes Cluster Administration \| Linux System Administration \| Infrastructure as Code \| Continuous Integration / Continuous
+Deployment \| Amazon Web Services \| Cloud infrastructure \| Terraform \| Ansible \| Chef \| Linux Packaging \| Monitoring &
+Observability \| Cloud Architecture \| Distributed Systems Design \| Network Design & Administration \| DevOps Automation
 
 ### Technical Knowledge & Skills
 
@@ -40,7 +41,7 @@ Deployment \| Amazon Web Services \| Cloud infrastructure \| Terraform \| Ansibl
 |:-----------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------|
 | Operating Systems:     | Windows 9x, 2000, XP, Vista, 7/8.1/10/11, Linux Distributions including Arch, Manjaro, Gentoo, Ubuntu, Debian, CentOS, RedHat, CoreOS, Alpine, Yocto, MacOS 10.x-15.x, FreeBSD, OpenWRT |
 | Programming Languages: | Ruby; Python; Bash/Shell Scripting; Rust; Go; Java; C/C++; VHDL; Perl; Tcl; Motorola HCS12 Assembly, PHP, SQL, CSS, JavaScript, HTML, TypeScript |
-| Computer Applications: | Terraform, Chef, Ansible, Jenkins, Docker, Kubernetes, ElasticSearch, Logstash, Kibana, Kafka, CloudFlare, OpenSSL, SSH, FTP, SVN, GIT, Sublime Text, VSCode, Eclipse/Tasktop, Dreamweaver, Photoshop, Illustrator, LAMP Stack, Apache Tomcat, Ruby on Rails, Python+mod WSGI, Memcached, APC, Varnish, Many Open Source Web Apps, MS Office, OpenOffice, Xilinx ISE, MathCAD, Matlab, Quartus, OrCAD/PSpice, LabView, SolidWorks |
+| Computer Applications: | Terraform, Chef, Ansible, Jenkins, Docker, Kubernetes, Prometheus, InfluxDB, Diamond, Graphite, Carbon, DataDog, Splunk, CloudWatch, Grafana, ElasticSearch, Logstash, Kibana, Kafka, Atlantis, Terragrunt, ArgoCD, GitLab Pipelines, GitHub Actions, PostgreSQL, MySQL / MariaDB, DynamoDB, CloudFlare, OpenSSL, SSH, FTP, SVN, GIT, Sublime Text, VSCode, vim, Emacs, Eclipse/Tasktop, Dreamweaver, Photoshop, Illustrator, LAMP Stack, Apache Tomcat, NGINX, Apache, Ruby on Rails, Python+mod WSGI, Memcached, APC, Varnish, Many Open Source Web Apps, MS Office, OpenOffice, Xilinx ISE, MathCAD, Matlab, Quartus, OrCAD/PSpice, LabView, SolidWorks |
 
 <!-- markdownlint-enable MD013 -->
 
@@ -62,7 +63,8 @@ configuration management & deployment to AWS using Terraform, Kubernetes, and Ar
 
 - Maintained Terraform Infrastructure as Code & Blackbox credential Repositories with SRE team
 - Migrated RancherOS cluster to Kubernetes (EKS) in the Cloud (AWS) using Terraform, ArgoCD, Atlantis, & Terragrunt
-- Designed & optimized CI/CD pipelines using parallel jobs with GitHub Actions workflows and Jenkins + Jenkinsfiles
+- Designed & optimized CI/CD pipelines using parallel jobs with GitHub Actions workflows, advanced Bash scripting, Makefiles,
+  and Jenkins + Jenkinsfiles
 
 ---
 
@@ -85,22 +87,38 @@ custom metrics. Secure cluster using HashiCorp Vault Secrets provisioning with
 integration into Kubernetes ServiceAccounts, Role-Based Access Control (RBAC), &
 Amazon IAM integration.
 
+- Led migration of Email Fraud Defense product from on-prem datacenter to AWS VPC,
+  ensuring seamless transition and uptime during acquisition.
 - Setup Kubernetes cluster monitoring & centralized logging
   - Monitoring with Prometheus & Grafana
   - Centralized logging with ELK stack (ElasticSearch, Logstash, Kibana)
   - Migrated legacy systems into Docker containers, and from DataDog to Prometheus + Grafana
-- Maintained Postfix MTA server tier for product data ingestion
+- Maintained large-scale Postfix MTA server tier for product data ingestion
   - Email MX server tier handled throughput of millions of messages per day
+  - Scaled for High Availability, tuned for high throughput, low-latency (epoll, many sockets & file descriptors)
   - Configured systems to use SELinux, migrated from CentOS 6 to 7, and then RHEL 8
+- Scaled and supported realtime Big Data email analysis & analytics pipelines using:
+  - Amazon MSK (Kafka), Amazon Simple Queue Service (SQS), Apache Storm, Python Machine Learning Models
+  - Amazon Simple Email Service (SES), Amazon RedShift, Amazon Aurora
+  - Apache Airflow jobs, SystemD timers, Cron jobs, etc...
 - Deployed and maintained DNS Caching servers (`unbound`) to optimize for millions of local lookups
 - Implemented and provisioned Infrastructure as Code (IaC) with HashiCorp Terraform
 - Sustained legacy Ansible playbooks IaC repository for product’s data pipeline infrastructure components
-  - Maintained & scaled legacy Diamond, Graphite / Carbon monitoring stack
+  - Automated infrastructure provisioning & management with Terraform and Ansible, reducing manual operations by 70%.
+  - Maintained & scaled observability & monitoring with CloudWatch, Diamond, Graphite / Carbon monitoring stack
   - Optimized Graphite stack for high level of disk I/O using LVM & EBS NVMe volumes
 - Built Docker containers for deployment into Kubernetes Clusters and/or Dedicated EC2 CoreOS instances
+  - Reduced manual deployment errors by 92%
 - Setup declarative Jenkins pipelines including DevSecOps SAST / SCA tools for Continuous Integration testing & Continuous
 Deployment (CI/CD)
 - Handled and performed security updates for over 200 EC2 instances, including Python 2 to 3 migration
+- Built and secured AWS network infrastructure (VPC, EC2, IAM, RDS, Route53) with focus on network security best practices
+  - Amazon Simple Active Directory, LDAP clients, Bastion Hosts, Amazon Elastic File System (EFS / NFS) & SSH tunnels
+  - Amazon Key Management Service (KMS), HashiCorp Vault + SASL authentication
+  - Amazon Web Application Firewall (WAF), Amazon Elastic Load Balancing (ELB), AWS Security Groups, Amazon Simple Systems Manager (SSM)
+- Supported Java-based microservices in Kubernetes/EKS, ensuring low-latency, high-availability deployments
+- Participated in on-call rotation, quickly troubleshooting and resolving incidents in high-pressure, low-latency environments
+- Mentored junior engineers in Kubernetes, Ansible, Terraform, and monitoring best practices.
 
 ---
 
@@ -110,16 +128,24 @@ Deployment (CI/CD)
 
 #### DevOps Engineer
 
-Supported 3 different product engineering teams to deploy software to production. Developed configuration management
-validation and deployment playbooks using Ansible and Python.
+Supported and collaborated with 3 different cross-functional product engineering teams to deploy software to production,
+and to design resilient architecture and reliable infrastructure solutions.
+Developed configuration management validation and deployment playbooks using Ansible and Python.
 
-- Maintained Infrastructure as Code Repositories with Core Operations team
+- Maintained Infrastructure as Code Repositories with Core Operations team using:
+  - Terraform
+  - Ansible
+  - Puppet
+  - AWS CloudFormation
 - Provisioned Virtual Machines on-prem (VMWare vSphere) and in the Cloud (AWS) for Infrastructure Deployment
 - Worked with Core Operations Team to maintain and administer shared VPS Infrastructure & hardware in the datacenter
 - Built & scaled CoreOS Docker clusters
 - Migrated CoreOS systems to Kubernetes clusters
-- Upgraded MapR clusters
+- Upgraded MapR / Hadoop clusters
+- Supported and contributed bugfixes for microservices in production, written in many languages
+  (Java, Go, Ruby, Python, Apache Storm, Node.js, C/C++, PHP)
 - Datacenter hardware maintenance
+- Participated in on-call rotation, distributed systems troubleshooting and resolution
 - Built & scaled Diamond, Graphite / Carbon, Nagios & PagerDuty monitoring and alerting stack
 
 ---
@@ -130,10 +156,14 @@ validation and deployment playbooks using Ansible and Python.
 
 #### DevOps Engineer
 
-Administered and maintained 38+ server cloud-based infrastructure for PaaS Ruby on Rails / JRuby backend. Developed Chef cookbooks in Ruby including Unit and
+Administered and maintained 38+ server cloud-based infrastructure for PaaS Ruby on Rails / JRuby backend (JVM). Developed Chef cookbooks in Ruby including Unit and
 Integration Testing Frameworks. Cloud Architecture Design and Planning for Scalable, Multi-Region, Fault-Tolerant Services.
 
-- Worked to develop shared goals and understanding about technical & infrastructure design requirements
+- Partnered with product, engineering teams & management to develop shared goals and
+  understanding to align technical & infrastructure design with business requirements
+- Mentored and provided DevOps consulation / expertise to junior engineers
+- Participated in on-call rotation, to resolve incidents affecting the product
+- Maintained 99.999% uptime for SaaS platform, including microservices & APIs
 
 ---
 
@@ -150,6 +180,9 @@ the Cloud.
   - Deployed to over 15 top cloud providers (AWS, RackSpace, OpSource, Linode, etc...)
   - Management & Administration of Linux Cloud servers
   - Application deployment automation and rapid development
+    - Developed and maintained automation scripts in Bash / POSIX shell
+    - Optimized OSS install, upgrade & system administration tasks, reducing manual effort by 98%
+    - Supported Java-based SaaS product in production
   - Agile software development
   - Providing Direct Customer Support to Cloud Application Users
   - Development of Cucumber / Watir / Selenium Acceptance Tests in Ruby
